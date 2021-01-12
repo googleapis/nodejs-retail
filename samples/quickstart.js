@@ -15,10 +15,8 @@
 
 async function main(projectId, location) {
   // [START nodejs_retail_quickstart]
-  // Imports the Google Cloud client library
 
-  // remove this line after package is released
-  // eslint-disable-next-line node/no-missing-require
+  // Imports the Google Cloud client library
   const {CatalogServiceClient} = require('@google-cloud/retail');
 
   // TODO(developer): uncomment these variables with your information
@@ -26,7 +24,6 @@ async function main(projectId, location) {
   // const location = 'global'
 
   // Creates a client
-  // eslint-disable-next-line no-unused-vars
   const client = new CatalogServiceClient();
 
   //TODO(library generator): write the actual function you will be testing
