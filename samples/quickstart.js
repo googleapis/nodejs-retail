@@ -26,7 +26,6 @@ async function main(projectId, location) {
   // Creates a client
   const client = new CatalogServiceClient();
 
-  //TODO(library generator): write the actual function you will be testing
   async function listCatalogs() {
     const catalogs = await client.listCatalogs({
       parent: `projects/${projectId}/locations/${location}`,

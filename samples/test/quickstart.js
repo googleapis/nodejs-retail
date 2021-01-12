@@ -30,7 +30,6 @@ const cwd = path.join(__dirname, '..');
 const client = new CatalogServiceClient();
 
 describe('Quickstart', () => {
-  //TODO: remove this if not using the projectId
   let projectId;
 
   before(async () => {
@@ -38,7 +37,6 @@ describe('Quickstart', () => {
   });
 
   it('should run quickstart', async () => {
-    //TODO: remove this disability
     const stdout = execSync(`node ./quickstart.js ${projectId} global`, {cwd});
     assert.match(stdout, /default_catalog/);
   });
