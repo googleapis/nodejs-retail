@@ -1,10 +1,10 @@
 {
-    "name": "retail",
-    "name_pretty": "Retail",
+    "name": "Search for Retail",
+    "name_pretty": "Search for Retail",
     "product_documentation": "https://cloud.google.com/recommendations/",
     "client_documentation": "https://googleapis.dev/nodejs/retail/latest/",
     "issue_tracker": "https://github.com/googleapis/nodejs-retail/issues",
-    "release_level": "BETA",
+    "release_level": "beta",
     "language": "nodejs",
     "repo": "googleapis/nodejs-retail",
     "distribution_name": "@google-cloud/retail",
