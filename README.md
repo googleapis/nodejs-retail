@@ -2,7 +2,7 @@
 [//]: # "To regenerate it, use `python -m synthtool`."
 <img src="https://avatars2.githubusercontent.com/u/2810941?v=3&s=96" alt="Google Cloud Platform logo" title="Google Cloud Platform" align="right" height="96" width="96"/>
 
-# [Retail: Node.js Client](https://github.com/googleapis/nodejs-retail)
+# [Retail API: Node.js Client](https://github.com/googleapis/nodejs-retail)
 
 [![release level](https://img.shields.io/badge/release%20level-beta-yellow.svg?style=flat)](https://cloud.google.com/terms/launch-stages)
 [![npm version](https://img.shields.io/npm/v/@google-cloud/retail.svg)](https://www.npmjs.org/package/@google-cloud/retail)
@@ -17,8 +17,8 @@ Retail client for Node.js
 A comprehensive list of changes in each version may be found in
 [the CHANGELOG](https://github.com/googleapis/nodejs-retail/blob/master/CHANGELOG.md).
 
-* [Retail Node.js Client API Reference][client-docs]
-* [Retail Documentation][product-docs]
+* [Retail API Node.js Client API Reference][client-docs]
+* [Retail API Documentation][product-docs]
 * [github.com/googleapis/nodejs-retail](https://github.com/googleapis/nodejs-retail)
 
 Read more about the client libraries for Cloud APIs, including the older
@@ -44,7 +44,7 @@ Google APIs Client Libraries, in [Client Libraries Explained][explained].
 
 1.  [Select or create a Cloud Platform project][projects].
 1.  [Enable billing for your project][billing].
-1.  [Enable the Retail API][enable_api].
+1.  [Enable the Retail API API][enable_api].
 1.  [Set up authentication with a service account][auth] so you can access the
     API from your local workstation.
 
@@ -69,7 +69,6 @@ const {CatalogServiceClient} = require('@google-cloud/retail');
 // Creates a client
 const client = new CatalogServiceClient();
 
-//TODO(library generator): write the actual function you will be testing
 async function listCatalogs() {
   const catalogs = await client.listCatalogs({
     parent: `projects/${projectId}/locations/${location}`,
@@ -92,7 +91,7 @@ Samples are in the [`samples/`](https://github.com/googleapis/nodejs-retail/tree
 
 
 
-The [Retail Node.js Client API Reference][client-docs] documentation
+The [Retail API Node.js Client API Reference][client-docs] documentation
 also contains samples.
 
 ## Supported Node.js Versions
@@ -121,6 +120,11 @@ _Legacy Node.js versions are supported as a best effort:_
 This library follows [Semantic Versioning](http://semver.org/).
 
 
+
+This library is considered to be in **beta**. This means it is expected to be
+mostly stable while we work toward a general availability release; however,
+complete stability is not guaranteed. We will address issues and requests
+against beta libraries with a high priority.
 
 
 
