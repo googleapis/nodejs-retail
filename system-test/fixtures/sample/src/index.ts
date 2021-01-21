@@ -21,7 +21,7 @@ import {
   PredictionServiceClient,
   ProductServiceClient,
   UserEventServiceClient,
-} from '@google-cloud/retail';
+} from 'retail';
 
 // check that the client class type name can be used
 function doStuffWithCatalogServiceClient(client: CatalogServiceClient) {
