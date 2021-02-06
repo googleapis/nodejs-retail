@@ -17,7 +17,7 @@
 // ** All changes to this file may be overwritten. **
 
 /* eslint-disable node/no-missing-require, no-unused-vars */
-const retail = require('retail');
+const retail = require('@google-cloud/retail');
 
 function main() {
   const catalogServiceClient = new retail.CatalogServiceClient();
