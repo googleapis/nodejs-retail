@@ -3,7 +3,7 @@
     {
       "git": {
         "name": ".",
-        "remote": "git@github.com:googleapis/nodejs-retail.git",
+        "remote": "https://github.com/googleapis/nodejs-retail.git",
         "sha": "800cd46ddc56ef33fec7ad656cd7558fd23fbcc1"
       }
     },
