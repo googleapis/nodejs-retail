@@ -16,8 +16,8 @@
 // ** https://github.com/googleapis/synthtool **
 // ** All changes to this file may be overwritten. **
 
-import * as v2 from './v2';
 import * as v2alpha from './v2alpha';
+import * as v2 from './v2';
 import * as v2beta from './v2beta';
 
 const CatalogServiceClient = v2beta.CatalogServiceClient;
@@ -30,8 +30,8 @@ const UserEventServiceClient = v2beta.UserEventServiceClient;
 type UserEventServiceClient = v2beta.UserEventServiceClient;
 
 export {
-  v2,
   v2alpha,
+  v2,
   v2beta,
   CatalogServiceClient,
   PredictionServiceClient,
@@ -39,8 +39,8 @@ export {
   UserEventServiceClient,
 };
 export default {
-  v2,
   v2alpha,
+  v2,
   v2beta,
   CatalogServiceClient,
   PredictionServiceClient,
