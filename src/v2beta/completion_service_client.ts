@@ -41,8 +41,8 @@ const version = require('../../../package.json').version;
  *  Auto-completion service for retail.
  *
  *  This feature is only available for users who have Retail Search enabled.
- *  Contact Retail Support (retail-search-support@google.com) if you are
- *  interested in using Retail Search.
+ *  Please submit a form [here](https://cloud.google.com/contact) to contact
+ *  cloud sales if you are interested in using Retail Search.
  * @class
  * @memberof v2beta
  */
@@ -364,8 +364,8 @@ export class CompletionServiceClient {
    * Completes the specified prefix with keyword suggestions.
    *
    * This feature is only available for users who have Retail Search enabled.
-   * Contact Retail Support (retail-search-support@google.com) if you are
-   * interested in using Retail Search.
+   * Please submit a form [here](https://cloud.google.com/contact) to contact
+   * cloud sales if you are interested in using Retail Search.
    *
    * @param {Object} request
    *   The request object that will be sent.
@@ -421,12 +421,14 @@ export class CompletionServiceClient {
    *   * user-data
    *
    *   * cloud-retail
-   *     This option is not automatically enabled. Before using cloud-retail,
-   *     contact retail-search-support@google.com first.
+   *     This option requires additional allowlisting. Before using cloud-retail,
+   *     contact Cloud Retail support team first.
    * @param {number} request.maxSuggestions
-   *   Completion max suggestions.
+   *   Completion max suggestions. If left unset or set to 0, then will fallback
+   *   to the configured value {@link |CompletionConfig.max_suggestions}.
    *
-   *   The maximum allowed max suggestions is 20. The default value is 20.
+   *   The maximum allowed max suggestions is 20. If it is set higher, it will be
+   *   capped by 20.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
@@ -523,8 +525,8 @@ export class CompletionServiceClient {
    * Request processing may be synchronous. Partial updating is not supported.
    *
    * This feature is only available for users who have Retail Search enabled.
-   * Contact Retail Support (retail-search-support@google.com) if you are
-   * interested in using Retail Search.
+   * Please submit a form [here](https://cloud.google.com/contact) to contact
+   * cloud sales if you are interested in using Retail Search.
    *
    * @param {Object} request
    *   The request object that will be sent.

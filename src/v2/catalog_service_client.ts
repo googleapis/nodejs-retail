@@ -480,8 +480,8 @@ export class CatalogServiceClient {
    *   {newBranch}.
    *
    * This feature is only available for users who have Retail Search enabled.
-   * Contact Retail Support (retail-search-support@google.com) if you are
-   * interested in using Retail Search.
+   * Please submit a form [here](https://cloud.google.com/contact) to contact
+   * cloud sales if you are interested in using Retail Search.
    *
    * @param {Object} request
    *   The request object that will be sent.
@@ -584,8 +584,8 @@ export class CatalogServiceClient {
    * method under a specified parent catalog.
    *
    * This feature is only available for users who have Retail Search enabled.
-   * Contact Retail Support (retail-search-support@google.com) if you are
-   * interested in using Retail Search.
+   * Please submit a form [here](https://cloud.google.com/contact) to contact
+   * cloud sales if you are interested in using Retail Search.
    *
    * @param {Object} request
    *   The request object that will be sent.
