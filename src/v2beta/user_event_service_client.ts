@@ -406,6 +406,10 @@ export class UserEventServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.writeUserEvent(request);
+   *
+   * @example <caption>include:samples/generated/v2beta/user_event_service.write_user_event.js</caption>
+   * region_tag:retail_write_user_event_sample
+   *
    */
   writeUserEvent(
     request?: protos.google.cloud.retail.v2beta.IWriteUserEventRequest,
@@ -514,6 +518,10 @@ export class UserEventServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.collectUserEvent(request);
+   *
+   * @example <caption>include:samples/generated/v2beta/user_event_service.collect_user_event.js</caption>
+   * region_tag:retail_collect_user_event_sample
+   *
    */
   collectUserEvent(
     request?: protos.google.cloud.retail.v2beta.ICollectUserEventRequest,
@@ -648,6 +656,10 @@ export class UserEventServiceClient {
    * @example
    * const [operation] = await client.purgeUserEvents(request);
    * const [response] = await operation.promise();
+   *
+   * @example <caption>include:samples/generated/v2beta/user_event_service.purge_user_events.js</caption>
+   * region_tag:retail_purge_user_events_sample
+   *
    */
   purgeUserEvents(
     request?: protos.google.cloud.retail.v2beta.IPurgeUserEventsRequest,
@@ -711,6 +723,10 @@ export class UserEventServiceClient {
    * console.log(decodedOperation.result);
    * console.log(decodedOperation.done);
    * console.log(decodedOperation.metadata);
+   *
+   * @example <caption>include:samples/generated/v2beta/user_event_service.purge_user_events.js</caption>
+   * region_tag:retail_purge_user_events_sample
+   *
    */
   async checkPurgeUserEventsProgress(
     name: string
@@ -800,6 +816,10 @@ export class UserEventServiceClient {
    * @example
    * const [operation] = await client.importUserEvents(request);
    * const [response] = await operation.promise();
+   *
+   * @example <caption>include:samples/generated/v2beta/user_event_service.import_user_events.js</caption>
+   * region_tag:retail_import_user_events_sample
+   *
    */
   importUserEvents(
     request?: protos.google.cloud.retail.v2beta.IImportUserEventsRequest,
@@ -863,6 +883,10 @@ export class UserEventServiceClient {
    * console.log(decodedOperation.result);
    * console.log(decodedOperation.done);
    * console.log(decodedOperation.metadata);
+   *
+   * @example <caption>include:samples/generated/v2beta/user_event_service.import_user_events.js</caption>
+   * region_tag:retail_import_user_events_sample
+   *
    */
   async checkImportUserEventsProgress(
     name: string
@@ -953,6 +977,10 @@ export class UserEventServiceClient {
    * @example
    * const [operation] = await client.rejoinUserEvents(request);
    * const [response] = await operation.promise();
+   *
+   * @example <caption>include:samples/generated/v2beta/user_event_service.rejoin_user_events.js</caption>
+   * region_tag:retail_rejoin_user_events_sample
+   *
    */
   rejoinUserEvents(
     request?: protos.google.cloud.retail.v2beta.IRejoinUserEventsRequest,
@@ -1016,6 +1044,10 @@ export class UserEventServiceClient {
    * console.log(decodedOperation.result);
    * console.log(decodedOperation.done);
    * console.log(decodedOperation.metadata);
+   *
+   * @example <caption>include:samples/generated/v2beta/user_event_service.rejoin_user_events.js</caption>
+   * region_tag:retail_rejoin_user_events_sample
+   *
    */
   async checkRejoinUserEventsProgress(
     name: string

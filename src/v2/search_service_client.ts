@@ -535,6 +535,10 @@ export class SearchServiceClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v2/search_service.search.js</caption>
+   * region_tag:retail_search_sample
+   *
    */
   search(
     request?: protos.google.cloud.retail.v2.ISearchRequest,
@@ -756,6 +760,10 @@ export class SearchServiceClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v2/search_service.search.js</caption>
+   * region_tag:retail_search_sample
+   *
    */
   searchStream(
     request?: protos.google.cloud.retail.v2.ISearchRequest,
@@ -769,7 +777,8 @@ export class SearchServiceClient {
       gax.routingHeader.fromParams({
         placement: request.placement || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['search'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.search.createStream(
       this.innerApiCalls.search as gax.GaxCall,
@@ -964,6 +973,10 @@ export class SearchServiceClient {
    * for await (const response of iterable) {
    *   // process response
    * }
+   *
+   * @example <caption>include:samples/generated/v2/search_service.search.js</caption>
+   * region_tag:retail_search_sample
+   *
    */
   searchAsync(
     request?: protos.google.cloud.retail.v2.ISearchRequest,
@@ -978,7 +991,8 @@ export class SearchServiceClient {
         placement: request.placement || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['search'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.search.asyncIterate(
       this.innerApiCalls['search'] as GaxCall,

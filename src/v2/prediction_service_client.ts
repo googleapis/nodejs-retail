@@ -433,6 +433,10 @@ export class PredictionServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.predict(request);
+   *
+   * @example <caption>include:samples/generated/v2/prediction_service.predict.js</caption>
+   * region_tag:retail_predict_sample
+   *
    */
   predict(
     request?: protos.google.cloud.retail.v2.IPredictRequest,
