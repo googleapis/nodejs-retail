@@ -809,7 +809,8 @@ export class SearchServiceClient {
       gax.routingHeader.fromParams({
         placement: request.placement || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['search'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.search.createStream(
       this.innerApiCalls.search as gax.GaxCall,
@@ -1038,7 +1039,8 @@ export class SearchServiceClient {
         placement: request.placement || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['search'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.search.asyncIterate(
       this.innerApiCalls['search'] as GaxCall,
