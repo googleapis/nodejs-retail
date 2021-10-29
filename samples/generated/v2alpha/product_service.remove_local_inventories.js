@@ -12,11 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(product, type, placeIds) {
-  // [START retail_v2alpha_generated_ProductService_RemoveFulfillmentPlaces_async]
+function main(product, placeIds) {
+  // [START retail_v2alpha_generated_ProductService_RemoveLocalInventories_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
@@ -30,45 +29,20 @@ function main(product, type, placeIds) {
    */
   // const product = 'abc123'
   /**
-   *  Required. The fulfillment type, including commonly used types (such as
-   *  pickup in store and same day delivery), and custom types.
-   *  Supported values:
-   *  * "pickup-in-store"
-   *  * "ship-to-store"
-   *  * "same-day-delivery"
-   *  * "next-day-delivery"
-   *  * "custom-type-1"
-   *  * "custom-type-2"
-   *  * "custom-type-3"
-   *  * "custom-type-4"
-   *  * "custom-type-5"
-   *  If this field is set to an invalid value other than these, an
-   *  INVALID_ARGUMENT error is returned.
-   *  This field directly corresponds to [Product.fulfillment_info.type][].
-   */
-  // const type = 'abc123'
-  /**
-   *  Required. The IDs for this
-   *  [type][google.cloud.retail.v2alpha.RemoveFulfillmentPlacesRequest.type],
-   *  such as the store IDs for "pickup-in-store" or the region IDs for
-   *  "same-day-delivery", to be removed for this
-   *  [type][google.cloud.retail.v2alpha.RemoveFulfillmentPlacesRequest.type].
-   *  At least 1 value is required, and a maximum of 2000 values are allowed.
-   *  Each value must be a string with a length limit of 10 characters, matching
-   *  the pattern `[a-zA-Z0-9_-]+`, such as "store1" or "REGION-2". Otherwise, an
-   *  INVALID_ARGUMENT error is returned.
+   *  Required. A list of place IDs to have their inventory deleted.
+   *  At most 1000 place IDs are allowed per request.
    */
   // const placeIds = 'abc123'
   /**
-   *  The time when the fulfillment updates are issued, used to prevent
-   *  out-of-order updates on fulfillment information. If not provided, the
-   *  internal system time will be used.
+   *  The time when the inventory deletions are issued. Used to prevent
+   *  out-of-order updates and deletions on local inventory fields. If not
+   *  provided, the internal system time will be used.
    */
   // const removeTime = ''
   /**
    *  If set to true, and the [Product][google.cloud.retail.v2alpha.Product] is
-   *  not found, the fulfillment information will still be processed and retained
-   *  for at most 1 day and processed once the
+   *  not found, the local inventory removal request will still be processed and
+   *  retained for at most 1 day and processed once the
    *  [Product][google.cloud.retail.v2alpha.Product] is created. If set to false,
    *  a NOT_FOUND error is returned if the
    *  [Product][google.cloud.retail.v2alpha.Product] is not found.
@@ -81,22 +55,21 @@ function main(product, type, placeIds) {
   // Instantiates a client
   const retailClient = new ProductServiceClient();
 
-  async function removeFulfillmentPlaces() {
+  async function removeLocalInventories() {
     // Construct request
     const request = {
       product,
-      type,
       placeIds,
     };
 
     // Run request
-    const [operation] = await retailClient.removeFulfillmentPlaces(request);
+    const [operation] = await retailClient.removeLocalInventories(request);
     const [response] = await operation.promise();
     console.log(response);
   }
 
-  removeFulfillmentPlaces();
-  // [END retail_v2alpha_generated_ProductService_RemoveFulfillmentPlaces_async]
+  removeLocalInventories();
+  // [END retail_v2alpha_generated_ProductService_RemoveLocalInventories_async]
 }
 
 process.on('unhandledRejection', err => {

@@ -12,11 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(product, placeIds) {
-  // [START retail_v2alpha_generated_ProductService_RemoveLocalInventories_async]
+function main(product, localInventories) {
+  // [START retail_v2alpha_generated_ProductService_AddLocalInventories_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
@@ -30,22 +29,37 @@ function main(product, placeIds) {
    */
   // const product = 'abc123'
   /**
-   *  Required. A list of place IDs to have their inventory deleted.
-   *  At most 1000 place IDs are allowed per request.
+   *  Required. A list of inventory information at difference places. Each place
+   *  is identified by its place ID. At most 1000 inventories are allowed per
+   *  request.
    */
-  // const placeIds = 'abc123'
+  // const localInventories = 1234
   /**
-   *  The time when the inventory deletions are issued. Used to prevent
-   *  out-of-order updates and deletions on local inventory fields. If not
-   *  provided, the internal system time will be used.
+   *  Indicates which inventory fields in the provided list of
+   *  [LocalInventory][google.cloud.retail.v2alpha.LocalInventory] to update. The
+   *  field is updated to the provided value.
+   *  If a field is set while the place does not have a previous local inventory,
+   *  the local inventory at that store is created.
+   *  If a field is set while the value of that field is not provided, the
+   *  original field value, if it exists, is deleted.
+   *  If the mask is not set or set with empty paths, all inventory fields will
+   *  be updated.
+   *  If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
+   *  is returned and the entire update will be ignored.
    */
-  // const removeTime = ''
+  // const addMask = ''
+  /**
+   *  The time when the inventory updates are issued. Used to prevent
+   *  out-of-order updates on local inventory fields. If not provided, the
+   *  internal system time will be used.
+   */
+  // const addTime = ''
   /**
    *  If set to true, and the [Product][google.cloud.retail.v2alpha.Product] is
-   *  not found, the local inventory removal request will still be processed and
-   *  retained for at most 1 day and processed once the
+   *  not found, the local inventory will still be processed and retained for at
+   *  most 1 day and processed once the
    *  [Product][google.cloud.retail.v2alpha.Product] is created. If set to false,
-   *  a NOT_FOUND error is returned if the
+   *  an INVALID_ARGUMENT error is returned if the
    *  [Product][google.cloud.retail.v2alpha.Product] is not found.
    */
   // const allowMissing = true
@@ -56,21 +70,21 @@ function main(product, placeIds) {
   // Instantiates a client
   const retailClient = new ProductServiceClient();
 
-  async function removeLocalInventories() {
+  async function addLocalInventories() {
     // Construct request
     const request = {
       product,
-      placeIds,
+      localInventories,
     };
 
     // Run request
-    const [operation] = await retailClient.removeLocalInventories(request);
+    const [operation] = await retailClient.addLocalInventories(request);
     const [response] = await operation.promise();
     console.log(response);
   }
 
-  removeLocalInventories();
-  // [END retail_v2alpha_generated_ProductService_RemoveLocalInventories_async]
+  addLocalInventories();
+  // [END retail_v2alpha_generated_ProductService_AddLocalInventories_async]
 }
 
 process.on('unhandledRejection', err => {
