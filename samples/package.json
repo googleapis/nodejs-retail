@@ -11,7 +11,7 @@
     "*.js"
   ],
   "scripts": {
-    "test": "c8 mocha --timeout 600000 test/*.test.js"
+    "test": "c8 mocha --timeout 600000 --recursive --config ./mocha.config.js"
   },
   "dependencies": {
     "@google-cloud/retail": "^1.5.0",
