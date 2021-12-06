@@ -21,7 +21,6 @@ async function main() {
   const {SearchServiceClient} = require('@google-cloud/retail');
 
   const projectNumber = process.env['PROJECT_NUMBER'];
-  const apiEndpoint = 'retail.googleapis.com';
 
   // Placement is used to identify the Serving Config name.
   const placement = `projects/${projectNumber}/locations/global/catalogs/default_catalog/placements/default_search`;
@@ -42,7 +41,7 @@ async function main() {
   let pageToken = '';
 
   // Instantiates a client.
-  const retailClient = new SearchServiceClient({apiEndpoint});
+  const retailClient = new SearchServiceClient();
 
   const IResponseParams = {
     ISearchResult: 0,
@@ -68,14 +67,12 @@ async function main() {
     });
     const searchResponse = response[IResponseParams.ISearchResponse];
     console.log('Search result: ', JSON.stringify(searchResponse, null, 4));
-    pageToken = getNextPageToken(response);
-    console.log('Next page token:', getNextPageToken(response));
+    pageToken = response[IResponseParams.ISearchResponse].nextPageToken;
+    console.log(
+      'Next page token:',
+      response[IResponseParams.ISearchResponse].nextPageToken
+    );
     console.log('Search end');
-  };
-
-  // Get next page token from the response
-  const getNextPageToken = response => {
-    return response[IResponseParams.ISearchResponse].nextPageToken;
   };
 
   // Call search

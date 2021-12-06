@@ -28,7 +28,10 @@ describe('Search simple query', () => {
     let stdout;
 
     before(async () => {
-      stdout = execSync('node search/search_simple_query.js', {cwd});
+      stdout = execSync(
+        'node interactive-tutorials/search/search_simple_query.js',
+        {cwd}
+      );
     });
 
     it('should show that search successfully started', () => {
@@ -41,8 +44,7 @@ describe('Search simple query', () => {
   });
 
   describe('Search simple query sample result', () => {
-    const apiEndpoint = 'retail.googleapis.com';
-    const retailClient = new SearchServiceClient({apiEndpoint});
+    const retailClient = new SearchServiceClient();
 
     const projectNumber = process.env['PROJECT_NUMBER'];
     const request = {

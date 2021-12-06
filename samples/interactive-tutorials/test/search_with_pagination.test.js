@@ -28,7 +28,10 @@ describe('Search with pagination', () => {
     let stdout;
 
     before(async () => {
-      stdout = execSync('node search/search_with_pagination.js', {cwd});
+      stdout = execSync(
+        'node interactive-tutorials/search/search_with_pagination.js',
+        {cwd}
+      );
     });
 
     it('should show that search successfully started', () => {
@@ -45,8 +48,7 @@ describe('Search with pagination', () => {
   });
 
   describe('Search with pagination sample result', () => {
-    const apiEndpoint = 'retail.googleapis.com';
-    const retailClient = new SearchServiceClient({apiEndpoint});
+    const retailClient = new SearchServiceClient();
     const projectNumber = process.env['PROJECT_NUMBER'];
     const pageSize = 2;
     const offset = 0;

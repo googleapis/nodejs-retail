@@ -28,7 +28,10 @@ describe('Search with filtering', () => {
     let stdout;
 
     before(async () => {
-      stdout = execSync('node search/search_with_filtering.js', {cwd});
+      stdout = execSync(
+        'node interactive-tutorials/search/search_with_filtering.js',
+        {cwd}
+      );
     });
 
     it('should show that search successfully started', () => {
@@ -41,8 +44,7 @@ describe('Search with filtering', () => {
   });
 
   describe('Search with filtering sample result', () => {
-    const apiEndpoint = 'retail.googleapis.com';
-    const retailClient = new SearchServiceClient({apiEndpoint});
+    const retailClient = new SearchServiceClient();
     const projectNumber = process.env['PROJECT_NUMBER'];
     const request = {
       placement: `projects/${projectNumber}/locations/global/catalogs/default_catalog/placements/default_search`,
