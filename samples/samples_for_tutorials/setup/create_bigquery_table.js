@@ -17,19 +17,23 @@
 async function main() {
   const utils = require('./setup_cleanup');
 
-  await utils.createBqDataset('products');
-  await utils.createBqTable('products', 'products');
-  await utils.uploadDataToBqTable(
-    'products',
-    'products',
-    'resources/products.json'
-  );
+  const dataset = 'products';
+  const validTable = 'products';
+  const invalidTable = 'products_some_invalid';
+  const schema = 'resources/product_schema.json';
+  const validSourceFile = 'resources/products.json';
+  const invalidSourceFile = 'resources/products_some_invalid.json';
 
-  await utils.createBqTable('products', 'products_some_invalid');
+  await utils.createBqDataset(dataset);
+  await utils.createBqTable(dataset, validTable, schema);
+  await utils.uploadDataToBqTable(dataset, validTable, validSourceFile, schema);
+
+  await utils.createBqTable(dataset, invalidTable, schema);
   await utils.uploadDataToBqTable(
-    'products',
-    'products',
-    'resources/products_some_invalid.json'
+    dataset,
+    validTable,
+    invalidSourceFile,
+    schema
   );
 }
 

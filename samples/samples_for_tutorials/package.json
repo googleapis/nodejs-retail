@@ -6,20 +6,21 @@
   "engines": {
     "node": ">=10"
   },
-  "main": "app.js",
+  "files": [
+    "*.js"
+  ],
   "private": true,
   "scripts": {
-    "start": "node app.js",
     "test": "mocha --timeout 600000 test/*.test.js"
   },
   "dependencies": {
     "@google-cloud/bigquery": "^5.9.2",
     "@google-cloud/retail": "^1.2.2",
-    "@google-cloud/storage": "^5.16.1",
-    "chai": "^4.3.4"
+    "@google-cloud/storage": "^5.16.1"
   },
   "devDependencies": {
     "mocha": "^8.0.0",
+    "chai": "^4.3.4",
     "supertest": "^6.0.0"
   }
 }

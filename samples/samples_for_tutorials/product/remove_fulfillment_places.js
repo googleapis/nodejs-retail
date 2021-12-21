@@ -22,6 +22,7 @@ async function main(generatedProductId) {
   const utils = require('../setup/setup_cleanup');
 
   const projectNumber = process.env['PROJECT_NUMBER'];
+  const apiEndpoint = 'retail.googleapis.com';
 
   // Create product
   const createdProduct = await utils.createProduct(
@@ -48,7 +49,7 @@ async function main(generatedProductId) {
   };
 
   // Instantiates a client.
-  const retailClient = new ProductServiceClient();
+  const retailClient = new ProductServiceClient({ apiEndpoint });
 
   const callRemoveFulfillmentPlaces = () => {
     return new Promise(async (resolve, reject) => {

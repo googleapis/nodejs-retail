@@ -41,7 +41,8 @@ describe('Search with boost spec', () => {
   });
 
   describe('Search with boost spec sample result', () => {
-    const retailClient = new SearchServiceClient();
+    const apiEndpoint = 'retail.googleapis.com';
+    const retailClient = new SearchServiceClient({ apiEndpoint });
 
     const projectNumber = process.env['PROJECT_NUMBER'];
     const request = {

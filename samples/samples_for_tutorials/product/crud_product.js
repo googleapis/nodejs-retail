@@ -21,6 +21,7 @@ async function main(generatedProductId) {
   const { ProductServiceClient } = require('@google-cloud/retail').v2;
 
   const projectNumber = process.env['PROJECT_NUMBER'];
+  const apiEndpoint = 'retail.googleapis.com';
 
   // The parent catalog resource name
   const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog/branches/default_branch`;
@@ -64,85 +65,60 @@ async function main(generatedProductId) {
   };
 
   // Instantiates a client.
-  const retailClient = new ProductServiceClient();
+  const retailClient = new ProductServiceClient({ apiEndpoint });
 
-  const callCreateProduct = () => {
-    return new Promise(async (resolve, reject) => {
-      try {
-        // Construct request
-        const request = {
-          parent,
-          product: productForCreate,
-          productId,
-        };
-        console.log('Create product request:', request);
+  const callCreateProduct = async () => {
+    // Construct request
+    const request = {
+      parent,
+      product: productForCreate,
+      productId,
+    };
+    console.log('Create product request:', request);
 
-        // Run request
-        const response = await retailClient.createProduct(request);
-        console.log('Created product:', response);
-        resolve(response[0]);
-      } catch (err) {
-        reject(err);
-      }
-    });
+    // Run request
+    const response = await retailClient.createProduct(request);
+    console.log('Created product:', response);
+    return response[0];
   };
 
-  const callGetProduct = () => {
-    return new Promise(async (resolve, reject) => {
-      try {
-        // Construct request
-        const request = {
-          name,
-        };
-        console.log('Get product request:', request);
+  const callGetProduct = async () => {
+    // Construct request
+    const request = {
+      name,
+    };
+    console.log('Get product request:', request);
 
-        // Run request
-        const response = await retailClient.getProduct(request);
-        console.log('Get product response:', response);
+    // Run request
+    const response = await retailClient.getProduct(request);
+    console.log('Get product response:', response);
 
-        resolve(response[0]);
-      } catch (err) {
-        reject(err);
-      }
-    });
+    return response[0];
   };
 
-  const callUpdateProduct = () => {
-    return new Promise(async (resolve, reject) => {
-      try {
-        // Construct request
-        const request = {
-          product: productForUpdate,
-        };
-        console.log('Update product request:', request);
+  const callUpdateProduct = async () => {
+    // Construct request
+    const request = {
+      product: productForUpdate,
+    };
+    console.log('Update product request:', request);
 
-        // Run request
-        const response = await retailClient.updateProduct(request);
-        console.log('Updated product:', response);
+    // Run request
+    const response = await retailClient.updateProduct(request);
+    console.log('Updated product:', response);
 
-        resolve(response[0]);
-      } catch (err) {
-        reject(err);
-      }
-    });
+    return response[0];
   };
 
-  const callDeleteProduct = () => {
-    return new Promise(async (resolve, reject) => {
-      try {
-        // Construct request
-        const request = {
-          name,
-        };
-        console.log('Delete product request:', request);
+  const callDeleteProduct = async () => {
+    // Construct request
+    const request = {
+      name,
+    };
+    console.log('Delete product request:', request);
 
-        // Run request
-        await retailClient.deleteProduct(request);
-        resolve();
-      } catch (err) {
-        reject(err);
-      }
-    });
+    // Run request
+    await retailClient.deleteProduct(request);
   };
 
   console.log('Start CRUD product');

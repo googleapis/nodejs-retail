@@ -22,6 +22,7 @@ async function main(generatedProductId) {
   const utils = require('../setup/setup_cleanup');
 
   const projectNumber = process.env['PROJECT_NUMBER'];
+  const apiEndpoint = 'retail.googleapis.com';
 
   // The parent catalog resource name
   const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog/branches/default_branch`;
@@ -46,27 +47,21 @@ async function main(generatedProductId) {
   };
 
   // Instantiates a client.
-  const retailClient = new ProductServiceClient();
+  const retailClient = new ProductServiceClient({ apiEndpoint });
 
-  const callCreateProduct = () => {
-    return new Promise(async (resolve, reject) => {
-      try {
-        // Construct request
-        const request = {
-          parent,
-          product,
-          productId,
-        };
-        console.log('Create product request:', request);
+  const callCreateProduct = async () => {
+    // Construct request
+    const request = {
+      parent,
+      product,
+      productId,
+    };
+    console.log('Create product request:', request);
 
-        // Run request
-        const response = await retailClient.createProduct(request);
-        console.log('Created product:', response);
-        resolve(response[0]);
-      } catch (err) {
-        reject(err);
-      }
-    });
+    // Run request
+    const response = await retailClient.createProduct(request);
+    console.log('Created product:', response);
+    return response[0];
   };
 
   // Create product

@@ -22,6 +22,7 @@ async function main(generatedProductId) {
   const utils = require('../setup/setup_cleanup');
 
   const projectNumber = process.env['PROJECT_NUMBER'];
+  const apiEndpoint = 'retail.googleapis.com';
 
   // Create product
   const createdProduct = await utils.createProduct(
@@ -73,7 +74,7 @@ async function main(generatedProductId) {
         console.log('Waiting to complete add operation..');
         setTimeout(() => {
           resolve();
-        }, 50000);
+        }, 120000);
       } catch (err) {
         console.log(err);
         reject(err);

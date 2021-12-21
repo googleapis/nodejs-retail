@@ -18,7 +18,7 @@ async function main() {
   const utils = require('./setup_cleanup');
 
   //Get your project ID
-  const projectId = await utils.getProjectId();
+  const projectId = process.env['PROJECT_ID'];
 
   // The ID of your GCS bucket
   const bucketName = `${projectId}_${Math.round(Date.now() / 1000)}`;

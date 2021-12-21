@@ -22,6 +22,7 @@ async function main(generatedProductId) {
   const utils = require('../setup/setup_cleanup');
 
   const projectNumber = process.env['PROJECT_NUMBER'];
+  const apiEndpoint = 'retail.googleapis.com';
 
   // Create product
   const product = await utils.createProduct(projectNumber, generatedProductId);
@@ -30,7 +31,7 @@ async function main(generatedProductId) {
   const name = product.name;
 
   // Instantiates a client.
-  const retailClient = new ProductServiceClient();
+  const retailClient = new ProductServiceClient({ apiEndpoint });
 
   const callDeleteProduct = async () => {
     // Construct request
@@ -40,14 +41,13 @@ async function main(generatedProductId) {
     console.log('Delete product request:', request);
 
     // Run request
-    console.log('Start deleting the product');
     await retailClient.deleteProduct(request);
-    console.log(`Product ${product.id} deleted`);
   };
 
   // Delete product
-  callDeleteProduct();
-
+  console.log('Start deleting the product');
+  await callDeleteProduct();
+  console.log(`Product ${product.id} deleted`);
   // [END retail_delete_product]
 }
 

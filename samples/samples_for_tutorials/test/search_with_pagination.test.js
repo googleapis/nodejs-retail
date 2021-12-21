@@ -45,7 +45,8 @@ describe('Search with pagination', () => {
   });
 
   describe('Search with pagination sample result', () => {
-    const retailClient = new SearchServiceClient();
+    const apiEndpoint = 'retail.googleapis.com';
+    const retailClient = new SearchServiceClient({ apiEndpoint });
     const projectNumber = process.env['PROJECT_NUMBER'];
     const pageSize = 2;
     const offset = 0;

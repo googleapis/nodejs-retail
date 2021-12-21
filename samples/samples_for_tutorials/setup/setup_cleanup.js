@@ -15,6 +15,7 @@
 'use strict';
 // Imports the Google Cloud client library.
 const { ProductServiceClient } = require('@google-cloud/retail').v2;
+const { UserEventServiceClient } = require('@google-cloud/retail').v2;
 const { Storage } = require('@google-cloud/storage');
 const { BigQuery } = require('@google-cloud/bigquery');
 const { exec } = require('child_process');
@@ -27,6 +28,7 @@ const createProduct = async (
 ) => {
   // The parent catalog resource name
   const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog/branches/default_branch`;
+  const apiEndpoint = 'retail.googleapis.com';
 
   // The ID to use for the product
   const productId = generatedProductId
@@ -57,67 +59,52 @@ const createProduct = async (
     availability: 'IN_STOCK',
   };
 
-  const retailClient = new ProductServiceClient();
+  const retailClient = new ProductServiceClient({ apiEndpoint });
 
-  return new Promise(async (resolve, reject) => {
-    try {
-      // Construct request
-      const request = {
-        parent,
-        product,
-        productId,
-      };
+  // Construct request
+  const request = {
+    parent,
+    product,
+    productId,
+  };
 
-      // Run request
-      const response = await retailClient.createProduct(request);
-      console.log(`Product ${response[0].id} created`);
-      resolve(response[0]);
-    } catch (err) {
-      reject(err);
-    }
-  });
+  // Run request
+  const response = await retailClient.createProduct(request);
+  console.log(`Product ${response[0].id} created`);
+  return response[0];
 };
 
-const getProduct = (name) => {
-  const retailClient = new ProductServiceClient();
+const getProduct = async (name) => {
+  const apiEndpoint = 'retail.googleapis.com';
+  const retailClient = new ProductServiceClient({ apiEndpoint });
 
-  return new Promise(async (resolve, reject) => {
-    try {
-      // Construct request
-      const request = {
-        name,
-      };
+  // Construct request
+  const request = {
+    name,
+  };
 
-      // Run request
-      const response = await retailClient.getProduct(request);
-      resolve(response);
-    } catch (err) {
-      reject(err);
-    }
-  });
+  // Run request
+  const response = await retailClient.getProduct(request);
+  return response;
 };
 
-const deleteProduct = (name) => {
-  const retailClient = new ProductServiceClient();
+const deleteProduct = async (name) => {
+  const apiEndpoint = 'retail.googleapis.com';
+  const retailClient = new ProductServiceClient({ apiEndpoint });
 
-  return new Promise(async (resolve, reject) => {
-    try {
-      // Construct request
-      const request = {
-        name,
-      };
+  // Construct request
+  const request = {
+    name,
+  };
 
-      // Run request
-      const response = await retailClient.deleteProduct(request);
-      resolve(response);
-    } catch (err) {
-      reject(err);
-    }
-  });
+  // Run request
+  const response = await retailClient.deleteProduct(request);
+  return response;
 };
 
 const deleteProducts = (projectNumber, ids) => {
-  const retailClient = new ProductServiceClient();
+  const apiEndpoint = 'retail.googleapis.com';
+  const retailClient = new ProductServiceClient({ apiEndpoint });
 
   return new Promise(async (resolve, reject) => {
     try {
@@ -132,46 +119,19 @@ const deleteProducts = (projectNumber, ids) => {
   });
 };
 
-const getProjectId = () => {
-  return new Promise((resolve, reject) => {
-    const command = 'gcloud config get-value project --format json';
-    exec(command, (error, stdout, stderr) => {
-      if (error) {
-        reject(error);
-      } else if (stdout) {
-        resolve(JSON.parse(stdout));
-      } else if (stderr) {
-        reject(stderr);
-      }
-    });
-  });
+const getBucketsList = async () => {
+  const storage = new Storage();
+  const [buckets] = await storage.getBuckets();
+  const bucketNames = buckets.map((item) => item.name);
+  console.log(bucketNames);
+  resolve(buckets);
 };
 
-const getBucketsList = () => {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const storage = new Storage();
-      const [buckets] = await storage.getBuckets();
-      const bucketNames = buckets.map((item) => item.name);
-      console.log(bucketNames);
-      resolve(buckets);
-    } catch (error) {
-      reject(error);
-    }
-  });
-};
-
-const isBucketExist = (name) => {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const storage = new Storage();
-      const [buckets] = await storage.getBuckets();
-      const bucketNames = buckets.map((item) => item.name);
-      bucketNames.indexOf(name) !== -1 ? resolve(true) : resolve(false);
-    } catch (error) {
-      reject(error);
-    }
-  });
+const isBucketExist = async (name) => {
+  const storage = new Storage();
+  const [buckets] = await storage.getBuckets();
+  const bucketNames = buckets.map((item) => item.name);
+  return bucketNames.indexOf(name) !== -1 ? true : false;
 };
 
 const createBucket = (name) => {
@@ -197,62 +157,35 @@ const createBucket = (name) => {
   });
 };
 
-const deleteBucket = (name) => {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const storage = new Storage();
-      await storage.bucket(name).delete();
-      console.log(`Bucket ${name} deleted`);
-      resolve();
-    } catch (error) {
-      reject(error);
-    }
+const deleteBucket = async (name) => {
+  const storage = new Storage();
+  await storage.bucket(name).delete();
+  console.log(`Bucket ${name} deleted`);
+};
+
+const uploadFile = async (bucketName, filePath, destFileName) => {
+  const storage = new Storage();
+  await storage.bucket(bucketName).upload(filePath, {
+    destination: destFileName,
+  });
+  console.log(`File ${destFileName} uploaded to ${bucketName}`);
+};
+
+const listFiles = async (bucketName) => {
+  const storage = new Storage();
+  const [files] = await storage.bucket(bucketName).getFiles();
+
+  console.log('Files:');
+  files.forEach((file) => {
+    console.log(file.name);
   });
 };
 
-const uploadFile = (bucketName, filePath, destFileName) => {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const storage = new Storage();
-      await storage.bucket(bucketName).upload(filePath, {
-        destination: destFileName,
-      });
-      console.log(`File ${destFileName} uploaded to ${bucketName}`);
-      resolve();
-    } catch (error) {
-      reject(error);
-    }
-  });
-};
-
-const listFiles = (bucketName) => {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const storage = new Storage();
-      const [files] = await storage.bucket(bucketName).getFiles();
-
-      console.log('Files:');
-      files.forEach((file) => {
-        console.log(file.name);
-      });
-      resolve();
-    } catch (error) {
-      reject(error);
-    }
-  });
-};
-
-const isDatasetExist = (datasetId) => {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const bigquery = new BigQuery();
-      const [datasets] = await bigquery.getDatasets();
-      const datasetIds = datasets.map((dataset) => dataset.id);
-      datasetIds.indexOf(datasetId) !== -1 ? resolve(true) : resolve(false);
-    } catch (error) {
-      reject(error);
-    }
-  });
+const isDatasetExist = async (datasetId) => {
+  const bigquery = new BigQuery();
+  const [datasets] = await bigquery.getDatasets();
+  const datasetIds = datasets.map((dataset) => dataset.id);
+  return datasetIds.indexOf(datasetId) !== -1 ? true : false;
 };
 
 const createBqDataset = (datasetId) => {
@@ -279,43 +212,28 @@ const createBqDataset = (datasetId) => {
   });
 };
 
-const deleteBqDataset = (datasetId) => {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const bigquery = new BigQuery();
-      await bigquery.dataset(datasetId).delete({ force: true });
-      console.log(`Dataset ${dataset.id} deleted.`);
-      resolve();
-    } catch (error) {
-      reject(error);
-    }
-  });
+const deleteBqDataset = async (datasetId) => {
+  const bigquery = new BigQuery();
+  await bigquery.dataset(datasetId).delete({ force: true });
+  console.log(`Dataset ${datasetId} deleted.`);
 };
 
-const isTableExist = (datasetId, tableId) => {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const bigquery = new BigQuery();
-      const [tables] = await bigquery.dataset(datasetId).getTables();
-      const tableIds = tables.map((table) => table.id);
-      tableIds.indexOf(tableId) !== -1 ? resolve(true) : resolve(false);
-    } catch (error) {
-      reject(error);
-    }
-  });
+const isTableExist = async (datasetId, tableId) => {
+  const bigquery = new BigQuery();
+  const [tables] = await bigquery.dataset(datasetId).getTables();
+  const tableIds = tables.map((table) => table.id);
+  return tableIds.indexOf(tableId) !== -1 ? true : false;
 };
 
-const createBqTable = (datasetId, tableId) => {
+const createBqTable = (datasetId, tableId, schemaFile) => {
   return new Promise(async (resolve, reject) => {
     try {
       if (await isTableExist(datasetId, tableId)) {
         console.log(`Table ${tableId} already exists`);
         resolve();
       } else {
-        const productSchemaFile = fs.readFileSync(
-          'resources/product_schema.json'
-        );
-        const schema = JSON.parse(productSchemaFile);
+        const schemaFileData = fs.readFileSync(schemaFile);
+        const schema = JSON.parse(schemaFileData);
 
         const bigquery = new BigQuery();
         const options = {
@@ -337,33 +255,78 @@ const createBqTable = (datasetId, tableId) => {
   });
 };
 
-const uploadDataToBqTable = (datasetId, tableId, source) => {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const productSchemaFile = fs.readFileSync(
-        'resources/product_schema.json'
-      );
-      const schema = {
-        fields: JSON.parse(productSchemaFile),
-      };
+const deleteBqTable = async (datasetId, tableId) => {
+  const bigquery = new BigQuery();
+  await bigquery.dataset(datasetId).table(tableId).delete({ force: true });
+  console.log(`Table ${tableId} deleted.`);
+};
 
-      const bigquery = new BigQuery();
-      const options = {
-        sourceFormat: 'NEWLINE_DELIMITED_JSON',
-        schema,
-        location: 'US',
-      };
-      const [job] = await bigquery
-        .dataset(datasetId)
-        .table(tableId)
-        .load(source, options);
-      // load() waits for the job to finish
-      console.log(`Job ${job.id} completed.`);
-      resolve();
-    } catch (error) {
-      reject(error);
-    }
-  });
+const uploadDataToBqTable = async (datasetId, tableId, source, schemaFile) => {
+  const schemaFileData = fs.readFileSync(schemaFile);
+  const schema = {
+    fields: JSON.parse(schemaFileData),
+  };
+
+  const bigquery = new BigQuery();
+  const options = {
+    sourceFormat: 'NEWLINE_DELIMITED_JSON',
+    schema,
+    location: 'US',
+  };
+  const [job] = await bigquery
+    .dataset(datasetId)
+    .table(tableId)
+    .load(source, options);
+  // load() waits for the job to finish
+  console.log(`Job ${job.id} completed.`);
+};
+
+const writeUserEvent = async (visitorId) => {
+  const apiEndpoint = 'retail.googleapis.com';
+  const projectNumber = process.env['PROJECT_NUMBER'];
+  const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog`;
+  const retailClient = new UserEventServiceClient({ apiEndpoint });
+
+  const userEvent = {
+    eventType: 'detail-page-view',
+    visitorId,
+    eventTime: {
+      seconds: Math.round(Date.now() / 1000),
+    },
+    productDetails: [
+      {
+        product: {
+          id: 'test_id',
+        },
+        quantity: {
+          value: 3,
+        },
+      },
+    ],
+  };
+
+  const request = {
+    parent,
+    userEvent,
+  };
+
+  const response = await retailClient.writeUserEvent(request);
+  return response[0];
+};
+
+const purgeUserEvents = async (parent, visitorId) => {
+  const apiEndpoint = 'retail.googleapis.com';
+  const retailClient = new UserEventServiceClient({ apiEndpoint });
+  const request = {
+    parent,
+    filter: `visitorId="${visitorId}"`,
+    force: true,
+  };
+
+  const [operation] = await retailClient.purgeUserEvents(request);
+  console.log(
+    `Purge operation in progress.. Operation name: ${operation.name}`
+  );
 };
 
 module.exports = {
@@ -371,7 +334,6 @@ module.exports = {
   getProduct,
   deleteProduct,
   deleteProducts,
-  getProjectId,
   createBucket,
   deleteBucket,
   getBucketsList,
@@ -380,5 +342,8 @@ module.exports = {
   createBqDataset,
   deleteBqDataset,
   createBqTable,
+  deleteBqTable,
   uploadDataToBqTable,
+  writeUserEvent,
+  purgeUserEvents,
 };

@@ -25,7 +25,8 @@ const execSync = (cmd) => cp.execSync(cmd, { encoding: 'utf-8' });
 const cwd = path.join(__dirname, '..');
 
 describe('Import product from inline source', () => {
-  const retailClient = new ProductServiceClient();
+  const apiEndpoint = 'retail.googleapis.com';
+  const retailClient = new ProductServiceClient({ apiEndpoint });
   const projectNumber = process.env['PROJECT_NUMBER'];
 
   const id1 = Math.random().toString(36).slice(2).toUpperCase();

@@ -43,7 +43,8 @@ describe('Search with query expansion spec', () => {
   });
 
   describe('Search with query expansion spec sample result', () => {
-    const retailClient = new SearchServiceClient();
+    const apiEndpoint = 'retail.googleapis.com';
+    const retailClient = new SearchServiceClient({ apiEndpoint });
     const projectNumber = process.env['PROJECT_NUMBER'];
     const request = {
       placement: `projects/${projectNumber}/locations/global/catalogs/default_catalog/placements/default_search`,

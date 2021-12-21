@@ -22,6 +22,7 @@ async function main(generatedProductId) {
   const utils = require('../setup/setup_cleanup');
 
   const projectNumber = process.env['PROJECT_NUMBER'];
+  const apiEndpoint = 'retail.googleapis.com';
 
   // Create product
   const createdProduct = await utils.createProduct(
@@ -55,26 +56,20 @@ async function main(generatedProductId) {
   const updateMask = {};
 
   // Instantiates a client.
-  const retailClient = new ProductServiceClient();
+  const retailClient = new ProductServiceClient({ apiEndpoint });
 
-  const callUpdateProduct = () => {
-    return new Promise(async (resolve, reject) => {
-      try {
-        // Construct request
-        const request = {
-          product,
-        };
-        console.log('Update product request:', request);
+  const callUpdateProduct = async () => {
+    // Construct request
+    const request = {
+      product,
+    };
+    console.log('Update product request:', request);
 
-        // Run request
-        const response = await retailClient.updateProduct(request);
-        console.log('Updated product:', response);
+    // Run request
+    const response = await retailClient.updateProduct(request);
+    console.log('Updated product:', response);
 
-        resolve(response[0]);
-      } catch (err) {
-        reject(err);
-      }
-    });
+    return response[0];
   };
 
   // Update product

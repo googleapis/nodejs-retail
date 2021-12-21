@@ -22,6 +22,7 @@ async function main() {
   const { SearchServiceClient } = require('@google-cloud/retail');
 
   const projectNumber = process.env['PROJECT_NUMBER'];
+  const apiEndpoint = 'retail.googleapis.com';
 
   // Placement is used to identify the Serving Config name.
   const placement = `projects/${projectNumber}/locations/global/catalogs/default_catalog/placements/default_search`;
@@ -40,7 +41,7 @@ async function main() {
   const pageSize = 10;
 
   // Instantiates a client.
-  const retailClient = new SearchServiceClient();
+  const retailClient = new SearchServiceClient({ apiEndpoint });
 
   const IResponseParams = {
     ISearchResult: 0,
