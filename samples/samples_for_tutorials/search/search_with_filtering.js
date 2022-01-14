@@ -35,7 +35,7 @@ async function main() {
 
   // The filter syntax consists of an expression language for constructing a
   // predicate from one or more fields of the products being filtered.
-  const filter = '(colorFamily: ANY("Black"))'; // TRY DIFFERENT FILTER EXPRESSIONS
+  const filter = '(colorFamilies: ANY("Black"))'; // TRY DIFFERENT FILTER EXPRESSIONS
 
   // Maximum number of Products to return.
   const pageSize = 10;
@@ -66,8 +66,8 @@ async function main() {
     const response = await retailClient.search(request, {
       autoPaginate: false,
     });
-    const searchResult = response[IResponseParams.ISearchResponse];
-    console.log('Search result: ', JSON.stringify(searchResult, null, 4));
+    const searchResponse = response[IResponseParams.ISearchResponse];
+    console.log('Search result: ', JSON.stringify(searchResponse, null, 4));
     console.log('Search end');
   };
 

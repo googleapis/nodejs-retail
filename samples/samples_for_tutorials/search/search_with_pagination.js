@@ -68,8 +68,8 @@ async function main() {
         const response = await retailClient.search(request, {
           autoPaginate: false,
         });
-        const searchResult = response[IResponseParams.ISearchResponse];
-        console.log('Search result: ', JSON.stringify(searchResult, null, 4));
+        const searchResponse = response[IResponseParams.ISearchResponse];
+        console.log('Search result: ', JSON.stringify(searchResponse, null, 4));
         pageToken = getNextPageToken(response);
         console.log('Next page token:', getNextPageToken(response));
         console.log('Search end');

@@ -50,7 +50,7 @@ describe('Search with boost spec', () => {
       query: 'Hoodie',
       visitorId: '12345',
       boostSpec: {
-        condition: '(colorFamily: ANY("Blue"))',
+        condition: '(colorFamilies: ANY("Blue"))',
         boost: 0.0,
       },
     };

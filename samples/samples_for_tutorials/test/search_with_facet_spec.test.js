@@ -48,7 +48,7 @@ describe('Search with facet spec', () => {
       placement: `projects/${projectNumber}/locations/global/catalogs/default_catalog/placements/default_search`,
       query: 'Tee',
       visitorId: '12345',
-      facetSpecs: [{ facetKey: { key: 'colorFamilies', intervals: [] } }],
+      facetSpecs: [{ facetKey: { key: 'colorFamilies' } }],
       pageSize: 10,
     };
     const IResponseParams = {

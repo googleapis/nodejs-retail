@@ -124,7 +124,7 @@ const getBucketsList = async () => {
   const [buckets] = await storage.getBuckets();
   const bucketNames = buckets.map((item) => item.name);
   console.log(bucketNames);
-  resolve(buckets);
+  return buckets;
 };
 
 const isBucketExist = async (name) => {
@@ -157,10 +157,11 @@ const createBucket = (name) => {
   });
 };
 
-const deleteBucket = async (name) => {
+const deleteBucket = async (bucketName) => {
   const storage = new Storage();
-  await storage.bucket(name).delete();
-  console.log(`Bucket ${name} deleted`);
+  await storage.bucket(bucketName).deleteFiles({force: true});
+  await storage.bucket(bucketName).delete();
+  console.log(`Bucket ${bucketName} deleted`);
 };
 
 const uploadFile = async (bucketName, filePath, destFileName) => {

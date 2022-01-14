@@ -34,7 +34,7 @@ async function main() {
   const visitorId = '12345';
 
   //Facet specifications for faceted search.
-  const facetSpecs = [{ facetKey: { key: 'colorFamilies', intervals: [] } }]; //PUT THE INTERVALS HERE
+  const facetSpecs = [{ facetKey: { key: 'colorFamilies' } }]; //PUT THE INTERVALS HERE
 
   // Maximum number of Products to return.
   const pageSize = 10;
@@ -64,8 +64,8 @@ async function main() {
     const response = await retailClient.search(request, {
       autoPaginate: false,
     });
-    const searchResult = response[IResponseParams.ISearchResponse];
-    console.log('Search result: ', JSON.stringify(searchResult, null, 4));
+    const searchResponse = response[IResponseParams.ISearchResponse];
+    console.log('Search result: ', JSON.stringify(searchResponse, null, 4));
     console.log('Search end');
   };
 

@@ -48,7 +48,7 @@ describe('Search with filtering', () => {
       placement: `projects/${projectNumber}/locations/global/catalogs/default_catalog/placements/default_search`,
       query: 'Tee',
       visitorId: '12345',
-      filter: '(colorFamily: ANY("Black"))',
+      filter: '(colorFamilies: ANY("Black"))',
     };
     const IResponseParams = {
       ISearchResult: 0,

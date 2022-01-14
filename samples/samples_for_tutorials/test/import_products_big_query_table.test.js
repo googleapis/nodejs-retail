@@ -23,7 +23,7 @@ const execSync = (cmd) => cp.execSync(cmd, { encoding: 'utf-8' });
 
 const cwd = path.join(__dirname, '..');
 
-describe('Import product from gcs', () => {
+describe('Import product from big query table', () => {
   let stdout;
 
   before(async () => {
