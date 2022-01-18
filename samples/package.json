@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-retail",
+  "private": true,
+  "description": "NodeJS code samples for Google Retails Search API",
+  "license": "Apache-2.0",
+  "author": "Google LLC",
+  "engines": {
+    "node": ">=10"
+  },
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "test": "c8 mocha --timeout 600000 test/*.test.js"
+  },
+  "dependencies": {
+    "@google-cloud/retail": "^1.5.0",
+    "@google-cloud/bigquery": "^5.9.2",
+    "@google-cloud/storage": "^5.16.1"
+  },
+  "devDependencies": {
+    "c8": "^7.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^8.0.0"
+  }
+}
