@@ -16,24 +16,24 @@
 
 const path = require('path');
 const cp = require('child_process');
-const { before, describe, it, after } = require('mocha');
-const { ProductServiceClient } = require('@google-cloud/retail');
-const { assert, expect } = require('chai');
+const {before, describe, it, after} = require('mocha');
+const {ProductServiceClient} = require('@google-cloud/retail');
+const {assert, expect} = require('chai');
 
-const execSync = (cmd) => cp.execSync(cmd, { encoding: 'utf-8' });
+const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
 const cwd = path.join(__dirname, '..');
 
 describe('Delete product', () => {
   const apiEndpoint = 'retail.googleapis.com';
-  const retailClient = new ProductServiceClient({ apiEndpoint });
+  const retailClient = new ProductServiceClient({apiEndpoint});
   const productId = Math.random().toString(36).slice(2).toUpperCase();
   const projectNumber = process.env['PROJECT_NUMBER'];
   const name = `projects/${projectNumber}/locations/global/catalogs/default_catalog/branches/default_branch/products/${productId}`;
   let stdout;
 
   before(async () => {
-    stdout = execSync(`node product/delete_product.js ${productId}`, { cwd });
+    stdout = execSync(`node product/delete_product.js ${productId}`, {cwd});
   });
 
   it('should check that product created', () => {
@@ -52,10 +52,10 @@ describe('Delete product', () => {
 
   after(async () => {
     try {
-      const product = await retailClient.getProduct({ name: name });
+      const product = await retailClient.getProduct({name: name});
       expect(product, 'The product not deleted').to.be.undefined;
     } catch (err) {
-      expect(err, 'Bad error code').to.include({ code: 5 });
+      expect(err, 'Bad error code').to.include({code: 5});
     }
   });
 });

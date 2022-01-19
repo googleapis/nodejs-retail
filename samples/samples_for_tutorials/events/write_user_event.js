@@ -18,7 +18,7 @@ async function main() {
   // [START retail_write_user_event]
 
   // Imports the Google Cloud client library.
-  const { UserEventServiceClient } = require('@google-cloud/retail').v2;
+  const {UserEventServiceClient} = require('@google-cloud/retail').v2;
   const utils = require('../setup/setup_cleanup');
 
   const projectNumber = process.env['PROJECT_NUMBER'];
@@ -38,7 +38,7 @@ async function main() {
   };
 
   // Instantiates a client.
-  const retailClient = new UserEventServiceClient({ apiEndpoint });
+  const retailClient = new UserEventServiceClient({apiEndpoint});
 
   const callWriteUserEvent = async () => {
     // Construct request
@@ -64,7 +64,7 @@ async function main() {
   // [END retail_write_user_event]
 }
 
-process.on('unhandledRejection', (err) => {
+process.on('unhandledRejection', err => {
   console.error(err.message);
   process.exitCode = 1;
 });

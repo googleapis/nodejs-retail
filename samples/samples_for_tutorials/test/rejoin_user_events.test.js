@@ -16,10 +16,10 @@
 
 const path = require('path');
 const cp = require('child_process');
-const { before, describe, it } = require('mocha');
-const { assert, expect } = require('chai');
+const {before, describe, it} = require('mocha');
+const {assert, expect} = require('chai');
 
-const execSync = (cmd) => cp.execSync(cmd, { encoding: 'utf-8' });
+const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
 const cwd = path.join(__dirname, '..');
 
@@ -29,7 +29,7 @@ describe('Rejoin user events', () => {
   let stdout;
 
   before(async () => {
-    stdout = execSync(`node events/rejoin_user_events.js`, { cwd });
+    stdout = execSync('node events/rejoin_user_events.js', {cwd});
   });
 
   it('should check that new event already created', () => {
@@ -41,12 +41,12 @@ describe('Rejoin user events', () => {
   });
 
   it('should check that rejoin operation started', () => {
-    const regex = new RegExp(`Rejoin operation in progress`, 'g');
+    const regex = new RegExp('Rejoin operation in progress', 'g');
     assert.match(stdout, regex);
   });
 
   it('should check that purge operation started', () => {
-    const regex = new RegExp(`Purge operation in progress`, 'g');
+    const regex = new RegExp('Purge operation in progress', 'g');
     assert.match(stdout, regex);
   });
 });

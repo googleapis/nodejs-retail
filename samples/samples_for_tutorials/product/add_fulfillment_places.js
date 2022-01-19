@@ -18,7 +18,7 @@ async function main(generatedProductId) {
   // [START retail_add_remove_fulfillment_places]
 
   // Imports the Google Cloud client library.
-  const { ProductServiceClient } = require('@google-cloud/retail').v2;
+  const {ProductServiceClient} = require('@google-cloud/retail').v2;
   const utils = require('../setup/setup_cleanup');
 
   const projectNumber = process.env['PROJECT_NUMBER'];
@@ -39,7 +39,7 @@ async function main(generatedProductId) {
 
   // The IDs for this type, such as the store IDs for "pickup-in-store" or the region IDs for
   // "same-day-delivery" to be added for this type.
-  let placeIds = ['store1', 'store2', 'store3'];
+  const placeIds = ['store1', 'store2', 'store3'];
 
   // The time when the fulfillment updates are issued, used to prevent
   // out-of-order updates on fulfillment information.
@@ -97,7 +97,7 @@ async function main(generatedProductId) {
   // [END retail_add_remove_fulfillment_places]
 }
 
-process.on('unhandledRejection', (err) => {
+process.on('unhandledRejection', err => {
   console.error('ERROR', err.message);
   process.exitCode = 1;
 });

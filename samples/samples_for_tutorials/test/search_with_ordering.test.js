@@ -16,11 +16,11 @@
 
 const path = require('path');
 const cp = require('child_process');
-const { before, describe, it } = require('mocha');
-const { SearchServiceClient } = require('@google-cloud/retail');
-const { assert, expect } = require('chai');
+const {before, describe, it} = require('mocha');
+const {SearchServiceClient} = require('@google-cloud/retail');
+const {assert, expect} = require('chai');
 
-const execSync = (cmd) => cp.execSync(cmd, { encoding: 'utf-8' });
+const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 const cwd = path.join(__dirname, '..');
 
 describe('Search with ordering', () => {
@@ -28,7 +28,7 @@ describe('Search with ordering', () => {
     let stdout;
 
     before(async () => {
-      stdout = execSync(`node search/search_with_ordering.js`, { cwd });
+      stdout = execSync('node search/search_with_ordering.js', {cwd});
     });
 
     it('should show that search successfully started', () => {
@@ -42,7 +42,7 @@ describe('Search with ordering', () => {
 
   describe('Search with ordering sample result', () => {
     const apiEndpoint = 'retail.googleapis.com';
-    const retailClient = new SearchServiceClient({ apiEndpoint });
+    const retailClient = new SearchServiceClient({apiEndpoint});
     const projectNumber = process.env['PROJECT_NUMBER'];
     const request = {
       placement: `projects/${projectNumber}/locations/global/catalogs/default_catalog/placements/default_search`,
@@ -58,7 +58,7 @@ describe('Search with ordering', () => {
     let response = [];
 
     before(async () => {
-      response = await retailClient.search(request, { autoPaginate: false });
+      response = await retailClient.search(request, {autoPaginate: false});
     });
 
     it('should be a valid response', () => {
@@ -68,7 +68,7 @@ describe('Search with ordering', () => {
       const searchResponse = response[IResponseParams.ISearchResponse];
       if (searchResult.length) {
         expect(searchResponse.totalSize).to.be.above(0);
-        searchResult.forEach((resultItem) => {
+        searchResult.forEach(resultItem => {
           expect(resultItem, 'It should be an object').to.be.an('object');
           expect(
             resultItem,
@@ -90,8 +90,8 @@ describe('Search with ordering', () => {
     it('should be ordered', () => {
       const searchResult = response[IResponseParams.ISearchResult];
       if (searchResult.length) {
-        let prices = [];
-        searchResult.forEach((item) => {
+        const prices = [];
+        searchResult.forEach(item => {
           prices.push(item.product.priceInfo.price);
         });
         const sortedArrayDesc = [...prices].sort((a, b) => b - a);

@@ -18,7 +18,7 @@ async function main() {
   // [START retail_import_user_events_gcs]
 
   // Imports the Google Cloud client library.
-  const { UserEventServiceClient } = require('@google-cloud/retail').v2;
+  const {UserEventServiceClient} = require('@google-cloud/retail').v2;
 
   const projectNumber = process.env['PROJECT_NUMBER'];
   const bucketName = process.env['EVENTS_BUCKET_NAME'];
@@ -26,7 +26,7 @@ async function main() {
 
   const gcsBucket = `gs://${bucketName}`;
   const gcsErrorsBucket = `gs://${bucketName}/error`;
-  let gcsEventsObject = 'user_events.json';
+  const gcsEventsObject = 'user_events.json';
 
   // TO CHECK ERROR HANDLING USE THE JSON WITH INVALID USER EVENTS
   //gcsEventsObject = "user_events_some_invalid.json"
@@ -48,7 +48,7 @@ async function main() {
   };
 
   // Instantiates a client.
-  const retailClient = new UserEventServiceClient({ apiEndpoint });
+  const retailClient = new UserEventServiceClient({apiEndpoint});
 
   const IResponseParams = {
     IError: 0,
@@ -85,7 +85,7 @@ async function main() {
   // [END retail_import_user_events_gcs]
 }
 
-process.on('unhandledRejection', (err) => {
+process.on('unhandledRejection', err => {
   console.error(err.message);
   process.exitCode = 1;
 });

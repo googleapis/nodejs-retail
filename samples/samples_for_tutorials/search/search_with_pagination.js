@@ -18,7 +18,7 @@ async function main() {
   // [START retail_search_for_products_with_pagination]
 
   // Imports the Google Cloud client library.
-  const { SearchServiceClient } = require('@google-cloud/retail');
+  const {SearchServiceClient} = require('@google-cloud/retail');
 
   const projectNumber = process.env['PROJECT_NUMBER'];
   const apiEndpoint = 'retail.googleapis.com';
@@ -36,13 +36,13 @@ async function main() {
   const pageSize = 6; // TRY DIFFERENT PAGE SIZES, INCLUDING THOSE OVER 100
 
   // A 0-indexed integer that specifies the current offset in search results.
-  let offset = 0; // TRY DIFFERENT OFFSETS TO SEE DIFFERENT PRODUCTS
+  const offset = 0; // TRY DIFFERENT OFFSETS TO SEE DIFFERENT PRODUCTS
 
   //A page token recieved from a previous search call.
   let pageToken = '';
 
   // Instantiates a client.
-  const retailClient = new SearchServiceClient({ apiEndpoint });
+  const retailClient = new SearchServiceClient({apiEndpoint});
 
   const IResponseParams = {
     ISearchResult: 0,
@@ -81,7 +81,7 @@ async function main() {
   };
 
   // Get next page token from the response
-  const getNextPageToken = (response) => {
+  const getNextPageToken = response => {
     return response[IResponseParams.ISearchResponse].nextPageToken;
   };
 
@@ -95,7 +95,7 @@ async function main() {
   // [END retail_search_for_products_with_pagination]
 }
 
-process.on('unhandledRejection', (err) => {
+process.on('unhandledRejection', err => {
   console.error(err.message);
   process.exitCode = 1;
 });

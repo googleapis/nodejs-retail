@@ -24,7 +24,7 @@ async function main() {
   await utils.deleteBucket(bucketName);
 }
 
-process.on('unhandledRejection', (err) => {
+process.on('unhandledRejection', err => {
   console.error(err.message);
   process.exitCode = 1;
 });

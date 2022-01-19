@@ -18,7 +18,7 @@ async function main() {
   // [START retail_import_user_events_inline]
 
   // Imports the Google Cloud client library.
-  const { UserEventServiceClient } = require('@google-cloud/retail').v2;
+  const {UserEventServiceClient} = require('@google-cloud/retail').v2;
 
   const projectNumber = process.env['PROJECT_NUMBER'];
   const apiEndpoint = 'retail.googleapis.com';
@@ -27,7 +27,7 @@ async function main() {
   const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog`;
 
   // Create events
-  const generateEvent = (eventType) => {
+  const generateEvent = eventType => {
     return {
       eventType,
       visitorId: 'visitor_' + Math.random().toString(36).slice(2),
@@ -49,7 +49,7 @@ async function main() {
   };
 
   // Instantiates a client.
-  const retailClient = new UserEventServiceClient({ apiEndpoint });
+  const retailClient = new UserEventServiceClient({apiEndpoint});
 
   const IResponseParams = {
     IError: 0,
@@ -85,7 +85,7 @@ async function main() {
   // [END retail_import_user_events_inline]
 }
 
-process.on('unhandledRejection', (err) => {
+process.on('unhandledRejection', err => {
   console.error(err.message);
   process.exitCode = 1;
 });

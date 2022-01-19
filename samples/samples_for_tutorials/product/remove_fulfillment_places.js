@@ -18,7 +18,7 @@ async function main(generatedProductId) {
   // [START retail_add_remove_fulfillment_places]
 
   // Imports the Google Cloud client library.
-  const { ProductServiceClient } = require('@google-cloud/retail').v2;
+  const {ProductServiceClient} = require('@google-cloud/retail').v2;
   const utils = require('../setup/setup_cleanup');
 
   const projectNumber = process.env['PROJECT_NUMBER'];
@@ -49,7 +49,7 @@ async function main(generatedProductId) {
   };
 
   // Instantiates a client.
-  const retailClient = new ProductServiceClient({ apiEndpoint });
+  const retailClient = new ProductServiceClient({apiEndpoint});
 
   const callRemoveFulfillmentPlaces = () => {
     return new Promise(async (resolve, reject) => {
@@ -91,7 +91,7 @@ async function main(generatedProductId) {
   // [END retail_add_remove_fulfillment_places]
 }
 
-process.on('unhandledRejection', (err) => {
+process.on('unhandledRejection', err => {
   console.error('ERROR', err.message);
   process.exitCode = 1;
 });

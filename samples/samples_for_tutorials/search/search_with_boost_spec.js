@@ -20,7 +20,7 @@ async function main() {
   // results boosting or burying the products that match defined condition.
 
   // Imports the Google Cloud client library.
-  const { SearchServiceClient } = require('@google-cloud/retail');
+  const {SearchServiceClient} = require('@google-cloud/retail');
 
   const projectNumber = process.env['PROJECT_NUMBER'];
   const apiEndpoint = 'retail.googleapis.com';
@@ -44,7 +44,7 @@ async function main() {
   const pageSize = 10;
 
   // Instantiates a client
-  const retailClient = new SearchServiceClient({ apiEndpoint });
+  const retailClient = new SearchServiceClient({apiEndpoint});
 
   const IResponseParams = {
     ISearchResult: 0,
@@ -78,7 +78,7 @@ async function main() {
   // [END retail_search_product_with_boost_spec]
 }
 
-process.on('unhandledRejection', (err) => {
+process.on('unhandledRejection', err => {
   console.error(err.message);
   process.exitCode = 1;
 });

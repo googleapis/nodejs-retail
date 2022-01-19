@@ -16,10 +16,10 @@
 
 const path = require('path');
 const cp = require('child_process');
-const { before, describe, it } = require('mocha');
-const { assert, expect } = require('chai');
+const {before, describe, it} = require('mocha');
+const {assert, expect} = require('chai');
 
-const execSync = (cmd) => cp.execSync(cmd, { encoding: 'utf-8' });
+const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
 const cwd = path.join(__dirname, '..');
 
@@ -27,7 +27,7 @@ describe('Import user events from big query table', () => {
   let stdout;
 
   before(async () => {
-    stdout = execSync(`node events/import_user_events_big_query.js`, {
+    stdout = execSync('node events/import_user_events_big_query.js', {
       cwd,
     });
   });
@@ -37,12 +37,12 @@ describe('Import user events from big query table', () => {
   });
 
   it('should check that events imported correctly', async () => {
-    const regex = new RegExp(`Operation result: .*\n`, 'g');
+    const regex = new RegExp('Operation result: .*\n', 'g');
     assert.match(stdout, regex);
     const string = stdout
       .match(regex)
       .toString()
-      .replace(`Operation result: `, '');
+      .replace('Operation result: ', '');
     const importOperation = JSON.parse(string);
 
     expect(importOperation).to.be.an('array');

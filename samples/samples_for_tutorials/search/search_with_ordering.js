@@ -19,7 +19,7 @@ async function main() {
   // Call Retail API to search for a products in a catalog, order the results by different product fields.
 
   // Imports the Google Cloud client library.
-  const { SearchServiceClient } = require('@google-cloud/retail');
+  const {SearchServiceClient} = require('@google-cloud/retail');
 
   const projectNumber = process.env['PROJECT_NUMBER'];
   const apiEndpoint = 'retail.googleapis.com';
@@ -40,7 +40,7 @@ async function main() {
   const pageSize = 10;
 
   // Instantiates a client
-  const retailClient = new SearchServiceClient({ apiEndpoint });
+  const retailClient = new SearchServiceClient({apiEndpoint});
 
   const IResponseParams = {
     ISearchResult: 0,
@@ -74,7 +74,7 @@ async function main() {
   // [END retail_search_for_products_with_ordering]
 }
 
-process.on('unhandledRejection', (err) => {
+process.on('unhandledRejection', err => {
   console.error(err.message);
   process.exitCode = 1;
 });

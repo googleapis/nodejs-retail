@@ -16,10 +16,10 @@
 
 const path = require('path');
 const cp = require('child_process');
-const { before, describe, it } = require('mocha');
-const { assert } = require('chai');
+const {before, describe, it} = require('mocha');
+const {assert} = require('chai');
 
-const execSync = (cmd) => cp.execSync(cmd, { encoding: 'utf-8' });
+const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
 const cwd = path.join(__dirname, '..');
 
@@ -27,7 +27,7 @@ describe('Get products list', () => {
   let stdout;
 
   before(async () => {
-    stdout = execSync(`node product/get_products_list.js`, { cwd });
+    stdout = execSync('node product/get_products_list.js', {cwd});
   });
 
   it('should check that get products list started', () => {

@@ -16,17 +16,17 @@
 
 const path = require('path');
 const cp = require('child_process');
-const { before, describe, it, after } = require('mocha');
-const { ProductServiceClient } = require('@google-cloud/retail');
-const { assert, expect } = require('chai');
+const {before, describe, it, after} = require('mocha');
+const {ProductServiceClient} = require('@google-cloud/retail');
+const {assert, expect} = require('chai');
 
-const execSync = (cmd) => cp.execSync(cmd, { encoding: 'utf-8' });
+const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
 const cwd = path.join(__dirname, '..');
 
 describe('Import product from inline source', () => {
   const apiEndpoint = 'retail.googleapis.com';
-  const retailClient = new ProductServiceClient({ apiEndpoint });
+  const retailClient = new ProductServiceClient({apiEndpoint});
   const projectNumber = process.env['PROJECT_NUMBER'];
 
   const id1 = Math.random().toString(36).slice(2).toUpperCase();
@@ -47,7 +47,7 @@ describe('Import product from inline source', () => {
   before(async () => {
     stdout = execSync(
       `node product/import_products_inline_source.js ${product1.id} ${product2.id}`,
-      { cwd }
+      {cwd}
     );
   });
 
@@ -56,12 +56,12 @@ describe('Import product from inline source', () => {
   });
 
   it('should check that products imported correctly', async () => {
-    const regex = new RegExp(`Operation result: .*\n`, 'g');
+    const regex = new RegExp('Operation result: .*\n', 'g');
     assert.match(stdout, regex);
     const string = stdout
       .match(regex)
       .toString()
-      .replace(`Operation result: `, '');
+      .replace('Operation result: ', '');
     const importOperation = JSON.parse(string);
 
     expect(importOperation).to.be.an('array');
@@ -82,7 +82,7 @@ describe('Import product from inline source', () => {
   });
 
   it('should check that product deleted', async () => {
-    const regex = new RegExp(`Products deleted`, 'g');
+    const regex = new RegExp('Products deleted', 'g');
     assert.match(stdout, regex);
   });
 
@@ -97,7 +97,7 @@ describe('Import product from inline source', () => {
       expect(importedProduct1, 'The product not deleted').to.be.undefined;
       expect(importedProduct2, 'The product not deleted').to.be.undefined;
     } catch (err) {
-      expect(err, 'Bad error code').to.include({ code: 5 });
+      expect(err, 'Bad error code').to.include({code: 5});
     }
   });
 });

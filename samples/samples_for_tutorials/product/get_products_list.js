@@ -18,7 +18,7 @@ async function main() {
   // [START retail_get_products_list]
 
   // Imports the Google Cloud client library.
-  const { ProductServiceClient } = require('@google-cloud/retail').v2;
+  const {ProductServiceClient} = require('@google-cloud/retail').v2;
 
   const projectNumber = process.env['PROJECT_NUMBER'];
   const apiEndpoint = 'retail.googleapis.com';
@@ -27,7 +27,7 @@ async function main() {
   const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog/branches/default_branch`;
 
   // Instantiates a client.
-  const retailClient = new ProductServiceClient({ apiEndpoint });
+  const retailClient = new ProductServiceClient({apiEndpoint});
 
   async function callListProducts() {
     console.log('Start get products list');
@@ -49,7 +49,7 @@ async function main() {
   // [END retail_get_products_list]
 }
 
-process.on('unhandledRejection', (err) => {
+process.on('unhandledRejection', err => {
   console.error(err.message);
   process.exitCode = 1;
 });

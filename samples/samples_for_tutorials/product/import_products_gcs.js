@@ -18,7 +18,7 @@ async function main() {
   // [START retail_import_products_from_gcs]
 
   // Imports the Google Cloud client library.
-  const { ProductServiceClient } = require('@google-cloud/retail').v2;
+  const {ProductServiceClient} = require('@google-cloud/retail').v2;
 
   const projectNumber = process.env['PROJECT_NUMBER'];
   const bucketName = process.env['BUCKET_NAME'];
@@ -26,13 +26,13 @@ async function main() {
 
   const gcsBucket = `gs://${bucketName}`;
   const gcsErrorsBucket = `gs://${bucketName}/error`;
-  let gcsProductsObject = 'products.json';
+  const gcsProductsObject = 'products.json';
 
   //TO CHECK ERROR HANDLING USE THE JSON WITH INVALID PRODUCT
   //gcsProductsObject = "products_some_invalid.json";
 
   // Placement
-  let parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog/branches/default_branch`;
+  const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog/branches/default_branch`;
   //TO CHECK ERROR HANDLING PASTE THE INVALID CATALOG NAME HERE:
   // parent = "invalid_catalog_name";
 
@@ -56,7 +56,7 @@ async function main() {
   };
 
   // Instantiates a client.
-  const retailClient = new ProductServiceClient({ apiEndpoint });
+  const retailClient = new ProductServiceClient({apiEndpoint});
 
   const callImportProducts = async () => {
     // Construct request
@@ -85,7 +85,7 @@ async function main() {
   // [END retail_import_products_from_gcs]
 }
 
-process.on('unhandledRejection', (err) => {
+process.on('unhandledRejection', err => {
   console.error(err.message);
   process.exitCode = 1;
 });

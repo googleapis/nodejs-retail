@@ -18,7 +18,7 @@ async function main() {
   // [START retail_import_products_from_big_query]
 
   // Imports the Google Cloud client library.
-  const { ProductServiceClient } = require('@google-cloud/retail').v2;
+  const {ProductServiceClient} = require('@google-cloud/retail').v2;
 
   const projectNumber = process.env['PROJECT_NUMBER'];
   const projectId = process.env['PROJECT_ID'];
@@ -57,7 +57,7 @@ async function main() {
   const reconciliationMode = reconciliationModes.FULL;
 
   // Instantiates a client.
-  const retailClient = new ProductServiceClient({ apiEndpoint });
+  const retailClient = new ProductServiceClient({apiEndpoint});
 
   const callImportProducts = async () => {
     // Construct request
@@ -87,7 +87,7 @@ async function main() {
   // [END retail_import_products_from_big_query]
 }
 
-process.on('unhandledRejection', (err) => {
+process.on('unhandledRejection', err => {
   console.error(err.message);
   process.exitCode = 1;
 });
