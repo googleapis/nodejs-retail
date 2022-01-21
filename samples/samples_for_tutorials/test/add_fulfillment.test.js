@@ -53,7 +53,7 @@ describe('Add fulfillment', () => {
   });
 
   it('should check that product updated correctly', async () => {
-    const regex = new RegExp('Updated product: .*\n', 'g');
+    const regex = new RegExp('Updated product: .*\\n', 'g');
     assert.match(stdout, regex);
     const string = stdout
       .match(regex)

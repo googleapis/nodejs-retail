@@ -60,7 +60,10 @@ describe('Update product', () => {
   });
 
   it('should check that product update finished', async () => {
-    const regex = new RegExp(`Product ${productId} update finished: .*\n`, 'g');
+    const regex = new RegExp(
+      `Product ${productId} update finished: .*\\n`,
+      'g'
+    );
     assert.match(stdout, regex);
     const string = stdout
       .match(regex)

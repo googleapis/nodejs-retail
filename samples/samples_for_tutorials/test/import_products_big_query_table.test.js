@@ -37,7 +37,7 @@ describe('Import product from big query table', () => {
   });
 
   it('should check that products imported correctly', async () => {
-    const regex = new RegExp('Operation result: .*\n', 'g');
+    const regex = new RegExp('Operation result: .*\\n', 'g');
     assert.match(stdout, regex);
     const string = stdout
       .match(regex)

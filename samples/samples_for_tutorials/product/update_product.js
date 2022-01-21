@@ -52,9 +52,6 @@ async function main(generatedProductId) {
     availability: 'OUT_OF_STOCK',
   };
 
-  // Indicates which fields in the provided product to update
-  const updateMask = {};
-
   // Instantiates a client.
   const retailClient = new ProductServiceClient({apiEndpoint});
 

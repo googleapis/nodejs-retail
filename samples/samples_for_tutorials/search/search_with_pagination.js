@@ -38,8 +38,8 @@ async function main() {
   // A 0-indexed integer that specifies the current offset in search results.
   const offset = 0; // TRY DIFFERENT OFFSETS TO SEE DIFFERENT PRODUCTS
 
-  //A page token recieved from a previous search call.
-  let pageToken = '';
+  //A page token received from a previous search call.
+  const pageToken = '';
 
   // Instantiates a client.
   const retailClient = new SearchServiceClient({apiEndpoint});
@@ -50,34 +50,27 @@ async function main() {
     ISearchResponse: 2,
   };
 
-  const callSearch = () => {
-    return new Promise(async (resolve, reject) => {
-      try {
-        console.log('Search start');
-        // Construct request
-        const request = {
-          placement,
-          query,
-          visitorId,
-          pageSize,
-          offset,
-          pageToken,
-        };
+  const callSearch = async () => {
+    console.log('Search start');
+    // Construct request
+    const request = {
+      placement,
+      query,
+      visitorId,
+      pageSize,
+      offset,
+      pageToken,
+    };
 
-        // Run request
-        const response = await retailClient.search(request, {
-          autoPaginate: false,
-        });
-        const searchResponse = response[IResponseParams.ISearchResponse];
-        console.log('Search result: ', JSON.stringify(searchResponse, null, 4));
-        pageToken = getNextPageToken(response);
-        console.log('Next page token:', getNextPageToken(response));
-        console.log('Search end');
-        resolve();
-      } catch (error) {
-        reject(error);
-      }
+    // Run request
+    const response = await retailClient.search(request, {
+      autoPaginate: false,
     });
+    const searchResponse = response[IResponseParams.ISearchResponse];
+    console.log('Search result: ', JSON.stringify(searchResponse, null, 4));
+    pageToken = getNextPageToken(response);
+    console.log('Next page token:', getNextPageToken(response));
+    console.log('Search end');
   };
 
   // Get next page token from the response
@@ -89,8 +82,6 @@ async function main() {
   await callSearch();
 
   //PASTE CALL WITH NEXT PAGE TOKEN HERE:
-
-  //PASTE CALL WITH OFFSET HERE:
 
   // [END retail_search_for_products_with_pagination]
 }

@@ -38,7 +38,7 @@ describe('Write user event', () => {
   });
 
   it('should check that new event created correctly', () => {
-    const regex = new RegExp('Operation result: .*\n', 'g');
+    const regex = new RegExp('Operation result: .*\\n', 'g');
     assert.match(stdout, regex);
     const string = stdout
       .match(regex)

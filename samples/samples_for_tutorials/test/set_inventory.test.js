@@ -18,7 +18,7 @@ const path = require('path');
 const cp = require('child_process');
 const {before, describe, it, after} = require('mocha');
 const {ProductServiceClient} = require('@google-cloud/retail');
-const {assert, expect, should} = require('chai');
+const {assert, expect} = require('chai');
 
 const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
@@ -68,7 +68,7 @@ describe('Set inventory', () => {
   });
 
   it('should check that product updated correctly', async () => {
-    const regex = new RegExp(`Updated product ${productId}: .*\n`, 'g');
+    const regex = new RegExp(`Updated product ${productId}: .*\\n`, 'g');
     assert.match(stdout, regex);
     const string = stdout
       .match(regex)

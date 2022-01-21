@@ -52,9 +52,6 @@ async function main(generatedProductId) {
     availability: 'IN_STOCK',
   };
 
-  // Indicates which inventory fields in the provided product to update
-  const setMask = {};
-
   // The time when the request is issued, used to prevent
   // out-of-order updates on inventory fields with the last update time recorded.
   const setTime = {
@@ -68,35 +65,24 @@ async function main(generatedProductId) {
   // Instantiates a client.
   const retailClient = new ProductServiceClient({apiEndpoint});
 
-  const callSetInventory = () => {
-    return new Promise(async (resolve, reject) => {
-      try {
-        // Construct request
-        const request = {
-          inventory: product,
-          setTime,
-          allowMissing,
-        };
-        console.log('Set inventory request:', request);
+  const callSetInventory = async () => {
+    // Construct request
+    const request = {
+      inventory: product,
+      setTime,
+      allowMissing,
+    };
+    console.log('Set inventory request:', request);
 
-        // Run request
-        await retailClient.setInventory(request);
-        console.log('Waiting to complete set inventory operation..');
-
-        // This is a long running operation and its result is not immediately present with get operations,
-        // thus we simulate wait with setTimeout method.
-        setTimeout(() => {
-          resolve();
-        }, 50000);
-      } catch (err) {
-        reject(err);
-      }
-    });
+    // Run request
+    await retailClient.setInventory(request);
+    console.log('Waiting to complete set inventory operation..');
   };
 
   // Set inventory
   console.log('Start set inventory');
   await callSetInventory();
+  await utils.delay(70000);
   console.log('Set inventory finished');
 
   // Get product
