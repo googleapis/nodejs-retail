@@ -43,6 +43,8 @@ function main(placement, visitorId) {
    *  could be implemented with an HTTP cookie, which should be able to uniquely
    *  identify a visitor on a single device. This unique identifier should not
    *  change if the visitor logs in or out of the website.
+   *  This should be the same identifier as
+   *  UserEvent.visitor_id google.cloud.retail.v2beta.UserEvent.visitor_id.
    *  The field must be a UTF-8 encoded string with a length limit of 128
    *  characters. Otherwise, an INVALID_ARGUMENT error is returned.
    */
@@ -123,11 +125,12 @@ function main(placement, visitorId) {
   /**
    *  Boost specification to boost certain products. See more details at this
    *  user guide (https://cloud.google.com/retail/docs/boosting).
-   *  Notice that if both ServingConfig.boost_control_ids   and
-   *  SearchRequest.boost_spec  are set, the boost conditions from both places
-   *  are evaluated. If a search request matches multiple boost conditions,
-   *  the final boost score is equal to the sum of the boost scores from all
-   *  matched boost conditions.
+   *  Notice that if both
+   *  ServingConfig.boost_control_ids google.cloud.retail.v2beta.ServingConfig.boost_control_ids 
+   *  and SearchRequest.boost_spec  are set, the boost conditions from both
+   *  places are evaluated. If a search request matches multiple boost
+   *  conditions, the final boost score is equal to the sum of the boost scores
+   *  from all matched boost conditions.
    */
   // const boostSpec = {}
   /**
@@ -139,14 +142,13 @@ function main(placement, visitorId) {
   /**
    *  The keys to fetch and rollup the matching
    *  variant google.cloud.retail.v2beta.Product.Type.VARIANT 
-   *  Product google.cloud.retail.v2beta.Product s attributes. The attributes
-   *  from all the matching
+   *  Product google.cloud.retail.v2beta.Product s attributes,
+   *  FulfillmentInfo google.cloud.retail.v2beta.FulfillmentInfo  or
+   *  LocalInventory  s attributes. The attributes from all the matching
    *  variant google.cloud.retail.v2beta.Product.Type.VARIANT 
-   *  Product google.cloud.retail.v2beta.Product s are merged and
-   *  de-duplicated. Notice that rollup
-   *  variant google.cloud.retail.v2beta.Product.Type.VARIANT 
-   *  Product google.cloud.retail.v2beta.Product s attributes will lead to
-   *  extra query latency. Maximum number of keys is 10.
+   *  Product google.cloud.retail.v2beta.Product s or LocalInventory  s are
+   *  merged and de-duplicated. Notice that rollup attributes will lead to extra
+   *  query latency. Maximum number of keys is 30.
    *  For FulfillmentInfo google.cloud.retail.v2beta.FulfillmentInfo, a
    *  fulfillment type and a fulfillment ID must be provided in the format of
    *  "fulfillmentType.fulfillmentId". E.g., in "pickupInStore.store123",
@@ -158,6 +160,7 @@ function main(placement, visitorId) {
    *  * discount
    *  * variantId
    *  * inventory(place_id,price)
+   *  * inventory(place_id,original_price)
    *  * inventory(place_id,attributes.key), where key is any key in the
    *    Product.inventories.attributes   map.
    *  * attributes.key, where key is any key in the
