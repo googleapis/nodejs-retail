@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+
 'use strict';
 
 function main(product, localInventories) {
@@ -30,7 +31,7 @@ function main(product, localInventories) {
   // const product = 'abc123'
   /**
    *  Required. A list of inventory information at difference places. Each place
-   *  is identified by its place ID. At most 1000 inventories are allowed per
+   *  is identified by its place ID. At most 3000 inventories are allowed per
    *  request.
    */
   // const localInventories = 1234
