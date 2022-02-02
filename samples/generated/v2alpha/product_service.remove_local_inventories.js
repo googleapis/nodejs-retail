@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+
 'use strict';
 
 function main(product, placeIds) {
@@ -30,7 +31,7 @@ function main(product, placeIds) {
   // const product = 'abc123'
   /**
    *  Required. A list of place IDs to have their inventory deleted.
-   *  At most 1000 place IDs are allowed per request.
+   *  At most 3000 place IDs are allowed per request.
    */
   // const placeIds = 'abc123'
   /**
