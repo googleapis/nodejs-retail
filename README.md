@@ -86,6 +86,7 @@ Samples are in the [`samples/`](https://github.com/googleapis/nodejs-retail/tree
 
 | Sample                      | Source Code                       | Try it |
 | --------------------------- | --------------------------------- | ------ |
+| Mocha.config | [source code](https://github.com/googleapis/nodejs-retail/blob/main/samples/mocha.config.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-retail&page=editor&open_in_editor=samples/mocha.config.js,samples/README.md) |
 | Quickstart | [source code](https://github.com/googleapis/nodejs-retail/blob/main/samples/quickstart.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-retail&page=editor&open_in_editor=samples/quickstart.js,samples/README.md) |
 
 
