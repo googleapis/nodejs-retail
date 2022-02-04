@@ -16,13 +16,26 @@
 
 async function main() {
   const {ProductServiceClient} = require('@google-cloud/retail').v2;
-  const {Storage} = require('@google-cloud/storage');
-  const projectNumber = process.env['PROJECT_NUMBER'];
-  const bucketName = process.env['BUCKET_NAME'];
+  const utils = require('../setup/setup_cleanup');
 
-  const gcsBucket = `gs://${bucketName}`;
-  const gcsErrorsBucket = `gs://${bucketName}/error`;
+  const projectNumber = process.env['GOOGLE_CLOUD_PROJECT_NUMBER'];
+
+  const productsBucketName = process.env['BUCKET_NAME'];
+  const eventsBucketName = process.env['EVENTS_BUCKET_NAME'];
+
+  const gcsBucket = `gs://${productsBucketName}`;
+  const gcsErrorsBucket = `gs://${productsBucketName}/error`;
   const gcsProductsObject = 'products.json';
+
+  const productsDataset = 'products';
+  const productTable = 'products';
+  const productSchema = 'interactive-tutorials/resources/product_schema.json';
+  const eventsDataset = 'user_events';
+  const eventsTable = 'events';
+  const eventsSchema = 'interactive-tutorials/resources/events_schema.json';
+
+  const productsSourceFile = 'interactive-tutorials/resources/products.json';
+  const eventsSourceFile = 'interactive-tutorials/resources/user_events.json';
 
   const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog/branches/default_branch`;
 
@@ -38,44 +51,12 @@ async function main() {
   };
 
   const IResponseParams = {
-    IError: 0,
-    ISearchResponse: 1,
-    ISearchMetadata: 2,
+    IImportProductsResponse: 0,
+    IImportMetadata: 1,
+    IOperation: 2,
   };
 
   const retailClient = new ProductServiceClient();
-
-  const isBucketExist = async name => {
-    const storage = new Storage();
-    const [buckets] = await storage.getBuckets();
-    const bucketNames = buckets.map(item => item.name);
-    return bucketNames.indexOf(name) !== -1 ? true : false;
-  };
-
-  const createBucket = async name => {
-    if (await isBucketExist(name)) {
-      console.log(`Bucket ${name} alreaty exists`);
-      return false;
-    } else {
-      const storage = new Storage();
-      const location = 'us';
-      const storageClass = 'STANDARD';
-      const createdBucket = await storage.createBucket(name, {
-        location,
-        [storageClass]: true,
-      });
-      console.log(`Bucket ${createdBucket[0].name} created.`);
-      return createdBucket;
-    }
-  };
-
-  const uploadFile = async (bucketName, filePath, destFileName) => {
-    const storage = new Storage();
-    await storage.bucket(bucketName).upload(filePath, {
-      destination: destFileName,
-    });
-    console.log(`File ${destFileName} uploaded to ${bucketName}`);
-  };
 
   const importProducts = async () => {
     // Construct request
@@ -89,7 +70,7 @@ async function main() {
     // Run request
     const [operation] = await retailClient.importProducts(request);
     const response = await operation.promise();
-    const result = response[IResponseParams.ISearchResponse];
+    const result = response[IResponseParams.IImportMetadata];
     console.log(
       `Number of successfully imported products: ${result.successCount | 0}`
     );
@@ -99,13 +80,44 @@ async function main() {
     console.log(`Operation result: ${JSON.stringify(response)}`);
   };
 
-  await createBucket(bucketName);
-  await uploadFile(
-    bucketName,
-    'interactive-tutorials/resources/products.json',
+  // Create a GCS bucket with products.json file
+  await utils.createBucket(productsBucketName);
+  await utils.uploadFile(
+    productsBucketName,
+    productsSourceFile,
     'products.json'
   );
+
+  // Create a GCS bucket with user_events.json file
+  await utils.createBucket(eventsBucketName);
+  await utils.uploadFile(
+    eventsBucketName,
+    eventsSourceFile,
+    'user_events.json'
+  );
+
+  // Import prodcuts from the GCS bucket to the Retail catalog
   await importProducts();
+
+  // Create a BigQuery table with products
+  await utils.createBqDataset(productsDataset);
+  await utils.createBqTable(productsDataset, productTable, productSchema);
+  await utils.uploadDataToBqTable(
+    productsDataset,
+    productTable,
+    productsSourceFile,
+    productSchema
+  );
+
+  // Create a BigQuery table with user events
+  await utils.createBqDataset(eventsDataset);
+  await utils.createBqTable(eventsDataset, eventsTable, eventsSchema);
+  await utils.uploadDataToBqTable(
+    eventsDataset,
+    eventsTable,
+    eventsSourceFile,
+    eventsSchema
+  );
 }
 
 process.on('unhandledRejection', err => {

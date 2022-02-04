@@ -15,17 +15,43 @@
 'use strict';
 
 async function main() {
-  const {Storage} = require('@google-cloud/storage');
-  const bucketName = process.env['BUCKET_NAME'];
+  const {ProductServiceClient} = require('@google-cloud/retail').v2;
+  const utils = require('../setup/setup_cleanup');
 
-  const deleteBucket = async bucketName => {
-    const storage = new Storage();
-    await storage.bucket(bucketName).deleteFiles({force: true});
-    await storage.bucket(bucketName).delete();
-    console.log(`Bucket ${bucketName} deleted`);
-  };
+  const projectNumber = process.env['GOOGLE_CLOUD_PROJECT_NUMBER'];
 
-  deleteBucket(bucketName);
+  const productsBucketName = process.env['BUCKET_NAME'];
+  const eventsBucketName = process.env['EVENTS_BUCKET_NAME'];
+
+  const productsDataset = 'products';
+  const eventsDataset = 'user_events';
+
+  const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog/branches/default_branch`;
+
+  const retailClient = new ProductServiceClient();
+
+  async function deleteProducts() {
+    const listProductsRequest = {
+      parent,
+    };
+    const iterable = await retailClient.listProductsAsync(listProductsRequest);
+    let counter = 0;
+    for await (const product of iterable) {
+      await retailClient.deleteProduct({name: product.name});
+      counter++;
+    }
+    console.log(`${counter} deleted products`);
+    const test = await retailClient.listProducts(listProductsRequest);
+    console.log(test);
+  }
+
+  await utils.deleteBucket(productsBucketName);
+  await utils.deleteBucket(eventsBucketName);
+
+  await deleteProducts();
+
+  await utils.deleteBqDataset(productsDataset);
+  await utils.deleteBqDataset(eventsDataset);
 }
 
 process.on('unhandledRejection', err => {
