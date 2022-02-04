@@ -24,11 +24,11 @@ async function main() {
   const projectId = process.env['PROJECT_ID'];
 
   const datasetId = 'products';
-  const tableId = 'products';
+  const tableId = 'products'; // TO CHECK ERROR HANDLING USE THE TABLE WITH INVALID PRODUCTS
   const dataSchema = 'product';
 
   // Placement
-  const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog/branches/default_branch`;
+  const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog/branches/default_branch`; // TO CHECK ERROR HANDLING PASTE THE INVALID CATALOG NAME HERE
 
   // The desired input location of the data.
   const inputConfig = {
@@ -47,9 +47,9 @@ async function main() {
   };
 
   const IResponseParams = {
-    IError: 0,
-    ISearchResponse: 1,
-    ISearchMetadata: 2,
+    IImportProductsResponse: 0,
+    IImportMetadata: 1,
+    IOperation: 2,
   };
 
   // The mode of reconciliation between existing products and the products to be imported.
@@ -70,7 +70,7 @@ async function main() {
     // Run request
     const [operation] = await retailClient.importProducts(request);
     const response = await operation.promise();
-    const result = response[IResponseParams.ISearchResponse];
+    const result = response[IResponseParams.IImportMetadata];
     console.log(
       `Number of successfully imported products: ${result.successCount | 0}`
     );

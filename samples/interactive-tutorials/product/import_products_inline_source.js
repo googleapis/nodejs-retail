@@ -84,9 +84,9 @@ async function main(id1, id2) {
   };
 
   const IResponseParams = {
-    IError: 0,
-    ISearchResponse: 1,
-    ISearchMetadata: 2,
+    IImportProductsResponse: 0,
+    IImportMetadata: 1,
+    IOperation: 2,
   };
 
   // Instantiates a client.
@@ -103,7 +103,7 @@ async function main(id1, id2) {
     // Run request
     const [operation] = await retailClient.importProducts(request);
     const response = await operation.promise();
-    const result = response[IResponseParams.ISearchResponse];
+    const result = response[IResponseParams.IImportMetadata];
     console.log(
       `Number of successfully imported products: ${result.successCount | 0}`
     );
