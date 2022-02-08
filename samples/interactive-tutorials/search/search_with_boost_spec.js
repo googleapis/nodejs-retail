@@ -39,8 +39,8 @@ async function main() {
       {
         condition: '(colorFamilies: ANY("Blue"))', // TRY OTHER CONDITIONS
         boost: 0.0, // TRY DIFFERENT SCORES
-      }
-    ]
+      },
+    ],
   };
 
   // Maximum number of Products to return.
