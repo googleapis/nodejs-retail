@@ -47,7 +47,7 @@ describe('Search with query expansion spec', () => {
 
   describe('Search with query expansion spec sample result', () => {
     const retailClient = new SearchServiceClient();
-    const projectNumber = process.env['PROJECT_NUMBER'];
+    const projectNumber = process.env['GOOGLE_CLOUD_PROJECT_NUMBER'];
     const request = {
       placement: `projects/${projectNumber}/locations/global/catalogs/default_catalog/placements/default_search`,
       query: 'Google Youth Hero Tee Grey',

@@ -49,7 +49,7 @@ describe('Search with pagination', () => {
 
   describe('Search with pagination sample result', () => {
     const retailClient = new SearchServiceClient();
-    const projectNumber = process.env['PROJECT_NUMBER'];
+    const projectNumber = process.env['GOOGLE_CLOUD_PROJECT_NUMBER'];
     const pageSize = 2;
     const offset = 0;
     const pageToken = '';

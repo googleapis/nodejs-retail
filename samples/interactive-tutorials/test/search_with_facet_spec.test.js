@@ -45,7 +45,7 @@ describe('Search with facet spec', () => {
 
   describe('Search with facet spec result', () => {
     const retailClient = new SearchServiceClient();
-    const projectNumber = process.env['PROJECT_NUMBER'];
+    const projectNumber = process.env['GOOGLE_CLOUD_PROJECT_NUMBER'];
     const request = {
       placement: `projects/${projectNumber}/locations/global/catalogs/default_catalog/placements/default_search`,
       query: 'Tee',
