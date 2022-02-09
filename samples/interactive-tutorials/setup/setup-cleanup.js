@@ -280,7 +280,7 @@ const uploadDataToBqTable = async (datasetId, tableId, source, schemaFile) => {
 };
 
 const writeUserEvent = async visitorId => {
-  const projectNumber = process.env['PROJECT_NUMBER'];
+  const projectNumber = process.env['GOOGLE_CLOUD_PROJECT_NUMBER'];
   const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog`;
   const retailClient = new UserEventServiceClient();
 

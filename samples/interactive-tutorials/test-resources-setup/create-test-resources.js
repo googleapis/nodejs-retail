@@ -18,7 +18,7 @@ async function main() {
   const {ProductServiceClient} = require('@google-cloud/retail').v2;
   const utils = require('../setup/setup-cleanup');
 
-  const projectNumber = process.env['PROJECT_NUMBER'];
+  const projectNumber = process.env['GOOGLE_CLOUD_PROJECT_NUMBER'];
 
   const productsBucketName = process.env['BUCKET_NAME'];
   const eventsBucketName = process.env['EVENTS_BUCKET_NAME'];
