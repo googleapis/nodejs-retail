@@ -21,7 +21,7 @@ async function main() {
   const {UserEventServiceClient} = require('@google-cloud/retail').v2;
   const utils = require('../setup/setup-cleanup');
 
-  const projectNumber = process.env['PROJECT_NUMBER'];
+  const projectNumber = process.env['GCLOUD_PROJECT'];
   const visitorId = 'test_visitor_id';
 
   // Placement
