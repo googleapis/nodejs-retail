@@ -53,7 +53,7 @@ async function main() {
   };
 
   // The mode of reconciliation between existing products and the products to be imported.
-  const reconciliationMode = reconciliationModes.FULL;
+  const reconciliationMode = reconciliationModes.INCREMENTAL;
 
   // Instantiates a client.
   const retailClient = new ProductServiceClient();
