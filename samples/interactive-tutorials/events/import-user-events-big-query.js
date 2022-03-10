@@ -20,14 +20,15 @@ async function main(datasetId) {
   // Imports the Google Cloud client library.
   const {UserEventServiceClient} = require('@google-cloud/retail').v2;
 
-  const projectNumber = process.env['GCLOUD_PROJECT'];
-  const projectId = process.env['PROJECT_ID'];
+  // Instantiates a client.
+  const retailClient = new UserEventServiceClient();
 
+  const projectId = await retailClient.getProjectId();
   const dataSchema = 'user_event';
   const tableId = 'events'; // TO CHECK ERROR HANDLING USE THE TABLE OF INVALID USER EVENTS
 
   // Placement
-  const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog`; // TO CHECK ERROR HANDLING PASTE THE INVALID CATALOG NAME HERE
+  const parent = `projects/${projectId}/locations/global/catalogs/default_catalog`; // TO CHECK ERROR HANDLING PASTE THE INVALID CATALOG NAME HERE
 
   // The desired input location of the data.
   const inputConfig = {
@@ -38,9 +39,6 @@ async function main(datasetId) {
       dataSchema,
     },
   };
-
-  // Instantiates a client.
-  const retailClient = new UserEventServiceClient();
 
   const IResponseParams = {
     IImportUserEventsResponse: 0,

@@ -20,14 +20,18 @@ async function main(bucketName) {
   // Imports the Google Cloud client library.
   const {UserEventServiceClient} = require('@google-cloud/retail').v2;
 
-  const projectNumber = process.env['GCLOUD_PROJECT'];
+  // Instantiates a client.
+  const retailClient = new UserEventServiceClient();
 
+  const projectId = await retailClient.getProjectId();
+
+  //TODO(developer) set the environment variable value which will be used as the bucket name
   const gcsBucket = `gs://${bucketName}`;
   const gcsErrorsBucket = `gs://${bucketName}/error`;
   const gcsEventsObject = 'user_events.json'; // TO CHECK ERROR HANDLING USE THE JSON WITH INVALID USER EVENTS
 
   // Placement
-  const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog`; // TO CHECK ERROR HANDLING PASTE THE INVALID CATALOG NAME HERE
+  const parent = `projects/${projectId}/locations/global/catalogs/default_catalog`; // TO CHECK ERROR HANDLING PASTE THE INVALID CATALOG NAME HERE
 
   // The desired input location of the data.
   const inputConfig = {
@@ -41,9 +45,6 @@ async function main(bucketName) {
   const errorsConfig = {
     gcsPrefix: gcsErrorsBucket,
   };
-
-  // Instantiates a client.
-  const retailClient = new UserEventServiceClient();
 
   const IResponseParams = {
     IImportUserEventsResponse: 0,

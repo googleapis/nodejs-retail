@@ -20,10 +20,13 @@ async function main() {
   // Imports the Google Cloud client library.
   const {UserEventServiceClient} = require('@google-cloud/retail').v2;
 
-  const projectNumber = process.env['GCLOUD_PROJECT'];
+  // Instantiates a client.
+  const retailClient = new UserEventServiceClient();
+
+  const projectId = await retailClient.getProjectId();
 
   // Placement
-  const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog`;
+  const parent = `projects/${projectId}/locations/global/catalogs/default_catalog`;
 
   // Create events
   const generateEvent = eventType => {
@@ -46,9 +49,6 @@ async function main() {
       ],
     },
   };
-
-  // Instantiates a client.
-  const retailClient = new UserEventServiceClient();
 
   const IResponseParams = {
     IImportUserEventsResponse: 0,
