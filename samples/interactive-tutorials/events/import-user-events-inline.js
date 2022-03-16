@@ -15,63 +15,62 @@
 'use strict';
 
 async function main() {
-  // [START retail_import_products_from_big_query]
+  // [START retail_import_user_events_inline]
 
   // Imports the Google Cloud client library.
-  const {ProductServiceClient} = require('@google-cloud/retail').v2;
+  const {UserEventServiceClient} = require('@google-cloud/retail').v2;
 
   // Instantiates a client.
-  const retailClient = new ProductServiceClient();
+  const retailClient = new UserEventServiceClient();
 
   const projectId = await retailClient.getProjectId();
 
-  const datasetId = 'products';
-  const tableId = 'products'; // TO CHECK ERROR HANDLING USE THE TABLE WITH INVALID PRODUCTS
-  const dataSchema = 'product';
-
   // Placement
-  const parent = `projects/${projectId}/locations/global/catalogs/default_catalog/branches/default_branch`; // TO CHECK ERROR HANDLING PASTE THE INVALID CATALOG NAME HERE
+  const parent = `projects/${projectId}/locations/global/catalogs/default_catalog`;
+
+  // Create events
+  const generateEvent = eventType => {
+    return {
+      eventType,
+      visitorId: 'visitor_' + Math.random().toString(36).slice(2),
+      eventTime: {
+        seconds: Math.round(Date.now() / 1000),
+      },
+    };
+  };
 
   // The desired input location of the data.
   const inputConfig = {
-    bigQuerySource: {
-      projectId,
-      datasetId,
-      tableId,
-      dataSchema,
+    userEventInlineSource: {
+      userEvents: [
+        generateEvent('home-page-view'),
+        generateEvent('home-page-view'),
+        generateEvent('home-page-view'),
+      ],
     },
   };
 
-  const reconciliationModes = {
-    RECONCILIATION_MODE_UNSPECIFIED: 0,
-    INCREMENTAL: 1,
-    FULL: 2,
-  };
-
   const IResponseParams = {
-    IImportProductsResponse: 0,
+    IImportUserEventsResponse: 0,
     IImportMetadata: 1,
     IOperation: 2,
   };
 
-  // The mode of reconciliation between existing products and the products to be imported.
-  const reconciliationMode = reconciliationModes.INCREMENTAL;
-
-  const callImportProducts = async () => {
+  const callImportUserEvents = async () => {
     // Construct request
     const request = {
       parent,
       inputConfig,
-      reconciliationMode,
     };
-    console.log('Import product request:', request);
+
+    console.log('Import request: ', request);
 
     // Run request
-    const [operation] = await retailClient.importProducts(request);
+    const [operation] = await retailClient.importUserEvents(request);
     const response = await operation.promise();
     const result = response[IResponseParams.IImportMetadata];
     console.log(
-      `Number of successfully imported products: ${result.successCount | 0}`
+      `Number of successfully imported events: ${result.successCount | 0}`
     );
     console.log(
       `Number of failures during the importing: ${result.failureCount | 0}`
@@ -79,10 +78,10 @@ async function main() {
     console.log(`Operation result: ${JSON.stringify(response)}`);
   };
 
-  console.log('Start import products');
-  await callImportProducts();
-  console.log('Import products finished');
-  // [END retail_import_products_from_big_query]
+  console.log('Start events import');
+  await callImportUserEvents();
+  console.log('Events import finished');
+  // [END retail_import_user_events_inline]
 }
 
 process.on('unhandledRejection', err => {

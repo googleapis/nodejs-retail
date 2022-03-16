@@ -21,11 +21,14 @@ async function main(generatedProductId) {
   const {ProductServiceClient} = require('@google-cloud/retail').v2;
   const utils = require('../setup/setup-cleanup');
 
-  const projectNumber = process.env['GCLOUD_PROJECT'];
+  // Instantiates a client.
+  const retailClient = new ProductServiceClient();
+
+  const projectId = await retailClient.getProjectId();
 
   // Create product
   const createdProduct = await utils.createProduct(
-    projectNumber,
+    projectId,
     generatedProductId
   );
 
@@ -61,9 +64,6 @@ async function main(generatedProductId) {
   // inventory update will still be processed and retained for at most 1 day until the product is created
   const allowMissing = true;
 
-  // Instantiates a client.
-  const retailClient = new ProductServiceClient();
-
   const callSetInventory = async () => {
     // Construct request
     const request = {
@@ -81,7 +81,7 @@ async function main(generatedProductId) {
   // Set inventory with current time
   console.log('Start set inventory');
   await callSetInventory();
-  await utils.delay(180000);
+  await utils.delay(200000);
 
   // Get product
   let changedProduct = await utils.getProduct(createdProduct.name);
@@ -94,7 +94,7 @@ async function main(generatedProductId) {
   product.priceInfo.price = 20.0;
   setTime = {seconds: Math.round(Date.now() / 1000) - 86400};
   await callSetInventory();
-  await utils.delay(180000);
+  await utils.delay(200000);
 
   // Get product
   changedProduct = await utils.getProduct(createdProduct.name);

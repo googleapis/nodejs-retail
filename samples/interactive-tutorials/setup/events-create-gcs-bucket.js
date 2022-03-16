@@ -14,38 +14,34 @@
 
 'use strict';
 
-async function main() {
-  // [START retail_get_products_list]
-
+async function main(generatedBucketName) {
   // Imports the Google Cloud client library.
-  const {ProductServiceClient} = require('@google-cloud/retail').v2;
+  const {UserEventServiceClient} = require('@google-cloud/retail').v2;
+  const utils = require('./setup-cleanup');
 
   // Instantiates a client.
-  const retailClient = new ProductServiceClient();
-
+  const retailClient = new UserEventServiceClient();
   const projectId = await retailClient.getProjectId();
 
-  // Placement
-  const parent = `projects/${projectId}/locations/global/catalogs/default_catalog/branches/default_branch`;
+  // The ID of your GCS bucket
+  const bucketName = generatedBucketName
+    ? generatedBucketName
+    : `${projectId}_events_${Math.round(Date.now() / 1000)}`;
 
-  async function callListProducts() {
-    console.log('Start get products list');
-    // Construct request
-    const request = {
-      parent,
-    };
-    console.log('List of products request:', request);
+  //Creates the new bucket
+  await utils.createBucket(bucketName);
 
-    // Run request
-    const iterable = await retailClient.listProductsAsync(request);
-    for await (const response of iterable) {
-      console.log(response);
-    }
-    console.log('Get products list finished');
-  }
-
-  callListProducts();
-  // [END retail_get_products_list]
+  //Upload files
+  await utils.uploadFile(
+    bucketName,
+    'resources/user_events.json',
+    'user_events.json'
+  );
+  await utils.uploadFile(
+    bucketName,
+    'resources/user_events_some_invalid.json',
+    'user_events_some_invalid.json'
+  );
 }
 
 process.on('unhandledRejection', err => {
@@ -53,4 +49,4 @@ process.on('unhandledRejection', err => {
   process.exitCode = 1;
 });
 
-main();
+main(...process.argv.slice(2));
