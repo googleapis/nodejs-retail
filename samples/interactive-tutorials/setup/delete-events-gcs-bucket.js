@@ -15,27 +15,13 @@
 'use strict';
 
 async function main() {
-  const {ProductServiceClient} = require('@google-cloud/retail').v2;
-  const utils = require('../setup/setup-cleanup');
+  const utils = require('./setup-cleanup');
 
-  const retailClient = new ProductServiceClient();
-  const projectId = await retailClient.getProjectId();
+  // The ID of your GCS bucket
+  const bucketName = process.env['EVENTS_BUCKET_NAME'];
 
-  const productsBucketName = process.env['BUCKET_NAME'];
-  const eventsBucketName = process.env['EVENTS_BUCKET_NAME'];
-
-  const productsDataset = 'products';
-  const eventsDataset = 'user_events';
-
-  const parent = `projects/${projectId}/locations/global/catalogs/default_catalog/branches/default_branch`;
-
-  await utils.deleteBucket(productsBucketName);
-  await utils.deleteBucket(eventsBucketName);
-
-  await utils.deleteProductsAll(parent);
-
-  await utils.deleteBqDataset(productsDataset);
-  await utils.deleteBqDataset(eventsDataset);
+  //Delete created bucket
+  await utils.deleteBucket(bucketName);
 }
 
 process.on('unhandledRejection', err => {
