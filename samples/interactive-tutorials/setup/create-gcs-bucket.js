@@ -23,7 +23,6 @@ async function main(generatedBucketName) {
 
   const projectId = await retailClient.getProjectId();
 
-
   // The ID of your GCS bucket
   const bucketName = generatedBucketName
     ? generatedBucketName
