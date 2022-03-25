@@ -637,6 +637,9 @@ export namespace google {
 
                     /** SetDefaultBranchRequest note */
                     note?: (string|null);
+
+                    /** SetDefaultBranchRequest force */
+                    force?: (boolean|null);
                 }
 
                 /** Represents a SetDefaultBranchRequest. */
@@ -656,6 +659,9 @@ export namespace google {
 
                     /** SetDefaultBranchRequest note. */
                     public note: string;
+
+                    /** SetDefaultBranchRequest force. */
+                    public force: boolean;
 
                     /**
                      * Creates a new SetDefaultBranchRequest instance using the specified properties.
@@ -1973,91 +1979,109 @@ export namespace google {
                     public toJSON(): { [k: string]: any };
                 }
 
-                /** Properties of a Promotion. */
-                interface IPromotion {
+                /** Properties of a LocalInventory. */
+                interface ILocalInventory {
 
-                    /** Promotion promotionId */
-                    promotionId?: (string|null);
+                    /** LocalInventory placeId */
+                    placeId?: (string|null);
+
+                    /** LocalInventory priceInfo */
+                    priceInfo?: (google.cloud.retail.v2.IPriceInfo|null);
+
+                    /** LocalInventory attributes */
+                    attributes?: ({ [k: string]: google.cloud.retail.v2.ICustomAttribute }|null);
+
+                    /** LocalInventory fulfillmentTypes */
+                    fulfillmentTypes?: (string[]|null);
                 }
 
-                /** Represents a Promotion. */
-                class Promotion implements IPromotion {
+                /** Represents a LocalInventory. */
+                class LocalInventory implements ILocalInventory {
 
                     /**
-                     * Constructs a new Promotion.
+                     * Constructs a new LocalInventory.
                      * @param [properties] Properties to set
                      */
-                    constructor(properties?: google.cloud.retail.v2.IPromotion);
+                    constructor(properties?: google.cloud.retail.v2.ILocalInventory);
 
-                    /** Promotion promotionId. */
-                    public promotionId: string;
+                    /** LocalInventory placeId. */
+                    public placeId: string;
+
+                    /** LocalInventory priceInfo. */
+                    public priceInfo?: (google.cloud.retail.v2.IPriceInfo|null);
+
+                    /** LocalInventory attributes. */
+                    public attributes: { [k: string]: google.cloud.retail.v2.ICustomAttribute };
+
+                    /** LocalInventory fulfillmentTypes. */
+                    public fulfillmentTypes: string[];
 
                     /**
-                     * Creates a new Promotion instance using the specified properties.
+                     * Creates a new LocalInventory instance using the specified properties.
                      * @param [properties] Properties to set
-                     * @returns Promotion instance
+                     * @returns LocalInventory instance
                      */
-                    public static create(properties?: google.cloud.retail.v2.IPromotion): google.cloud.retail.v2.Promotion;
+                    public static create(properties?: google.cloud.retail.v2.ILocalInventory): google.cloud.retail.v2.LocalInventory;
 
                     /**
-                     * Encodes the specified Promotion message. Does not implicitly {@link google.cloud.retail.v2.Promotion.verify|verify} messages.
-                     * @param message Promotion message or plain object to encode
+                     * Encodes the specified LocalInventory message. Does not implicitly {@link google.cloud.retail.v2.LocalInventory.verify|verify} messages.
+                     * @param message LocalInventory message or plain object to encode
                      * @param [writer] Writer to encode to
                      * @returns Writer
                      */
-                    public static encode(message: google.cloud.retail.v2.IPromotion, writer?: $protobuf.Writer): $protobuf.Writer;
+                    public static encode(message: google.cloud.retail.v2.ILocalInventory, writer?: $protobuf.Writer): $protobuf.Writer;
 
                     /**
-                     * Encodes the specified Promotion message, length delimited. Does not implicitly {@link google.cloud.retail.v2.Promotion.verify|verify} messages.
-                     * @param message Promotion message or plain object to encode
+                     * Encodes the specified LocalInventory message, length delimited. Does not implicitly {@link google.cloud.retail.v2.LocalInventory.verify|verify} messages.
+                     * @param message LocalInventory message or plain object to encode
                      * @param [writer] Writer to encode to
                      * @returns Writer
                      */
-                    public static encodeDelimited(message: google.cloud.retail.v2.IPromotion, writer?: $protobuf.Writer): $protobuf.Writer;
+                    public static encodeDelimited(message: google.cloud.retail.v2.ILocalInventory, writer?: $protobuf.Writer): $protobuf.Writer;
 
                     /**
-                     * Decodes a Promotion message from the specified reader or buffer.
+                     * Decodes a LocalInventory message from the specified reader or buffer.
                      * @param reader Reader or buffer to decode from
                      * @param [length] Message length if known beforehand
-                     * @returns Promotion
+                     * @returns LocalInventory
                      * @throws {Error} If the payload is not a reader or valid buffer
                      * @throws {$protobuf.util.ProtocolError} If required fields are missing
                      */
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2.Promotion;
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2.LocalInventory;
 
                     /**
-                     * Decodes a Promotion message from the specified reader or buffer, length delimited.
+                     * Decodes a LocalInventory message from the specified reader or buffer, length delimited.
                      * @param reader Reader or buffer to decode from
-                     * @returns Promotion
+                     * @returns LocalInventory
                      * @throws {Error} If the payload is not a reader or valid buffer
                      * @throws {$protobuf.util.ProtocolError} If required fields are missing
                      */
-                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2.Promotion;
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2.LocalInventory;
 
                     /**
-                     * Verifies a Promotion message.
+                     * Verifies a LocalInventory message.
                      * @param message Plain object to verify
                      * @returns `null` if valid, otherwise the reason why it is not
                      */
                     public static verify(message: { [k: string]: any }): (string|null);
 
                     /**
-                     * Creates a Promotion message from a plain object. Also converts values to their respective internal types.
+                     * Creates a LocalInventory message from a plain object. Also converts values to their respective internal types.
                      * @param object Plain object
-                     * @returns Promotion
+                     * @returns LocalInventory
                      */
-                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2.Promotion;
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2.LocalInventory;
 
                     /**
-                     * Creates a plain object from a Promotion message. Also converts values to other types if specified.
-                     * @param message Promotion
+                     * Creates a plain object from a LocalInventory message. Also converts values to other types if specified.
+                     * @param message LocalInventory
                      * @param [options] Conversion options
                      * @returns Plain object
                      */
-                    public static toObject(message: google.cloud.retail.v2.Promotion, options?: $protobuf.IConversionOptions): { [k: string]: any };
+                    public static toObject(message: google.cloud.retail.v2.LocalInventory, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
                     /**
-                     * Converts this Promotion to JSON.
+                     * Converts this LocalInventory to JSON.
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
@@ -4490,6 +4514,96 @@ export namespace google {
                     }
                 }
 
+                /** Properties of a Promotion. */
+                interface IPromotion {
+
+                    /** Promotion promotionId */
+                    promotionId?: (string|null);
+                }
+
+                /** Represents a Promotion. */
+                class Promotion implements IPromotion {
+
+                    /**
+                     * Constructs a new Promotion.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2.IPromotion);
+
+                    /** Promotion promotionId. */
+                    public promotionId: string;
+
+                    /**
+                     * Creates a new Promotion instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns Promotion instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2.IPromotion): google.cloud.retail.v2.Promotion;
+
+                    /**
+                     * Encodes the specified Promotion message. Does not implicitly {@link google.cloud.retail.v2.Promotion.verify|verify} messages.
+                     * @param message Promotion message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2.IPromotion, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified Promotion message, length delimited. Does not implicitly {@link google.cloud.retail.v2.Promotion.verify|verify} messages.
+                     * @param message Promotion message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2.IPromotion, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a Promotion message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns Promotion
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2.Promotion;
+
+                    /**
+                     * Decodes a Promotion message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns Promotion
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2.Promotion;
+
+                    /**
+                     * Verifies a Promotion message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a Promotion message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns Promotion
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2.Promotion;
+
+                    /**
+                     * Creates a plain object from a Promotion message. Also converts values to other types if specified.
+                     * @param message Promotion
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2.Promotion, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this Promotion to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
                 /** Properties of a UserEvent. */
                 interface IUserEvent {
 
@@ -5535,6 +5649,34 @@ export namespace google {
                      * @returns Promise
                      */
                     public removeFulfillmentPlaces(request: google.cloud.retail.v2.IRemoveFulfillmentPlacesRequest): Promise<google.longrunning.Operation>;
+
+                    /**
+                     * Calls AddLocalInventories.
+                     * @param request AddLocalInventoriesRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public addLocalInventories(request: google.cloud.retail.v2.IAddLocalInventoriesRequest, callback: google.cloud.retail.v2.ProductService.AddLocalInventoriesCallback): void;
+
+                    /**
+                     * Calls AddLocalInventories.
+                     * @param request AddLocalInventoriesRequest message or plain object
+                     * @returns Promise
+                     */
+                    public addLocalInventories(request: google.cloud.retail.v2.IAddLocalInventoriesRequest): Promise<google.longrunning.Operation>;
+
+                    /**
+                     * Calls RemoveLocalInventories.
+                     * @param request RemoveLocalInventoriesRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public removeLocalInventories(request: google.cloud.retail.v2.IRemoveLocalInventoriesRequest, callback: google.cloud.retail.v2.ProductService.RemoveLocalInventoriesCallback): void;
+
+                    /**
+                     * Calls RemoveLocalInventories.
+                     * @param request RemoveLocalInventoriesRequest message or plain object
+                     * @returns Promise
+                     */
+                    public removeLocalInventories(request: google.cloud.retail.v2.IRemoveLocalInventoriesRequest): Promise<google.longrunning.Operation>;
                 }
 
                 namespace ProductService {
@@ -5601,6 +5743,20 @@ export namespace google {
                      * @param [response] Operation
                      */
                     type RemoveFulfillmentPlacesCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.retail.v2.ProductService#addLocalInventories}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type AddLocalInventoriesCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.retail.v2.ProductService#removeLocalInventories}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type RemoveLocalInventoriesCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
                 }
 
                 /** Properties of a CreateProductRequest. */
@@ -6755,6 +6911,564 @@ export namespace google {
                     public toJSON(): { [k: string]: any };
                 }
 
+                /** Properties of an AddLocalInventoriesRequest. */
+                interface IAddLocalInventoriesRequest {
+
+                    /** AddLocalInventoriesRequest product */
+                    product?: (string|null);
+
+                    /** AddLocalInventoriesRequest localInventories */
+                    localInventories?: (google.cloud.retail.v2.ILocalInventory[]|null);
+
+                    /** AddLocalInventoriesRequest addMask */
+                    addMask?: (google.protobuf.IFieldMask|null);
+
+                    /** AddLocalInventoriesRequest addTime */
+                    addTime?: (google.protobuf.ITimestamp|null);
+
+                    /** AddLocalInventoriesRequest allowMissing */
+                    allowMissing?: (boolean|null);
+                }
+
+                /** Represents an AddLocalInventoriesRequest. */
+                class AddLocalInventoriesRequest implements IAddLocalInventoriesRequest {
+
+                    /**
+                     * Constructs a new AddLocalInventoriesRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2.IAddLocalInventoriesRequest);
+
+                    /** AddLocalInventoriesRequest product. */
+                    public product: string;
+
+                    /** AddLocalInventoriesRequest localInventories. */
+                    public localInventories: google.cloud.retail.v2.ILocalInventory[];
+
+                    /** AddLocalInventoriesRequest addMask. */
+                    public addMask?: (google.protobuf.IFieldMask|null);
+
+                    /** AddLocalInventoriesRequest addTime. */
+                    public addTime?: (google.protobuf.ITimestamp|null);
+
+                    /** AddLocalInventoriesRequest allowMissing. */
+                    public allowMissing: boolean;
+
+                    /**
+                     * Creates a new AddLocalInventoriesRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns AddLocalInventoriesRequest instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2.IAddLocalInventoriesRequest): google.cloud.retail.v2.AddLocalInventoriesRequest;
+
+                    /**
+                     * Encodes the specified AddLocalInventoriesRequest message. Does not implicitly {@link google.cloud.retail.v2.AddLocalInventoriesRequest.verify|verify} messages.
+                     * @param message AddLocalInventoriesRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2.IAddLocalInventoriesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified AddLocalInventoriesRequest message, length delimited. Does not implicitly {@link google.cloud.retail.v2.AddLocalInventoriesRequest.verify|verify} messages.
+                     * @param message AddLocalInventoriesRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2.IAddLocalInventoriesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an AddLocalInventoriesRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns AddLocalInventoriesRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2.AddLocalInventoriesRequest;
+
+                    /**
+                     * Decodes an AddLocalInventoriesRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns AddLocalInventoriesRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2.AddLocalInventoriesRequest;
+
+                    /**
+                     * Verifies an AddLocalInventoriesRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an AddLocalInventoriesRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns AddLocalInventoriesRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2.AddLocalInventoriesRequest;
+
+                    /**
+                     * Creates a plain object from an AddLocalInventoriesRequest message. Also converts values to other types if specified.
+                     * @param message AddLocalInventoriesRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2.AddLocalInventoriesRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this AddLocalInventoriesRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an AddLocalInventoriesMetadata. */
+                interface IAddLocalInventoriesMetadata {
+                }
+
+                /** Represents an AddLocalInventoriesMetadata. */
+                class AddLocalInventoriesMetadata implements IAddLocalInventoriesMetadata {
+
+                    /**
+                     * Constructs a new AddLocalInventoriesMetadata.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2.IAddLocalInventoriesMetadata);
+
+                    /**
+                     * Creates a new AddLocalInventoriesMetadata instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns AddLocalInventoriesMetadata instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2.IAddLocalInventoriesMetadata): google.cloud.retail.v2.AddLocalInventoriesMetadata;
+
+                    /**
+                     * Encodes the specified AddLocalInventoriesMetadata message. Does not implicitly {@link google.cloud.retail.v2.AddLocalInventoriesMetadata.verify|verify} messages.
+                     * @param message AddLocalInventoriesMetadata message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2.IAddLocalInventoriesMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified AddLocalInventoriesMetadata message, length delimited. Does not implicitly {@link google.cloud.retail.v2.AddLocalInventoriesMetadata.verify|verify} messages.
+                     * @param message AddLocalInventoriesMetadata message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2.IAddLocalInventoriesMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an AddLocalInventoriesMetadata message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns AddLocalInventoriesMetadata
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2.AddLocalInventoriesMetadata;
+
+                    /**
+                     * Decodes an AddLocalInventoriesMetadata message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns AddLocalInventoriesMetadata
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2.AddLocalInventoriesMetadata;
+
+                    /**
+                     * Verifies an AddLocalInventoriesMetadata message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an AddLocalInventoriesMetadata message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns AddLocalInventoriesMetadata
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2.AddLocalInventoriesMetadata;
+
+                    /**
+                     * Creates a plain object from an AddLocalInventoriesMetadata message. Also converts values to other types if specified.
+                     * @param message AddLocalInventoriesMetadata
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2.AddLocalInventoriesMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this AddLocalInventoriesMetadata to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an AddLocalInventoriesResponse. */
+                interface IAddLocalInventoriesResponse {
+                }
+
+                /** Represents an AddLocalInventoriesResponse. */
+                class AddLocalInventoriesResponse implements IAddLocalInventoriesResponse {
+
+                    /**
+                     * Constructs a new AddLocalInventoriesResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2.IAddLocalInventoriesResponse);
+
+                    /**
+                     * Creates a new AddLocalInventoriesResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns AddLocalInventoriesResponse instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2.IAddLocalInventoriesResponse): google.cloud.retail.v2.AddLocalInventoriesResponse;
+
+                    /**
+                     * Encodes the specified AddLocalInventoriesResponse message. Does not implicitly {@link google.cloud.retail.v2.AddLocalInventoriesResponse.verify|verify} messages.
+                     * @param message AddLocalInventoriesResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2.IAddLocalInventoriesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified AddLocalInventoriesResponse message, length delimited. Does not implicitly {@link google.cloud.retail.v2.AddLocalInventoriesResponse.verify|verify} messages.
+                     * @param message AddLocalInventoriesResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2.IAddLocalInventoriesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an AddLocalInventoriesResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns AddLocalInventoriesResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2.AddLocalInventoriesResponse;
+
+                    /**
+                     * Decodes an AddLocalInventoriesResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns AddLocalInventoriesResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2.AddLocalInventoriesResponse;
+
+                    /**
+                     * Verifies an AddLocalInventoriesResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an AddLocalInventoriesResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns AddLocalInventoriesResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2.AddLocalInventoriesResponse;
+
+                    /**
+                     * Creates a plain object from an AddLocalInventoriesResponse message. Also converts values to other types if specified.
+                     * @param message AddLocalInventoriesResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2.AddLocalInventoriesResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this AddLocalInventoriesResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a RemoveLocalInventoriesRequest. */
+                interface IRemoveLocalInventoriesRequest {
+
+                    /** RemoveLocalInventoriesRequest product */
+                    product?: (string|null);
+
+                    /** RemoveLocalInventoriesRequest placeIds */
+                    placeIds?: (string[]|null);
+
+                    /** RemoveLocalInventoriesRequest removeTime */
+                    removeTime?: (google.protobuf.ITimestamp|null);
+
+                    /** RemoveLocalInventoriesRequest allowMissing */
+                    allowMissing?: (boolean|null);
+                }
+
+                /** Represents a RemoveLocalInventoriesRequest. */
+                class RemoveLocalInventoriesRequest implements IRemoveLocalInventoriesRequest {
+
+                    /**
+                     * Constructs a new RemoveLocalInventoriesRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2.IRemoveLocalInventoriesRequest);
+
+                    /** RemoveLocalInventoriesRequest product. */
+                    public product: string;
+
+                    /** RemoveLocalInventoriesRequest placeIds. */
+                    public placeIds: string[];
+
+                    /** RemoveLocalInventoriesRequest removeTime. */
+                    public removeTime?: (google.protobuf.ITimestamp|null);
+
+                    /** RemoveLocalInventoriesRequest allowMissing. */
+                    public allowMissing: boolean;
+
+                    /**
+                     * Creates a new RemoveLocalInventoriesRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns RemoveLocalInventoriesRequest instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2.IRemoveLocalInventoriesRequest): google.cloud.retail.v2.RemoveLocalInventoriesRequest;
+
+                    /**
+                     * Encodes the specified RemoveLocalInventoriesRequest message. Does not implicitly {@link google.cloud.retail.v2.RemoveLocalInventoriesRequest.verify|verify} messages.
+                     * @param message RemoveLocalInventoriesRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2.IRemoveLocalInventoriesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified RemoveLocalInventoriesRequest message, length delimited. Does not implicitly {@link google.cloud.retail.v2.RemoveLocalInventoriesRequest.verify|verify} messages.
+                     * @param message RemoveLocalInventoriesRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2.IRemoveLocalInventoriesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a RemoveLocalInventoriesRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns RemoveLocalInventoriesRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2.RemoveLocalInventoriesRequest;
+
+                    /**
+                     * Decodes a RemoveLocalInventoriesRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns RemoveLocalInventoriesRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2.RemoveLocalInventoriesRequest;
+
+                    /**
+                     * Verifies a RemoveLocalInventoriesRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a RemoveLocalInventoriesRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns RemoveLocalInventoriesRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2.RemoveLocalInventoriesRequest;
+
+                    /**
+                     * Creates a plain object from a RemoveLocalInventoriesRequest message. Also converts values to other types if specified.
+                     * @param message RemoveLocalInventoriesRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2.RemoveLocalInventoriesRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this RemoveLocalInventoriesRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a RemoveLocalInventoriesMetadata. */
+                interface IRemoveLocalInventoriesMetadata {
+                }
+
+                /** Represents a RemoveLocalInventoriesMetadata. */
+                class RemoveLocalInventoriesMetadata implements IRemoveLocalInventoriesMetadata {
+
+                    /**
+                     * Constructs a new RemoveLocalInventoriesMetadata.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2.IRemoveLocalInventoriesMetadata);
+
+                    /**
+                     * Creates a new RemoveLocalInventoriesMetadata instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns RemoveLocalInventoriesMetadata instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2.IRemoveLocalInventoriesMetadata): google.cloud.retail.v2.RemoveLocalInventoriesMetadata;
+
+                    /**
+                     * Encodes the specified RemoveLocalInventoriesMetadata message. Does not implicitly {@link google.cloud.retail.v2.RemoveLocalInventoriesMetadata.verify|verify} messages.
+                     * @param message RemoveLocalInventoriesMetadata message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2.IRemoveLocalInventoriesMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified RemoveLocalInventoriesMetadata message, length delimited. Does not implicitly {@link google.cloud.retail.v2.RemoveLocalInventoriesMetadata.verify|verify} messages.
+                     * @param message RemoveLocalInventoriesMetadata message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2.IRemoveLocalInventoriesMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a RemoveLocalInventoriesMetadata message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns RemoveLocalInventoriesMetadata
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2.RemoveLocalInventoriesMetadata;
+
+                    /**
+                     * Decodes a RemoveLocalInventoriesMetadata message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns RemoveLocalInventoriesMetadata
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2.RemoveLocalInventoriesMetadata;
+
+                    /**
+                     * Verifies a RemoveLocalInventoriesMetadata message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a RemoveLocalInventoriesMetadata message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns RemoveLocalInventoriesMetadata
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2.RemoveLocalInventoriesMetadata;
+
+                    /**
+                     * Creates a plain object from a RemoveLocalInventoriesMetadata message. Also converts values to other types if specified.
+                     * @param message RemoveLocalInventoriesMetadata
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2.RemoveLocalInventoriesMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this RemoveLocalInventoriesMetadata to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a RemoveLocalInventoriesResponse. */
+                interface IRemoveLocalInventoriesResponse {
+                }
+
+                /** Represents a RemoveLocalInventoriesResponse. */
+                class RemoveLocalInventoriesResponse implements IRemoveLocalInventoriesResponse {
+
+                    /**
+                     * Constructs a new RemoveLocalInventoriesResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2.IRemoveLocalInventoriesResponse);
+
+                    /**
+                     * Creates a new RemoveLocalInventoriesResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns RemoveLocalInventoriesResponse instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2.IRemoveLocalInventoriesResponse): google.cloud.retail.v2.RemoveLocalInventoriesResponse;
+
+                    /**
+                     * Encodes the specified RemoveLocalInventoriesResponse message. Does not implicitly {@link google.cloud.retail.v2.RemoveLocalInventoriesResponse.verify|verify} messages.
+                     * @param message RemoveLocalInventoriesResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2.IRemoveLocalInventoriesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified RemoveLocalInventoriesResponse message, length delimited. Does not implicitly {@link google.cloud.retail.v2.RemoveLocalInventoriesResponse.verify|verify} messages.
+                     * @param message RemoveLocalInventoriesResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2.IRemoveLocalInventoriesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a RemoveLocalInventoriesResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns RemoveLocalInventoriesResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2.RemoveLocalInventoriesResponse;
+
+                    /**
+                     * Decodes a RemoveLocalInventoriesResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns RemoveLocalInventoriesResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2.RemoveLocalInventoriesResponse;
+
+                    /**
+                     * Verifies a RemoveLocalInventoriesResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a RemoveLocalInventoriesResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns RemoveLocalInventoriesResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2.RemoveLocalInventoriesResponse;
+
+                    /**
+                     * Creates a plain object from a RemoveLocalInventoriesResponse message. Also converts values to other types if specified.
+                     * @param message RemoveLocalInventoriesResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2.RemoveLocalInventoriesResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this RemoveLocalInventoriesResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
                 /** Properties of a RemoveFulfillmentPlacesRequest. */
                 interface IRemoveFulfillmentPlacesRequest {
 
@@ -7414,6 +8128,9 @@ export namespace google {
 
                     /** SearchRequest searchMode */
                     searchMode?: (google.cloud.retail.v2.SearchRequest.SearchMode|keyof typeof google.cloud.retail.v2.SearchRequest.SearchMode|null);
+
+                    /** SearchRequest personalizationSpec */
+                    personalizationSpec?: (google.cloud.retail.v2.SearchRequest.IPersonalizationSpec|null);
                 }
 
                 /** Represents a SearchRequest. */
@@ -7478,6 +8195,9 @@ export namespace google {
 
                     /** SearchRequest searchMode. */
                     public searchMode: (google.cloud.retail.v2.SearchRequest.SearchMode|keyof typeof google.cloud.retail.v2.SearchRequest.SearchMode);
+
+                    /** SearchRequest personalizationSpec. */
+                    public personalizationSpec?: (google.cloud.retail.v2.SearchRequest.IPersonalizationSpec|null);
 
                     /**
                      * Creates a new SearchRequest instance using the specified properties.
@@ -7894,6 +8614,9 @@ export namespace google {
 
                         /** BoostSpec conditionBoostSpecs */
                         conditionBoostSpecs?: (google.cloud.retail.v2.SearchRequest.BoostSpec.IConditionBoostSpec[]|null);
+
+                        /** BoostSpec skipBoostSpecValidation */
+                        skipBoostSpecValidation?: (boolean|null);
                     }
 
                     /** Represents a BoostSpec. */
@@ -7907,6 +8630,12 @@ export namespace google {
 
                         /** BoostSpec conditionBoostSpecs. */
                         public conditionBoostSpecs: google.cloud.retail.v2.SearchRequest.BoostSpec.IConditionBoostSpec[];
+
+                        /** BoostSpec skipBoostSpecValidation. */
+                        public skipBoostSpecValidation?: (boolean|null);
+
+                        /** BoostSpec _skipBoostSpecValidation. */
+                        public _skipBoostSpecValidation?: "skipBoostSpecValidation";
 
                         /**
                          * Creates a new BoostSpec instance using the specified properties.
@@ -8184,6 +8913,106 @@ export namespace google {
                         }
                     }
 
+                    /** Properties of a PersonalizationSpec. */
+                    interface IPersonalizationSpec {
+
+                        /** PersonalizationSpec mode */
+                        mode?: (google.cloud.retail.v2.SearchRequest.PersonalizationSpec.Mode|keyof typeof google.cloud.retail.v2.SearchRequest.PersonalizationSpec.Mode|null);
+                    }
+
+                    /** Represents a PersonalizationSpec. */
+                    class PersonalizationSpec implements IPersonalizationSpec {
+
+                        /**
+                         * Constructs a new PersonalizationSpec.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.retail.v2.SearchRequest.IPersonalizationSpec);
+
+                        /** PersonalizationSpec mode. */
+                        public mode: (google.cloud.retail.v2.SearchRequest.PersonalizationSpec.Mode|keyof typeof google.cloud.retail.v2.SearchRequest.PersonalizationSpec.Mode);
+
+                        /**
+                         * Creates a new PersonalizationSpec instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns PersonalizationSpec instance
+                         */
+                        public static create(properties?: google.cloud.retail.v2.SearchRequest.IPersonalizationSpec): google.cloud.retail.v2.SearchRequest.PersonalizationSpec;
+
+                        /**
+                         * Encodes the specified PersonalizationSpec message. Does not implicitly {@link google.cloud.retail.v2.SearchRequest.PersonalizationSpec.verify|verify} messages.
+                         * @param message PersonalizationSpec message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.retail.v2.SearchRequest.IPersonalizationSpec, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified PersonalizationSpec message, length delimited. Does not implicitly {@link google.cloud.retail.v2.SearchRequest.PersonalizationSpec.verify|verify} messages.
+                         * @param message PersonalizationSpec message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.retail.v2.SearchRequest.IPersonalizationSpec, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a PersonalizationSpec message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns PersonalizationSpec
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2.SearchRequest.PersonalizationSpec;
+
+                        /**
+                         * Decodes a PersonalizationSpec message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns PersonalizationSpec
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2.SearchRequest.PersonalizationSpec;
+
+                        /**
+                         * Verifies a PersonalizationSpec message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a PersonalizationSpec message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns PersonalizationSpec
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2.SearchRequest.PersonalizationSpec;
+
+                        /**
+                         * Creates a plain object from a PersonalizationSpec message. Also converts values to other types if specified.
+                         * @param message PersonalizationSpec
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.retail.v2.SearchRequest.PersonalizationSpec, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this PersonalizationSpec to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    namespace PersonalizationSpec {
+
+                        /** Mode enum. */
+                        enum Mode {
+                            MODE_UNSPECIFIED = 0,
+                            AUTO = 1,
+                            DISABLED = 2
+                        }
+                    }
+
                     /** SearchMode enum. */
                     enum SearchMode {
                         SEARCH_MODE_UNSPECIFIED = 0,
@@ -8218,6 +9047,12 @@ export namespace google {
 
                     /** SearchResponse redirectUri */
                     redirectUri?: (string|null);
+
+                    /** SearchResponse appliedControls */
+                    appliedControls?: (string[]|null);
+
+                    /** SearchResponse invalidConditionBoostSpecs */
+                    invalidConditionBoostSpecs?: (google.cloud.retail.v2.SearchRequest.BoostSpec.IConditionBoostSpec[]|null);
                 }
 
                 /** Represents a SearchResponse. */
@@ -8252,6 +9087,12 @@ export namespace google {
 
                     /** SearchResponse redirectUri. */
                     public redirectUri: string;
+
+                    /** SearchResponse appliedControls. */
+                    public appliedControls: string[];
+
+                    /** SearchResponse invalidConditionBoostSpecs. */
+                    public invalidConditionBoostSpecs: google.cloud.retail.v2.SearchRequest.BoostSpec.IConditionBoostSpec[];
 
                     /**
                      * Creates a new SearchResponse instance using the specified properties.

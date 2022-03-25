@@ -212,6 +212,10 @@
                         "note": {
                           "type": "string",
                           "id": 3
+                        },
+                        "force": {
+                          "type": "bool",
+                          "id": 4
                         }
                       }
                     },
@@ -465,11 +469,28 @@
                         }
                       }
                     },
-                    "Promotion": {
+                    "LocalInventory": {
                       "fields": {
-                        "promotionId": {
+                        "placeId": {
                           "type": "string",
                           "id": 1
+                        },
+                        "priceInfo": {
+                          "type": "PriceInfo",
+                          "id": 2
+                        },
+                        "attributes": {
+                          "keyType": "string",
+                          "type": "CustomAttribute",
+                          "id": 3
+                        },
+                        "fulfillmentTypes": {
+                          "rule": "repeated",
+                          "type": "string",
+                          "id": 4,
+                          "options": {
+                            "(google.api.field_behavior)": "INPUT_ONLY"
+                          }
                         }
                       }
                     },
@@ -708,7 +729,10 @@
                         },
                         "requestId": {
                           "type": "string",
-                          "id": 6
+                          "id": 6,
+                          "options": {
+                            "deprecated": true
+                          }
                         },
                         "inputConfig": {
                           "type": "ProductInputConfig",
@@ -887,7 +911,10 @@
                         },
                         "requestId": {
                           "type": "string",
-                          "id": 5
+                          "id": 5,
+                          "options": {
+                            "deprecated": true
+                          }
                         },
                         "notificationPubsubTopic": {
                           "type": "string",
@@ -1141,6 +1168,14 @@
                             "PREORDER": 3,
                             "BACKORDER": 4
                           }
+                        }
+                      }
+                    },
+                    "Promotion": {
+                      "fields": {
+                        "promotionId": {
+                          "type": "string",
+                          "id": 1
                         }
                       }
                     },
@@ -1611,6 +1646,62 @@
                               }
                             }
                           ]
+                        },
+                        "AddLocalInventories": {
+                          "requestType": "AddLocalInventoriesRequest",
+                          "responseType": "google.longrunning.Operation",
+                          "options": {
+                            "(google.api.http).post": "/v2/{product=projects/*/locations/*/catalogs/*/branches/*/products/**}:addLocalInventories",
+                            "(google.api.http).body": "*",
+                            "(google.api.method_signature)": "product",
+                            "(google.longrunning.operation_info).response_type": "google.cloud.retail.v2.AddLocalInventoriesResponse",
+                            "(google.longrunning.operation_info).metadata_type": "google.cloud.retail.v2.AddLocalInventoriesMetadata"
+                          },
+                          "parsedOptions": [
+                            {
+                              "(google.api.http)": {
+                                "post": "/v2/{product=projects/*/locations/*/catalogs/*/branches/*/products/**}:addLocalInventories",
+                                "body": "*"
+                              }
+                            },
+                            {
+                              "(google.api.method_signature)": "product"
+                            },
+                            {
+                              "(google.longrunning.operation_info)": {
+                                "response_type": "google.cloud.retail.v2.AddLocalInventoriesResponse",
+                                "metadata_type": "google.cloud.retail.v2.AddLocalInventoriesMetadata"
+                              }
+                            }
+                          ]
+                        },
+                        "RemoveLocalInventories": {
+                          "requestType": "RemoveLocalInventoriesRequest",
+                          "responseType": "google.longrunning.Operation",
+                          "options": {
+                            "(google.api.http).post": "/v2/{product=projects/*/locations/*/catalogs/*/branches/*/products/**}:removeLocalInventories",
+                            "(google.api.http).body": "*",
+                            "(google.api.method_signature)": "product",
+                            "(google.longrunning.operation_info).response_type": "google.cloud.retail.v2.RemoveLocalInventoriesResponse",
+                            "(google.longrunning.operation_info).metadata_type": "google.cloud.retail.v2.RemoveLocalInventoriesMetadata"
+                          },
+                          "parsedOptions": [
+                            {
+                              "(google.api.http)": {
+                                "post": "/v2/{product=projects/*/locations/*/catalogs/*/branches/*/products/**}:removeLocalInventories",
+                                "body": "*"
+                              }
+                            },
+                            {
+                              "(google.api.method_signature)": "product"
+                            },
+                            {
+                              "(google.longrunning.operation_info)": {
+                                "response_type": "google.cloud.retail.v2.RemoveLocalInventoriesResponse",
+                                "metadata_type": "google.cloud.retail.v2.RemoveLocalInventoriesMetadata"
+                              }
+                            }
+                          ]
                         }
                       }
                     },
@@ -1794,6 +1885,78 @@
                     "AddFulfillmentPlacesResponse": {
                       "fields": {}
                     },
+                    "AddLocalInventoriesRequest": {
+                      "fields": {
+                        "product": {
+                          "type": "string",
+                          "id": 1,
+                          "options": {
+                            "(google.api.field_behavior)": "REQUIRED",
+                            "(google.api.resource_reference).type": "retail.googleapis.com/Product"
+                          }
+                        },
+                        "localInventories": {
+                          "rule": "repeated",
+                          "type": "LocalInventory",
+                          "id": 2,
+                          "options": {
+                            "(google.api.field_behavior)": "REQUIRED"
+                          }
+                        },
+                        "addMask": {
+                          "type": "google.protobuf.FieldMask",
+                          "id": 4
+                        },
+                        "addTime": {
+                          "type": "google.protobuf.Timestamp",
+                          "id": 5
+                        },
+                        "allowMissing": {
+                          "type": "bool",
+                          "id": 6
+                        }
+                      }
+                    },
+                    "AddLocalInventoriesMetadata": {
+                      "fields": {}
+                    },
+                    "AddLocalInventoriesResponse": {
+                      "fields": {}
+                    },
+                    "RemoveLocalInventoriesRequest": {
+                      "fields": {
+                        "product": {
+                          "type": "string",
+                          "id": 1,
+                          "options": {
+                            "(google.api.field_behavior)": "REQUIRED",
+                            "(google.api.resource_reference).type": "retail.googleapis.com/Product"
+                          }
+                        },
+                        "placeIds": {
+                          "rule": "repeated",
+                          "type": "string",
+                          "id": 2,
+                          "options": {
+                            "(google.api.field_behavior)": "REQUIRED"
+                          }
+                        },
+                        "removeTime": {
+                          "type": "google.protobuf.Timestamp",
+                          "id": 5
+                        },
+                        "allowMissing": {
+                          "type": "bool",
+                          "id": 3
+                        }
+                      }
+                    },
+                    "RemoveLocalInventoriesMetadata": {
+                      "fields": {}
+                    },
+                    "RemoveLocalInventoriesResponse": {
+                      "fields": {}
+                    },
                     "RemoveFulfillmentPlacesRequest": {
                       "fields": {
                         "product": {
@@ -1954,7 +2117,10 @@
                         },
                         "dynamicFacetSpec": {
                           "type": "DynamicFacetSpec",
-                          "id": 21
+                          "id": 21,
+                          "options": {
+                            "deprecated": true
+                          }
                         },
                         "boostSpec": {
                           "type": "BoostSpec",
@@ -1977,6 +2143,10 @@
                         "searchMode": {
                           "type": "SearchMode",
                           "id": 31
+                        },
+                        "personalizationSpec": {
+                          "type": "PersonalizationSpec",
+                          "id": 32
                         }
                       },
                       "nested": {
@@ -2063,11 +2233,25 @@
                           }
                         },
                         "BoostSpec": {
+                          "oneofs": {
+                            "_skipBoostSpecValidation": {
+                              "oneof": [
+                                "skipBoostSpecValidation"
+                              ]
+                            }
+                          },
                           "fields": {
                             "conditionBoostSpecs": {
                               "rule": "repeated",
                               "type": "ConditionBoostSpec",
                               "id": 1
+                            },
+                            "skipBoostSpecValidation": {
+                              "type": "bool",
+                              "id": 2,
+                              "options": {
+                                "proto3_optional": true
+                              }
                             }
                           },
                           "nested": {
@@ -2102,6 +2286,23 @@
                                 "CONDITION_UNSPECIFIED": 0,
                                 "DISABLED": 1,
                                 "AUTO": 3
+                              }
+                            }
+                          }
+                        },
+                        "PersonalizationSpec": {
+                          "fields": {
+                            "mode": {
+                              "type": "Mode",
+                              "id": 1
+                            }
+                          },
+                          "nested": {
+                            "Mode": {
+                              "values": {
+                                "MODE_UNSPECIFIED": 0,
+                                "AUTO": 1,
+                                "DISABLED": 2
                               }
                             }
                           }
@@ -2150,6 +2351,16 @@
                         "redirectUri": {
                           "type": "string",
                           "id": 10
+                        },
+                        "appliedControls": {
+                          "rule": "repeated",
+                          "type": "string",
+                          "id": 12
+                        },
+                        "invalidConditionBoostSpecs": {
+                          "rule": "repeated",
+                          "type": "SearchRequest.BoostSpec.ConditionBoostSpec",
+                          "id": 14
                         }
                       },
                       "nested": {
