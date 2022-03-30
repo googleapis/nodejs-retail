@@ -14,23 +14,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# install needed Google client libraries
-current_path=$(pwd)
-temp_path="${current_path%cloudshell_open*}"
-full_path=$temp_path"cloudshell_open/nodejs-retail/samples"
-cd $full_path
-npm install
-
 # set the key as GOOGLE_APPLICATION_CREDENTIALS
 export GOOGLE_APPLICATION_CREDENTIALS=~/key.json
 
 # Create a GCS bucket and upload the product data to the bucket
-output=$(node interactive-tutorials/setup/create-gcs-bucket.js)
+output=$(node ~/cloudshell_open/nodejs-retail/samples/interactive-tutorials/setup/create-gcs-bucket.js)
+
 # Get the bucket name and store it in the env variable BUCKET_NAME
 temp="${output#*Bucket }"
 bucket_name="${temp% created*}"
 export BUCKET_NAME=$bucket_name
 
 # Import products to the Retail catalog
-node interactive-tutorials/product/import-products-gcs.js
+node ~/cloudshell_open/nodejs-retail/samples/interactive-tutorials/product/import-products-gcs.js
+
+echo =====================================
 echo "Your Retail catalog is ready to use!"
+echo =====================================
