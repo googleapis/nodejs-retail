@@ -28,6 +28,6 @@ export BUCKET_NAME=$bucket_name
 # Import products to the Retail catalog
 node ~/cloudshell_open/nodejs-retail/samples/interactive-tutorials/product/import-products-gcs.js
 
-echo =====================================
+echo "====================================="
 echo "Your Retail catalog is ready to use!"
-echo =====================================
+echo "====================================="
