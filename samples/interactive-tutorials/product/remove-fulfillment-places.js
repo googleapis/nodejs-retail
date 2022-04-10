@@ -61,20 +61,20 @@ async function main(generatedProductId) {
 
     console.log('Remove fulfillment request:', request);
     // Run request
-    await retailClient.removeFulfillmentPlaces(request);
-
-    console.log('Waiting to complete remove operation..');
+    const [operation] = await retailClient.removeFulfillmentPlaces(request);
+    const response = await operation.promise();
+    console.log('Wait till the operation to be completed...');
+    console.log(response);
   };
 
   // Remove fulfillment places with current time
   console.log('Start remove fulfillment');
   await callRemoveFulfillmentPlaces();
-  await utils.delay(180000);
-
+  await utils.delay(60000);
   //Get product
   const response = await utils.getProduct(product);
   console.log(
-    'Updated product with current time: ',
+    'Product with updated fulfillment information: ',
     JSON.stringify(response[0])
   );
   console.log('Remove fulfillment finished');

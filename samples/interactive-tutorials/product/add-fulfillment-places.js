@@ -66,20 +66,20 @@ async function main(generatedProductId) {
     console.log('Add fulfillment request:', request);
 
     // Run request
-    await retailClient.addFulfillmentPlaces(request);
-
-    console.log('Waiting to complete add operation..');
+    const [operation] = await retailClient.addFulfillmentPlaces(request);
+    const response = await operation.promise();
+    console.log('Wait till the operation to be completed...');
+    console.log(response);
   };
 
   // Add fulfillment places with current time
   console.log('Start add fulfillment');
   await calladdFulfillmentPlaces();
-  await utils.delay(180000);
-
+  await utils.delay(60000);
   //Get product
   const response = await utils.getProduct(product);
   console.log(
-    'Updated product with current time: ',
+    'Product with updated fulfillment information: ',
     JSON.stringify(response[0])
   );
   console.log('Add fulfillment finished');
