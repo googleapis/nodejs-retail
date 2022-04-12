@@ -70,7 +70,7 @@ const createProduct = async (
 
   // Run request
   const response = await retailClient.createProduct(request);
-  console.log('Created·product:·',·JSON.stringify(response[0]));
+  console.log('Created·product:·', JSON.stringify(response[0]));
   return response[0];
 };
 
