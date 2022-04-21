@@ -68,7 +68,7 @@ async function main(generatedProductId) {
     // Run request
     const [operation] = await retailClient.addFulfillmentPlaces(request);
     const response = await operation.promise();
-    console.log('Wait till the operation to be completed...');
+    console.log('Wait for the operation to be completed...');
     console.log(response);
   };
 
