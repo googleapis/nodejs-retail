@@ -14,16 +14,20 @@
 
 'use strict';
 
-async function main(bucketName) {
+async function main(bucketName, impersonatedPrincipal) {
   // [START retail_import_user_events_gcs]
 
   // Imports the Google Cloud client library.
   const {UserEventServiceClient} = require('@google-cloud/retail').v2;
 
-  // Instantiates a client.
-  const retailClient = new UserEventServiceClient();
+  // check if auth with impersonated client.
+  const {impersonatedAuthClient} = require('../setup/setup-cleanup');
+  const {opts, projectId} = await impersonatedAuthClient(impersonatedPrincipal);
 
-  const projectId = await retailClient.getProjectId();
+  // Instantiates a client.
+  const retailClient = new UserEventServiceClient(opts);
+
+  // const projectId = await retailClient.getProjectId();
 
   //TODO(developer) set the environment variable value which will be used as the bucket name
   const gcsBucket = `gs://${bucketName}`;
@@ -89,6 +93,7 @@ process.on('unhandledRejection', err => {
 main(
   ...(() => {
     const argv = process.argv.slice(2);
-    return argv.length ? argv : [process.env['EVENTS_BUCKET_NAME']];
+    return argv.length ? argv : [process.env['EVENTS_BUCKET_NAME'], 
+                                 process.env['IMPERSONATED_PRINCIPAL']]; 
   })()
 );

@@ -14,16 +14,20 @@
 
 'use strict';
 
-async function main(datasetId) {
+async function main(datasetId, impersonatedPrincipal) {
   // [START retail_import_user_events_big_query]
 
   // Imports the Google Cloud client library.
   const {UserEventServiceClient} = require('@google-cloud/retail').v2;
 
-  // Instantiates a client.
-  const retailClient = new UserEventServiceClient();
+  // check if auth with impersonated client.
+  const {impersonatedAuthClient} = require('../setup/setup-cleanup');
+  const {opts, projectId} = await impersonatedAuthClient(impersonatedPrincipal);
 
-  const projectId = await retailClient.getProjectId();
+  // Instantiates a client.
+  const retailClient = new UserEventServiceClient(opts);
+
+  // const projectId = await retailClient.getProjectId();
   const dataSchema = 'user_event';
   const tableId = 'events'; // TO CHECK ERROR HANDLING USE THE TABLE OF INVALID USER EVENTS
 
@@ -82,6 +86,6 @@ process.on('unhandledRejection', err => {
 main(
   ...(() => {
     const argv = process.argv.slice(2);
-    return argv.length ? argv : ['user_events'];
+    return argv.length ? argv : ['user_events', process.env['IMPERSONATED_PRINCIPAL']];
   })()
 );

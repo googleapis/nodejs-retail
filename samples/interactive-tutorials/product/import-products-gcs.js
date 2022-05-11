@@ -19,33 +19,9 @@ async function main(bucketName, impersonatedPrincipal) {
 
   // Imports the Google Cloud client library.
   const {ProductServiceClient} = require('@google-cloud/retail').v2;
-  const { GoogleAuth, Impersonated } = require('google-auth-library');
-
-  // Acquire source credentials:
-  const auth = new GoogleAuth();
-  const client = await auth.getClient();
-  const projectId = await auth.getProjectId();
-
-  let opts = {};
-
-  if(impersonatedPrincipal) {
-    // Impersonate new credentials:
-    let targetClient = new Impersonated({
-        sourceClient: client,
-        targetPrincipal: impersonatedPrincipal,
-        lifetime: 30,
-        delegates: [],
-        targetScopes: ['https://www.googleapis.com/auth/cloud-platform']
-    });
-
-    // Instantiates a client.
-    opts = {
-        auth: {
-            projectId: projectId,
-            getClient: () => targetClient
-        }
-    };
-  } 
+  
+  const {impersonatedAuthClient} = require('../setup/setup-cleanup');
+  const {opts, projectId} = await impersonatedAuthClient(impersonatedPrincipal);
   
   const retailClient = new ProductServiceClient(opts);
   
