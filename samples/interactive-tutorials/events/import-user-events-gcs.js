@@ -93,7 +93,11 @@ process.on('unhandledRejection', err => {
 main(
   ...(() => {
     const argv = process.argv.slice(2);
-    return argv.length ? argv : [process.env['EVENTS_BUCKET_NAME'], 
-                                 process.env['IMPERSONATED_PRINCIPAL']]; 
+    return argv.length
+      ? argv
+      : [
+          process.env['EVENTS_BUCKET_NAME'],
+          process.env['IMPERSONATED_PRINCIPAL'],
+        ];
   })()
 );

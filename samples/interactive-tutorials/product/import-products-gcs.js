@@ -19,12 +19,11 @@ async function main(bucketName, impersonatedPrincipal) {
 
   // Imports the Google Cloud client library.
   const {ProductServiceClient} = require('@google-cloud/retail').v2;
-  
+
   const {impersonatedAuthClient} = require('../setup/setup-cleanup');
   const {opts, projectId} = await impersonatedAuthClient(impersonatedPrincipal);
-  
+
   const retailClient = new ProductServiceClient(opts);
-  
 
   const gcsBucket = `gs://${bucketName}`;
   const gcsErrorsBucket = `gs://${bucketName}/error`;
@@ -87,7 +86,8 @@ process.on('unhandledRejection', err => {
 main(
   ...(() => {
     const argv = process.argv.slice(2);
-    return argv.length ? argv : [process.env['BUCKET_NAME'], 
-                                process.env['IMPERSONATED_PRINCIPAL']];
+    return argv.length
+      ? argv
+      : [process.env['BUCKET_NAME'], process.env['IMPERSONATED_PRINCIPAL']];
   })()
 );

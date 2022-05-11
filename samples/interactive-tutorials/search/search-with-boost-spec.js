@@ -90,8 +90,8 @@ process.on('unhandledRejection', err => {
 });
 
 main(
-    ...(() => {
-        const argv = process.argv.slice(2);
-        return argv.length ? argv : [process.env['IMPERSONATED_PRINCIPAL']];
-      })()
+  ...(() => {
+    const argv = process.argv.slice(2);
+    return argv.length ? argv : [process.env['IMPERSONATED_PRINCIPAL']];
+  })()
 );

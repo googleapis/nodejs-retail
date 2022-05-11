@@ -325,34 +325,34 @@ const purgeUserEvents = async (parent, visitorId) => {
 };
 
 const impersonatedAuthClient = async impersonatedPrincipal => {
-    const { GoogleAuth, Impersonated } = require('google-auth-library');
+  const {GoogleAuth, Impersonated} = require('google-auth-library');
 
-    // Acquire source credentials:
-    const auth = new GoogleAuth();
-    const client = await auth.getClient();
-    const projectId = await auth.getProjectId();
+  // Acquire source credentials:
+  const auth = new GoogleAuth();
+  const client = await auth.getClient();
+  const projectId = await auth.getProjectId();
 
-    let opts = {};
+  let opts = {};
 
-    if(impersonatedPrincipal) {
-        // Impersonate new credentials:
-        let targetClient = new Impersonated({
-            sourceClient: client,
-            targetPrincipal: impersonatedPrincipal,
-            lifetime: 30,
-            delegates: [],
-            targetScopes: ['https://www.googleapis.com/auth/cloud-platform']
-        });
+  if (impersonatedPrincipal) {
+    // Impersonate new credentials:
+    const targetClient = new Impersonated({
+      sourceClient: client,
+      targetPrincipal: impersonatedPrincipal,
+      lifetime: 30,
+      delegates: [],
+      targetScopes: ['https://www.googleapis.com/auth/cloud-platform'],
+    });
 
-        // Instantiates a client.
-        opts = {
-            auth: {
-                projectId: projectId,
-                getClient: () => targetClient
-            }
-        };
-    } 
-    return {opts, projectId};
+    // Instantiates a client.
+    opts = {
+      auth: {
+        projectId: projectId,
+        getClient: () => targetClient,
+      },
+    };
+  }
+  return {opts, projectId};
 };
 
 module.exports = {
