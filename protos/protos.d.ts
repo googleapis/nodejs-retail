@@ -25959,6 +25959,9 @@ export namespace google {
 
                     /** CatalogAttribute searchableOption */
                     searchableOption?: (google.cloud.retail.v2beta.CatalogAttribute.SearchableOption|keyof typeof google.cloud.retail.v2beta.CatalogAttribute.SearchableOption|null);
+
+                    /** CatalogAttribute recommendationsFilteringOption */
+                    recommendationsFilteringOption?: (google.cloud.retail.v2beta.RecommendationsFilteringOption|keyof typeof google.cloud.retail.v2beta.RecommendationsFilteringOption|null);
                 }
 
                 /** Represents a CatalogAttribute. */
@@ -25987,6 +25990,9 @@ export namespace google {
 
                     /** CatalogAttribute searchableOption. */
                     public searchableOption: (google.cloud.retail.v2beta.CatalogAttribute.SearchableOption|keyof typeof google.cloud.retail.v2beta.CatalogAttribute.SearchableOption);
+
+                    /** CatalogAttribute recommendationsFilteringOption. */
+                    public recommendationsFilteringOption: (google.cloud.retail.v2beta.RecommendationsFilteringOption|keyof typeof google.cloud.retail.v2beta.RecommendationsFilteringOption);
 
                     /**
                      * Creates a new CatalogAttribute instance using the specified properties.
@@ -26666,6 +26672,13 @@ export namespace google {
                     SOLUTION_TYPE_UNSPECIFIED = 0,
                     SOLUTION_TYPE_RECOMMENDATION = 1,
                     SOLUTION_TYPE_SEARCH = 2
+                }
+
+                /** RecommendationsFilteringOption enum. */
+                enum RecommendationsFilteringOption {
+                    RECOMMENDATIONS_FILTERING_OPTION_UNSPECIFIED = 0,
+                    RECOMMENDATIONS_FILTERING_DISABLED = 1,
+                    RECOMMENDATIONS_FILTERING_ENABLED = 3
                 }
 
                 /** SearchSolutionUseCase enum. */
@@ -33808,6 +33821,12 @@ export namespace google {
 
                     /** SearchRequest personalizationSpec */
                     personalizationSpec?: (google.cloud.retail.v2beta.SearchRequest.IPersonalizationSpec|null);
+
+                    /** SearchRequest labels */
+                    labels?: ({ [k: string]: string }|null);
+
+                    /** SearchRequest spellCorrectionSpec */
+                    spellCorrectionSpec?: (google.cloud.retail.v2beta.SearchRequest.ISpellCorrectionSpec|null);
                 }
 
                 /** Represents a SearchRequest. */
@@ -33875,6 +33894,15 @@ export namespace google {
 
                     /** SearchRequest personalizationSpec. */
                     public personalizationSpec?: (google.cloud.retail.v2beta.SearchRequest.IPersonalizationSpec|null);
+
+                    /** SearchRequest labels. */
+                    public labels: { [k: string]: string };
+
+                    /** SearchRequest spellCorrectionSpec. */
+                    public spellCorrectionSpec?: (google.cloud.retail.v2beta.SearchRequest.ISpellCorrectionSpec|null);
+
+                    /** SearchRequest _spellCorrectionSpec. */
+                    public _spellCorrectionSpec?: "spellCorrectionSpec";
 
                     /**
                      * Creates a new SearchRequest instance using the specified properties.
@@ -34077,11 +34105,17 @@ export namespace google {
                             /** FacetKey contains */
                             contains?: (string[]|null);
 
+                            /** FacetKey caseInsensitive */
+                            caseInsensitive?: (boolean|null);
+
                             /** FacetKey orderBy */
                             orderBy?: (string|null);
 
                             /** FacetKey query */
                             query?: (string|null);
+
+                            /** FacetKey returnMinMax */
+                            returnMinMax?: (boolean|null);
                         }
 
                         /** Represents a FacetKey. */
@@ -34108,11 +34142,17 @@ export namespace google {
                             /** FacetKey contains. */
                             public contains: string[];
 
+                            /** FacetKey caseInsensitive. */
+                            public caseInsensitive: boolean;
+
                             /** FacetKey orderBy. */
                             public orderBy: string;
 
                             /** FacetKey query. */
                             public query: string;
+
+                            /** FacetKey returnMinMax. */
+                            public returnMinMax: boolean;
 
                             /**
                              * Creates a new FacetKey instance using the specified properties.
@@ -34690,6 +34730,106 @@ export namespace google {
                         }
                     }
 
+                    /** Properties of a SpellCorrectionSpec. */
+                    interface ISpellCorrectionSpec {
+
+                        /** SpellCorrectionSpec mode */
+                        mode?: (google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec.Mode|keyof typeof google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec.Mode|null);
+                    }
+
+                    /** Represents a SpellCorrectionSpec. */
+                    class SpellCorrectionSpec implements ISpellCorrectionSpec {
+
+                        /**
+                         * Constructs a new SpellCorrectionSpec.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.retail.v2beta.SearchRequest.ISpellCorrectionSpec);
+
+                        /** SpellCorrectionSpec mode. */
+                        public mode: (google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec.Mode|keyof typeof google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec.Mode);
+
+                        /**
+                         * Creates a new SpellCorrectionSpec instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns SpellCorrectionSpec instance
+                         */
+                        public static create(properties?: google.cloud.retail.v2beta.SearchRequest.ISpellCorrectionSpec): google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec;
+
+                        /**
+                         * Encodes the specified SpellCorrectionSpec message. Does not implicitly {@link google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec.verify|verify} messages.
+                         * @param message SpellCorrectionSpec message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.retail.v2beta.SearchRequest.ISpellCorrectionSpec, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified SpellCorrectionSpec message, length delimited. Does not implicitly {@link google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec.verify|verify} messages.
+                         * @param message SpellCorrectionSpec message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.retail.v2beta.SearchRequest.ISpellCorrectionSpec, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a SpellCorrectionSpec message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns SpellCorrectionSpec
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec;
+
+                        /**
+                         * Decodes a SpellCorrectionSpec message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns SpellCorrectionSpec
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec;
+
+                        /**
+                         * Verifies a SpellCorrectionSpec message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a SpellCorrectionSpec message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns SpellCorrectionSpec
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec;
+
+                        /**
+                         * Creates a plain object from a SpellCorrectionSpec message. Also converts values to other types if specified.
+                         * @param message SpellCorrectionSpec
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this SpellCorrectionSpec to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    namespace SpellCorrectionSpec {
+
+                        /** Mode enum. */
+                        enum Mode {
+                            MODE_UNSPECIFIED = 0,
+                            SUGGESTION_ONLY = 1,
+                            AUTO = 2
+                        }
+                    }
+
                     /** SearchMode enum. */
                     enum SearchMode {
                         SEARCH_MODE_UNSPECIFIED = 0,
@@ -35073,6 +35213,12 @@ export namespace google {
 
                             /** FacetValue count */
                             count?: (number|Long|string|null);
+
+                            /** FacetValue minValue */
+                            minValue?: (number|null);
+
+                            /** FacetValue maxValue */
+                            maxValue?: (number|null);
                         }
 
                         /** Represents a FacetValue. */
@@ -35092,6 +35238,12 @@ export namespace google {
 
                             /** FacetValue count. */
                             public count: (number|Long|string);
+
+                            /** FacetValue minValue. */
+                            public minValue: number;
+
+                            /** FacetValue maxValue. */
+                            public maxValue: number;
 
                             /** FacetValue facetValue. */
                             public facetValue?: ("value"|"interval");
@@ -36173,6 +36325,9 @@ export namespace google {
 
                     /** ExportProductsResponse errorsConfig */
                     errorsConfig?: (google.cloud.retail.v2beta.IExportErrorsConfig|null);
+
+                    /** ExportProductsResponse outputResult */
+                    outputResult?: (google.cloud.retail.v2beta.IOutputResult|null);
                 }
 
                 /** Represents an ExportProductsResponse. */
@@ -36189,6 +36344,9 @@ export namespace google {
 
                     /** ExportProductsResponse errorsConfig. */
                     public errorsConfig?: (google.cloud.retail.v2beta.IExportErrorsConfig|null);
+
+                    /** ExportProductsResponse outputResult. */
+                    public outputResult?: (google.cloud.retail.v2beta.IOutputResult|null);
 
                     /**
                      * Creates a new ExportProductsResponse instance using the specified properties.
@@ -36269,6 +36427,9 @@ export namespace google {
 
                     /** ExportUserEventsResponse errorsConfig */
                     errorsConfig?: (google.cloud.retail.v2beta.IExportErrorsConfig|null);
+
+                    /** ExportUserEventsResponse outputResult */
+                    outputResult?: (google.cloud.retail.v2beta.IOutputResult|null);
                 }
 
                 /** Represents an ExportUserEventsResponse. */
@@ -36285,6 +36446,9 @@ export namespace google {
 
                     /** ExportUserEventsResponse errorsConfig. */
                     public errorsConfig?: (google.cloud.retail.v2beta.IExportErrorsConfig|null);
+
+                    /** ExportUserEventsResponse outputResult. */
+                    public outputResult?: (google.cloud.retail.v2beta.IOutputResult|null);
 
                     /**
                      * Creates a new ExportUserEventsResponse instance using the specified properties.
@@ -36352,6 +36516,192 @@ export namespace google {
 
                     /**
                      * Converts this ExportUserEventsResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an OutputResult. */
+                interface IOutputResult {
+
+                    /** OutputResult bigqueryResult */
+                    bigqueryResult?: (google.cloud.retail.v2beta.IBigQueryOutputResult[]|null);
+                }
+
+                /** Represents an OutputResult. */
+                class OutputResult implements IOutputResult {
+
+                    /**
+                     * Constructs a new OutputResult.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2beta.IOutputResult);
+
+                    /** OutputResult bigqueryResult. */
+                    public bigqueryResult: google.cloud.retail.v2beta.IBigQueryOutputResult[];
+
+                    /**
+                     * Creates a new OutputResult instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns OutputResult instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2beta.IOutputResult): google.cloud.retail.v2beta.OutputResult;
+
+                    /**
+                     * Encodes the specified OutputResult message. Does not implicitly {@link google.cloud.retail.v2beta.OutputResult.verify|verify} messages.
+                     * @param message OutputResult message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2beta.IOutputResult, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified OutputResult message, length delimited. Does not implicitly {@link google.cloud.retail.v2beta.OutputResult.verify|verify} messages.
+                     * @param message OutputResult message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2beta.IOutputResult, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an OutputResult message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns OutputResult
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2beta.OutputResult;
+
+                    /**
+                     * Decodes an OutputResult message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns OutputResult
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2beta.OutputResult;
+
+                    /**
+                     * Verifies an OutputResult message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an OutputResult message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns OutputResult
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2beta.OutputResult;
+
+                    /**
+                     * Creates a plain object from an OutputResult message. Also converts values to other types if specified.
+                     * @param message OutputResult
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2beta.OutputResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this OutputResult to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a BigQueryOutputResult. */
+                interface IBigQueryOutputResult {
+
+                    /** BigQueryOutputResult datasetId */
+                    datasetId?: (string|null);
+
+                    /** BigQueryOutputResult tableId */
+                    tableId?: (string|null);
+                }
+
+                /** Represents a BigQueryOutputResult. */
+                class BigQueryOutputResult implements IBigQueryOutputResult {
+
+                    /**
+                     * Constructs a new BigQueryOutputResult.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2beta.IBigQueryOutputResult);
+
+                    /** BigQueryOutputResult datasetId. */
+                    public datasetId: string;
+
+                    /** BigQueryOutputResult tableId. */
+                    public tableId: string;
+
+                    /**
+                     * Creates a new BigQueryOutputResult instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns BigQueryOutputResult instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2beta.IBigQueryOutputResult): google.cloud.retail.v2beta.BigQueryOutputResult;
+
+                    /**
+                     * Encodes the specified BigQueryOutputResult message. Does not implicitly {@link google.cloud.retail.v2beta.BigQueryOutputResult.verify|verify} messages.
+                     * @param message BigQueryOutputResult message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2beta.IBigQueryOutputResult, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified BigQueryOutputResult message, length delimited. Does not implicitly {@link google.cloud.retail.v2beta.BigQueryOutputResult.verify|verify} messages.
+                     * @param message BigQueryOutputResult message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2beta.IBigQueryOutputResult, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a BigQueryOutputResult message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns BigQueryOutputResult
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2beta.BigQueryOutputResult;
+
+                    /**
+                     * Decodes a BigQueryOutputResult message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns BigQueryOutputResult
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2beta.BigQueryOutputResult;
+
+                    /**
+                     * Verifies a BigQueryOutputResult message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a BigQueryOutputResult message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns BigQueryOutputResult
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2beta.BigQueryOutputResult;
+
+                    /**
+                     * Creates a plain object from a BigQueryOutputResult message. Also converts values to other types if specified.
+                     * @param message BigQueryOutputResult
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2beta.BigQueryOutputResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this BigQueryOutputResult to JSON.
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
