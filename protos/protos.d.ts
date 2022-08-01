@@ -8415,11 +8415,17 @@ export namespace google {
                             /** FacetKey contains */
                             contains?: (string[]|null);
 
+                            /** FacetKey caseInsensitive */
+                            caseInsensitive?: (boolean|null);
+
                             /** FacetKey orderBy */
                             orderBy?: (string|null);
 
                             /** FacetKey query */
                             query?: (string|null);
+
+                            /** FacetKey returnMinMax */
+                            returnMinMax?: (boolean|null);
                         }
 
                         /** Represents a FacetKey. */
@@ -8446,11 +8452,17 @@ export namespace google {
                             /** FacetKey contains. */
                             public contains: string[];
 
+                            /** FacetKey caseInsensitive. */
+                            public caseInsensitive: boolean;
+
                             /** FacetKey orderBy. */
                             public orderBy: string;
 
                             /** FacetKey query. */
                             public query: string;
+
+                            /** FacetKey returnMinMax. */
+                            public returnMinMax: boolean;
 
                             /**
                              * Creates a new FacetKey instance using the specified properties.
@@ -9511,6 +9523,12 @@ export namespace google {
 
                             /** FacetValue count */
                             count?: (number|Long|string|null);
+
+                            /** FacetValue minValue */
+                            minValue?: (number|null);
+
+                            /** FacetValue maxValue */
+                            maxValue?: (number|null);
                         }
 
                         /** Represents a FacetValue. */
@@ -9530,6 +9548,12 @@ export namespace google {
 
                             /** FacetValue count. */
                             public count: (number|Long|string);
+
+                            /** FacetValue minValue. */
+                            public minValue: number;
+
+                            /** FacetValue maxValue. */
+                            public maxValue: number;
 
                             /** FacetValue facetValue. */
                             public facetValue?: ("value"|"interval");

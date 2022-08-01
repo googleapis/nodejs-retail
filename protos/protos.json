@@ -1347,13 +1347,19 @@
                           "responseType": "PredictResponse",
                           "options": {
                             "(google.api.http).post": "/v2/{placement=projects/*/locations/*/catalogs/*/placements/*}:predict",
-                            "(google.api.http).body": "*"
+                            "(google.api.http).body": "*",
+                            "(google.api.http).additional_bindings.post": "/v2/{placement=projects/*/locations/*/catalogs/*/servingConfigs/*}:predict",
+                            "(google.api.http).additional_bindings.body": "*"
                           },
                           "parsedOptions": [
                             {
                               "(google.api.http)": {
                                 "post": "/v2/{placement=projects/*/locations/*/catalogs/*/placements/*}:predict",
-                                "body": "*"
+                                "body": "*",
+                                "additional_bindings": {
+                                  "post": "/v2/{placement=projects/*/locations/*/catalogs/*/servingConfigs/*}:predict",
+                                  "body": "*"
+                                }
                               }
                             }
                           ]
@@ -1382,7 +1388,10 @@
                         },
                         "pageToken": {
                           "type": "string",
-                          "id": 4
+                          "id": 4,
+                          "options": {
+                            "deprecated": true
+                          }
                         },
                         "filter": {
                           "type": "string",
@@ -2045,13 +2054,19 @@
                           "responseType": "SearchResponse",
                           "options": {
                             "(google.api.http).post": "/v2/{placement=projects/*/locations/*/catalogs/*/placements/*}:search",
-                            "(google.api.http).body": "*"
+                            "(google.api.http).body": "*",
+                            "(google.api.http).additional_bindings.post": "/v2/{placement=projects/*/locations/*/catalogs/*/servingConfigs/*}:search",
+                            "(google.api.http).additional_bindings.body": "*"
                           },
                           "parsedOptions": [
                             {
                               "(google.api.http)": {
                                 "post": "/v2/{placement=projects/*/locations/*/catalogs/*/placements/*}:search",
-                                "body": "*"
+                                "body": "*",
+                                "additional_bindings": {
+                                  "post": "/v2/{placement=projects/*/locations/*/catalogs/*/servingConfigs/*}:search",
+                                  "body": "*"
+                                }
                               }
                             }
                           ]
@@ -2225,6 +2240,10 @@
                                   "type": "string",
                                   "id": 9
                                 },
+                                "caseInsensitive": {
+                                  "type": "bool",
+                                  "id": 10
+                                },
                                 "orderBy": {
                                   "type": "string",
                                   "id": 4
@@ -2232,6 +2251,10 @@
                                 "query": {
                                   "type": "string",
                                   "id": 5
+                                },
+                                "returnMinMax": {
+                                  "type": "bool",
+                                  "id": 11
                                 }
                               }
                             }
@@ -2467,6 +2490,14 @@
                                 "count": {
                                   "type": "int64",
                                   "id": 3
+                                },
+                                "minValue": {
+                                  "type": "double",
+                                  "id": 5
+                                },
+                                "maxValue": {
+                                  "type": "double",
+                                  "id": 6
                                 }
                               }
                             }
