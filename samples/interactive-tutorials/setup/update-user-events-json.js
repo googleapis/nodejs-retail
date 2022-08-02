@@ -28,12 +28,8 @@ async function main() {
       const timeDiff = nowDate - date;
 
       if (timeDiff > 1000 * 60 * 60 * 24 * 90) {
-        if (nowDate.getDate() - 1 === 0) {
-          const yesterday = nowDate - 1000 * 60 * 60 * 24;
-          date = new Date(yesterday);
-        } else {
-          date = nowDate.getDate() - 1;
-        }
+        const yesterday = nowDate - 1000 * 60 * 60 * 24;
+        date = new Date(yesterday);
       }
       event.eventTime = date.toISOString();
       changedEvents.push(JSON.stringify(event));
