@@ -69,7 +69,6 @@ async function main(generatedProductId) {
   // Remove fulfillment places with current time
   console.log('Start remove fulfillment');
   await callRemoveFulfillmentPlaces();
-  await utils.delay(180000);
 
   //Get product
   const response = await utils.getProduct(product);

@@ -74,7 +74,6 @@ async function main(generatedProductId) {
   // Add fulfillment places with current time
   console.log('Start add fulfillment');
   await calladdFulfillmentPlaces();
-  await utils.delay(180000);
 
   //Get product
   const response = await utils.getProduct(product);
