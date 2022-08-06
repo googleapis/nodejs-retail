@@ -61,7 +61,7 @@ export class PredictionServiceClient {
    *
    * @param {object} [options] - The configuration object.
    * The options accepted by the constructor are described in detail
-   * in [this document](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#creating-the-client-instance).
+   * in [this document](https://github.com/googleapis/gax-nodejs/blob/main/client-libraries.md#creating-the-client-instance).
    * The common options are:
    * @param {object} [options.credentials] - Credentials object.
    * @param {string} [options.credentials.client_email]
@@ -84,11 +84,10 @@ export class PredictionServiceClient {
    *     API remote host.
    * @param {gax.ClientConfig} [options.clientConfig] - Client configuration override.
    *     Follows the structure of {@link gapicConfig}.
-   * @param {boolean} [options.fallback] - Use HTTP fallback mode.
-   *     In fallback mode, a special browser-compatible transport implementation is used
-   *     instead of gRPC transport. In browser context (if the `window` object is defined)
-   *     the fallback mode is enabled automatically; set `options.fallback` to `false`
-   *     if you need to override this behavior.
+   * @param {boolean | "rest"} [options.fallback] - Use HTTP fallback mode.
+   *     Pass "rest" to use HTTP/1.1 REST API instead of gRPC.
+   *     For more information, please check the
+   *     {@link https://github.com/googleapis/gax-nodejs/blob/main/client-libraries.md#http11-rest-api-mode documentation}.
    */
   constructor(opts?: ClientOptions) {
     // Ensure that options include all the required fields.
@@ -314,6 +313,16 @@ export class PredictionServiceClient {
    *   they took to trigger the predict request. Note that this user event detail
    *   won't be ingested to userEvent logs. Thus, a separate userEvent write
    *   request is required for event logging.
+   *
+   *   Don't set
+   *   {@link google.cloud.retail.v2.UserEvent.visitor_id|UserEvent.visitor_id} or
+   *   {@link google.cloud.retail.v2.UserInfo.user_id|UserInfo.user_id} to the same
+   *   fixed ID for different users. If you are trying to receive non-personalized
+   *   recommendations (not recommended; this can negatively impact model
+   *   performance), instead set
+   *   {@link google.cloud.retail.v2.UserEvent.visitor_id|UserEvent.visitor_id} to a
+   *   random unique ID and leave
+   *   {@link google.cloud.retail.v2.UserInfo.user_id|UserInfo.user_id} unset.
    * @param {number} request.pageSize
    *   Maximum number of results to return per page. Set this property
    *   to the number of prediction results needed. If zero, the service will
@@ -388,7 +397,7 @@ export class PredictionServiceClient {
    *   * Each resource can have multiple labels, up to a maximum of 64.
    *   * Each label must be a key-value pair.
    *   * Keys have a minimum length of 1 character and a maximum length of 63
-   *     characters, and cannot be empty. Values can be empty, and have a maximum
+   *     characters and cannot be empty. Values can be empty and have a maximum
    *     length of 63 characters.
    *   * Keys and values can contain only lowercase letters, numeric characters,
    *     underscores, and dashes. All characters must use UTF-8 encoding, and

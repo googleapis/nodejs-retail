@@ -73,7 +73,7 @@ export class SearchServiceClient {
    *
    * @param {object} [options] - The configuration object.
    * The options accepted by the constructor are described in detail
-   * in [this document](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#creating-the-client-instance).
+   * in [this document](https://github.com/googleapis/gax-nodejs/blob/main/client-libraries.md#creating-the-client-instance).
    * The common options are:
    * @param {object} [options.credentials] - Credentials object.
    * @param {string} [options.credentials.client_email]
@@ -96,11 +96,10 @@ export class SearchServiceClient {
    *     API remote host.
    * @param {gax.ClientConfig} [options.clientConfig] - Client configuration override.
    *     Follows the structure of {@link gapicConfig}.
-   * @param {boolean} [options.fallback] - Use HTTP fallback mode.
-   *     In fallback mode, a special browser-compatible transport implementation is used
-   *     instead of gRPC transport. In browser context (if the `window` object is defined)
-   *     the fallback mode is enabled automatically; set `options.fallback` to `false`
-   *     if you need to override this behavior.
+   * @param {boolean | "rest"} [options.fallback] - Use HTTP fallback mode.
+   *     Pass "rest" to use HTTP/1.1 REST API instead of gRPC.
+   *     For more information, please check the
+   *     {@link https://github.com/googleapis/gax-nodejs/blob/main/client-libraries.md#http11-rest-api-mode documentation}.
    */
   constructor(opts?: ClientOptions) {
     // Ensure that options include all the required fields.
@@ -331,7 +330,7 @@ export class SearchServiceClient {
    *   The request object that will be sent.
    * @param {string} request.placement
    *   Required. The resource name of the search engine placement, such as
-   *   `projects/* /locations/global/catalogs/default_catalog/placements/default_search`
+   *   `projects/* /locations/global/catalogs/default_catalog/placements/default_search`.
    *   This field is used to identify the serving configuration name and the set
    *   of models that will be used to make the search.
    * @param {string} request.branch
@@ -342,6 +341,11 @@ export class SearchServiceClient {
    *   products under the default branch.
    * @param {string} request.query
    *   Raw search query.
+   *
+   *   If this field is empty, the request is considered a category browsing
+   *   request and returned results are based on
+   *   {@link google.cloud.retail.v2.SearchRequest.filter|filter} and
+   *   {@link google.cloud.retail.v2.SearchRequest.page_categories|page_categories}.
    * @param {string} request.visitorId
    *   Required. A unique identifier for tracking visitors. For example, this
    *   could be implemented with an HTTP cookie, which should be able to uniquely
@@ -424,10 +428,10 @@ export class SearchServiceClient {
    *   [user guide](https://cloud.google.com/retail/docs/boosting).
    *
    *   Notice that if both {@link |ServingConfig.boost_control_ids} and
-   *   [SearchRequest.boost_spec] are set, the boost conditions from both places
-   *   are evaluated. If a search request matches multiple boost conditions,
-   *   the final boost score is equal to the sum of the boost scores from all
-   *   matched boost conditions.
+   *   {@link google.cloud.retail.v2.SearchRequest.boost_spec|SearchRequest.boost_spec}
+   *   are set, the boost conditions from both places are evaluated. If a search
+   *   request matches multiple boost conditions, the final boost score is equal
+   *   to the sum of the boost scores from all matched boost conditions.
    * @param {google.cloud.retail.v2.SearchRequest.QueryExpansionSpec} request.queryExpansionSpec
    *   The query expansion specification that specifies the conditions under which
    *   query expansion will occur. See more details at this [user
@@ -460,7 +464,8 @@ export class SearchServiceClient {
    *   * inventory(place_id,price)
    *   * inventory(place_id,original_price)
    *   * inventory(place_id,attributes.key), where key is any key in the
-   *     {@link |Product.inventories.attributes} map.
+   *     {@link google.cloud.retail.v2.LocalInventory.attributes|Product.local_inventories.attributes}
+   *     map.
    *   * attributes.key, where key is any key in the
    *     {@link google.cloud.retail.v2.Product.attributes|Product.attributes} map.
    *   * pickupInStore.id, where id is any
@@ -520,6 +525,27 @@ export class SearchServiceClient {
    *   request triggers both product search and faceted search.
    * @param {google.cloud.retail.v2.SearchRequest.PersonalizationSpec} request.personalizationSpec
    *   The specification for personalization.
+   * @param {number[]} request.labels
+   *   The labels applied to a resource must meet the following requirements:
+   *
+   *   * Each resource can have multiple labels, up to a maximum of 64.
+   *   * Each label must be a key-value pair.
+   *   * Keys have a minimum length of 1 character and a maximum length of 63
+   *     characters and cannot be empty. Values can be empty and have a maximum
+   *     length of 63 characters.
+   *   * Keys and values can contain only lowercase letters, numeric characters,
+   *     underscores, and dashes. All characters must use UTF-8 encoding, and
+   *     international characters are allowed.
+   *   * The key portion of a label must be unique. However, you can use the same
+   *     key with multiple resources.
+   *   * Keys must start with a lowercase letter or international character.
+   *
+   *   See [Google Cloud
+   *   Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+   *   for more details.
+   * @param {google.cloud.retail.v2.SearchRequest.SpellCorrectionSpec} request.spellCorrectionSpec
+   *   The spell correction specification that specifies the mode under
+   *   which spell correction will take effect.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
@@ -606,7 +632,7 @@ export class SearchServiceClient {
    *   The request object that will be sent.
    * @param {string} request.placement
    *   Required. The resource name of the search engine placement, such as
-   *   `projects/* /locations/global/catalogs/default_catalog/placements/default_search`
+   *   `projects/* /locations/global/catalogs/default_catalog/placements/default_search`.
    *   This field is used to identify the serving configuration name and the set
    *   of models that will be used to make the search.
    * @param {string} request.branch
@@ -617,6 +643,11 @@ export class SearchServiceClient {
    *   products under the default branch.
    * @param {string} request.query
    *   Raw search query.
+   *
+   *   If this field is empty, the request is considered a category browsing
+   *   request and returned results are based on
+   *   {@link google.cloud.retail.v2.SearchRequest.filter|filter} and
+   *   {@link google.cloud.retail.v2.SearchRequest.page_categories|page_categories}.
    * @param {string} request.visitorId
    *   Required. A unique identifier for tracking visitors. For example, this
    *   could be implemented with an HTTP cookie, which should be able to uniquely
@@ -699,10 +730,10 @@ export class SearchServiceClient {
    *   [user guide](https://cloud.google.com/retail/docs/boosting).
    *
    *   Notice that if both {@link |ServingConfig.boost_control_ids} and
-   *   [SearchRequest.boost_spec] are set, the boost conditions from both places
-   *   are evaluated. If a search request matches multiple boost conditions,
-   *   the final boost score is equal to the sum of the boost scores from all
-   *   matched boost conditions.
+   *   {@link google.cloud.retail.v2.SearchRequest.boost_spec|SearchRequest.boost_spec}
+   *   are set, the boost conditions from both places are evaluated. If a search
+   *   request matches multiple boost conditions, the final boost score is equal
+   *   to the sum of the boost scores from all matched boost conditions.
    * @param {google.cloud.retail.v2.SearchRequest.QueryExpansionSpec} request.queryExpansionSpec
    *   The query expansion specification that specifies the conditions under which
    *   query expansion will occur. See more details at this [user
@@ -735,7 +766,8 @@ export class SearchServiceClient {
    *   * inventory(place_id,price)
    *   * inventory(place_id,original_price)
    *   * inventory(place_id,attributes.key), where key is any key in the
-   *     {@link |Product.inventories.attributes} map.
+   *     {@link google.cloud.retail.v2.LocalInventory.attributes|Product.local_inventories.attributes}
+   *     map.
    *   * attributes.key, where key is any key in the
    *     {@link google.cloud.retail.v2.Product.attributes|Product.attributes} map.
    *   * pickupInStore.id, where id is any
@@ -795,6 +827,27 @@ export class SearchServiceClient {
    *   request triggers both product search and faceted search.
    * @param {google.cloud.retail.v2.SearchRequest.PersonalizationSpec} request.personalizationSpec
    *   The specification for personalization.
+   * @param {number[]} request.labels
+   *   The labels applied to a resource must meet the following requirements:
+   *
+   *   * Each resource can have multiple labels, up to a maximum of 64.
+   *   * Each label must be a key-value pair.
+   *   * Keys have a minimum length of 1 character and a maximum length of 63
+   *     characters and cannot be empty. Values can be empty and have a maximum
+   *     length of 63 characters.
+   *   * Keys and values can contain only lowercase letters, numeric characters,
+   *     underscores, and dashes. All characters must use UTF-8 encoding, and
+   *     international characters are allowed.
+   *   * The key portion of a label must be unique. However, you can use the same
+   *     key with multiple resources.
+   *   * Keys must start with a lowercase letter or international character.
+   *
+   *   See [Google Cloud
+   *   Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+   *   for more details.
+   * @param {google.cloud.retail.v2.SearchRequest.SpellCorrectionSpec} request.spellCorrectionSpec
+   *   The spell correction specification that specifies the mode under
+   *   which spell correction will take effect.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
@@ -837,7 +890,7 @@ export class SearchServiceClient {
    *   The request object that will be sent.
    * @param {string} request.placement
    *   Required. The resource name of the search engine placement, such as
-   *   `projects/* /locations/global/catalogs/default_catalog/placements/default_search`
+   *   `projects/* /locations/global/catalogs/default_catalog/placements/default_search`.
    *   This field is used to identify the serving configuration name and the set
    *   of models that will be used to make the search.
    * @param {string} request.branch
@@ -848,6 +901,11 @@ export class SearchServiceClient {
    *   products under the default branch.
    * @param {string} request.query
    *   Raw search query.
+   *
+   *   If this field is empty, the request is considered a category browsing
+   *   request and returned results are based on
+   *   {@link google.cloud.retail.v2.SearchRequest.filter|filter} and
+   *   {@link google.cloud.retail.v2.SearchRequest.page_categories|page_categories}.
    * @param {string} request.visitorId
    *   Required. A unique identifier for tracking visitors. For example, this
    *   could be implemented with an HTTP cookie, which should be able to uniquely
@@ -930,10 +988,10 @@ export class SearchServiceClient {
    *   [user guide](https://cloud.google.com/retail/docs/boosting).
    *
    *   Notice that if both {@link |ServingConfig.boost_control_ids} and
-   *   [SearchRequest.boost_spec] are set, the boost conditions from both places
-   *   are evaluated. If a search request matches multiple boost conditions,
-   *   the final boost score is equal to the sum of the boost scores from all
-   *   matched boost conditions.
+   *   {@link google.cloud.retail.v2.SearchRequest.boost_spec|SearchRequest.boost_spec}
+   *   are set, the boost conditions from both places are evaluated. If a search
+   *   request matches multiple boost conditions, the final boost score is equal
+   *   to the sum of the boost scores from all matched boost conditions.
    * @param {google.cloud.retail.v2.SearchRequest.QueryExpansionSpec} request.queryExpansionSpec
    *   The query expansion specification that specifies the conditions under which
    *   query expansion will occur. See more details at this [user
@@ -966,7 +1024,8 @@ export class SearchServiceClient {
    *   * inventory(place_id,price)
    *   * inventory(place_id,original_price)
    *   * inventory(place_id,attributes.key), where key is any key in the
-   *     {@link |Product.inventories.attributes} map.
+   *     {@link google.cloud.retail.v2.LocalInventory.attributes|Product.local_inventories.attributes}
+   *     map.
    *   * attributes.key, where key is any key in the
    *     {@link google.cloud.retail.v2.Product.attributes|Product.attributes} map.
    *   * pickupInStore.id, where id is any
@@ -1026,6 +1085,27 @@ export class SearchServiceClient {
    *   request triggers both product search and faceted search.
    * @param {google.cloud.retail.v2.SearchRequest.PersonalizationSpec} request.personalizationSpec
    *   The specification for personalization.
+   * @param {number[]} request.labels
+   *   The labels applied to a resource must meet the following requirements:
+   *
+   *   * Each resource can have multiple labels, up to a maximum of 64.
+   *   * Each label must be a key-value pair.
+   *   * Keys have a minimum length of 1 character and a maximum length of 63
+   *     characters and cannot be empty. Values can be empty and have a maximum
+   *     length of 63 characters.
+   *   * Keys and values can contain only lowercase letters, numeric characters,
+   *     underscores, and dashes. All characters must use UTF-8 encoding, and
+   *     international characters are allowed.
+   *   * The key portion of a label must be unique. However, you can use the same
+   *     key with multiple resources.
+   *   * Keys must start with a lowercase letter or international character.
+   *
+   *   See [Google Cloud
+   *   Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+   *   for more details.
+   * @param {google.cloud.retail.v2.SearchRequest.SpellCorrectionSpec} request.spellCorrectionSpec
+   *   The spell correction specification that specifies the mode under
+   *   which spell correction will take effect.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Object}
