@@ -79,7 +79,7 @@ const createProduct = async (
   createdProduct.fulfillmentInfo = response[0].fulfillmentInfo;
   createdProduct.availableQuantity = response[0].availableQuantity;
   createdProduct.availability = response[0].availability;
-  console.log("Created product: ", createdProduct);
+  console.log('Created product: ', createdProduct);
 
   return response[0];
 };
