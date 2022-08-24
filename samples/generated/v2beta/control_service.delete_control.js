@@ -23,11 +23,14 @@
 function main(name) {
   // [START retail_v2beta_generated_ControlService_DeleteControl_async]
   /**
+   * This snippet has been automatically generated and should be regarded as a code template only.
+   * It will require modifications to work.
+   * It may require correct/in-range values for request initialization.
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
    *  Required. The resource name of the Control to delete. Format:
-   *  projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/controls/{control_id}
+   *  `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/controls/{control_id}`
    */
   // const name = 'abc123'
 

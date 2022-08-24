@@ -23,6 +23,9 @@
 function main(product, type, placeIds) {
   // [START retail_v2alpha_generated_ProductService_AddFulfillmentPlaces_async]
   /**
+   * This snippet has been automatically generated and should be regarded as a code template only.
+   * It will require modifications to work.
+   * It may require correct/in-range values for request initialization.
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
@@ -49,7 +52,8 @@ function main(product, type, placeIds) {
    *  * "custom-type-5"
    *  If this field is set to an invalid value other than these, an
    *  INVALID_ARGUMENT error is returned.
-   *  This field directly corresponds to Product.fulfillment_info.type .
+   *  This field directly corresponds to
+   *  Product.fulfillment_info.type google.cloud.retail.v2alpha.FulfillmentInfo.type.
    */
   // const type = 'abc123'
   /**

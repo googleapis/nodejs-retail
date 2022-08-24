@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import * as Long from "long";
+import Long = require("long");
 import {protobuf as $protobuf} from "google-gax";
 /** Namespace google. */
 export namespace google {
@@ -120,6 +120,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ProductLevelConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a Catalog. */
@@ -222,6 +229,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Catalog
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a CatalogService */
@@ -304,28 +318,28 @@ export namespace google {
                 namespace CatalogService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.CatalogService#listCatalogs}.
+                     * Callback as used by {@link google.cloud.retail.v2.CatalogService|listCatalogs}.
                      * @param error Error, if any
                      * @param [response] ListCatalogsResponse
                      */
                     type ListCatalogsCallback = (error: (Error|null), response?: google.cloud.retail.v2.ListCatalogsResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.CatalogService#updateCatalog}.
+                     * Callback as used by {@link google.cloud.retail.v2.CatalogService|updateCatalog}.
                      * @param error Error, if any
                      * @param [response] Catalog
                      */
                     type UpdateCatalogCallback = (error: (Error|null), response?: google.cloud.retail.v2.Catalog) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.CatalogService#setDefaultBranch}.
+                     * Callback as used by {@link google.cloud.retail.v2.CatalogService|setDefaultBranch}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
                     type SetDefaultBranchCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.CatalogService#getDefaultBranch}.
+                     * Callback as used by {@link google.cloud.retail.v2.CatalogService|getDefaultBranch}.
                      * @param error Error, if any
                      * @param [response] GetDefaultBranchResponse
                      */
@@ -432,6 +446,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListCatalogsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListCatalogsResponse. */
@@ -528,6 +549,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListCatalogsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateCatalogRequest. */
@@ -624,6 +652,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateCatalogRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a SetDefaultBranchRequest. */
@@ -732,6 +767,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SetDefaultBranchRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetDefaultBranchRequest. */
@@ -822,6 +864,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetDefaultBranchRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetDefaultBranchResponse. */
@@ -924,6 +973,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetDefaultBranchResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an Audience. */
@@ -1020,6 +1076,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Audience
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ColorInfo. */
@@ -1116,6 +1179,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ColorInfo
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CustomAttribute. */
@@ -1230,6 +1300,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CustomAttribute
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a FulfillmentInfo. */
@@ -1326,6 +1403,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for FulfillmentInfo
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an Image. */
@@ -1428,6 +1512,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Image
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an Interval. */
@@ -1542,6 +1633,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Interval
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PriceInfo. */
@@ -1668,6 +1766,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PriceInfo
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace PriceInfo {
@@ -1766,6 +1871,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for PriceRange
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -1869,6 +1981,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Rating
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a UserInfo. */
@@ -1977,6 +2096,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UserInfo
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a LocalInventory. */
@@ -2085,6 +2211,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for LocalInventory
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a CompletionService */
@@ -2139,14 +2272,14 @@ export namespace google {
                 namespace CompletionService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.CompletionService#completeQuery}.
+                     * Callback as used by {@link google.cloud.retail.v2.CompletionService|completeQuery}.
                      * @param error Error, if any
                      * @param [response] CompleteQueryResponse
                      */
                     type CompleteQueryCallback = (error: (Error|null), response?: google.cloud.retail.v2.CompleteQueryResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.CompletionService#importCompletionData}.
+                     * Callback as used by {@link google.cloud.retail.v2.CompletionService|importCompletionData}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
@@ -2277,6 +2410,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CompleteQueryRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CompleteQueryResponse. */
@@ -2379,6 +2519,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CompleteQueryResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace CompleteQueryResponse {
@@ -2477,6 +2624,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for CompletionResult
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a RecentSearchResult. */
@@ -2567,6 +2721,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for RecentSearchResult
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -2664,6 +2825,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GcsSource
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a BigQuerySource. */
@@ -2787,6 +2955,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for BigQuerySource
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ProductInlineSource. */
@@ -2877,6 +3052,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ProductInlineSource
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a UserEventInlineSource. */
@@ -2967,6 +3149,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UserEventInlineSource
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportErrorsConfig. */
@@ -3060,6 +3249,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportErrorsConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportProductsRequest. */
@@ -3186,6 +3382,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportProductsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace ImportProductsRequest {
@@ -3298,6 +3501,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportUserEventsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportCompletionDataRequest. */
@@ -3400,6 +3610,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportCompletionDataRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ProductInputConfig. */
@@ -3505,6 +3722,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ProductInputConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a UserEventInputConfig. */
@@ -3610,6 +3834,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UserEventInputConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CompletionDataInputConfig. */
@@ -3703,6 +3934,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CompletionDataInputConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportMetadata. */
@@ -3823,6 +4061,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportProductsResponse. */
@@ -3919,6 +4164,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportProductsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportUserEventsResponse. */
@@ -4021,6 +4273,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportUserEventsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a UserEventImportSummary. */
@@ -4117,6 +4376,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UserEventImportSummary
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportCompletionDataResponse. */
@@ -4207,6 +4473,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportCompletionDataResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a Product. */
@@ -4492,6 +4765,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Product
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace Product {
@@ -4602,6 +4882,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Promotion
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a UserEvent. */
@@ -4806,6 +5093,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UserEvent
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ProductDetail. */
@@ -4902,6 +5196,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ProductDetail
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CompletionDetail. */
@@ -5004,6 +5305,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CompletionDetail
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PurchaseTransaction. */
@@ -5118,6 +5426,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PurchaseTransaction
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a PredictionService */
@@ -5158,7 +5473,7 @@ export namespace google {
                 namespace PredictionService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.PredictionService#predict}.
+                     * Callback as used by {@link google.cloud.retail.v2.PredictionService|predict}.
                      * @param error Error, if any
                      * @param [response] PredictResponse
                      */
@@ -5295,6 +5610,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PredictRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PredictResponse. */
@@ -5403,6 +5725,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PredictResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace PredictResponse {
@@ -5501,6 +5830,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for PredictionResult
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -5682,77 +6018,77 @@ export namespace google {
                 namespace ProductService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.ProductService#createProduct}.
+                     * Callback as used by {@link google.cloud.retail.v2.ProductService|createProduct}.
                      * @param error Error, if any
                      * @param [response] Product
                      */
                     type CreateProductCallback = (error: (Error|null), response?: google.cloud.retail.v2.Product) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.ProductService#getProduct}.
+                     * Callback as used by {@link google.cloud.retail.v2.ProductService|getProduct}.
                      * @param error Error, if any
                      * @param [response] Product
                      */
                     type GetProductCallback = (error: (Error|null), response?: google.cloud.retail.v2.Product) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.ProductService#listProducts}.
+                     * Callback as used by {@link google.cloud.retail.v2.ProductService|listProducts}.
                      * @param error Error, if any
                      * @param [response] ListProductsResponse
                      */
                     type ListProductsCallback = (error: (Error|null), response?: google.cloud.retail.v2.ListProductsResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.ProductService#updateProduct}.
+                     * Callback as used by {@link google.cloud.retail.v2.ProductService|updateProduct}.
                      * @param error Error, if any
                      * @param [response] Product
                      */
                     type UpdateProductCallback = (error: (Error|null), response?: google.cloud.retail.v2.Product) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.ProductService#deleteProduct}.
+                     * Callback as used by {@link google.cloud.retail.v2.ProductService|deleteProduct}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
                     type DeleteProductCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.ProductService#importProducts}.
+                     * Callback as used by {@link google.cloud.retail.v2.ProductService|importProducts}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type ImportProductsCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.ProductService#setInventory}.
+                     * Callback as used by {@link google.cloud.retail.v2.ProductService|setInventory}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type SetInventoryCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.ProductService#addFulfillmentPlaces}.
+                     * Callback as used by {@link google.cloud.retail.v2.ProductService|addFulfillmentPlaces}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type AddFulfillmentPlacesCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.ProductService#removeFulfillmentPlaces}.
+                     * Callback as used by {@link google.cloud.retail.v2.ProductService|removeFulfillmentPlaces}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type RemoveFulfillmentPlacesCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.ProductService#addLocalInventories}.
+                     * Callback as used by {@link google.cloud.retail.v2.ProductService|addLocalInventories}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type AddLocalInventoriesCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.ProductService#removeLocalInventories}.
+                     * Callback as used by {@link google.cloud.retail.v2.ProductService|removeLocalInventories}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
@@ -5859,6 +6195,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CreateProductRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetProductRequest. */
@@ -5949,6 +6292,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetProductRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateProductRequest. */
@@ -6051,6 +6401,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateProductRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a DeleteProductRequest. */
@@ -6141,6 +6498,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for DeleteProductRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListProductsRequest. */
@@ -6255,6 +6619,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListProductsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListProductsResponse. */
@@ -6351,6 +6722,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListProductsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a SetInventoryRequest. */
@@ -6459,6 +6837,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SetInventoryRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a SetInventoryMetadata. */
@@ -6543,6 +6928,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SetInventoryMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a SetInventoryResponse. */
@@ -6627,6 +7019,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SetInventoryResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddFulfillmentPlacesRequest. */
@@ -6741,6 +7140,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddFulfillmentPlacesRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddFulfillmentPlacesMetadata. */
@@ -6825,6 +7231,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddFulfillmentPlacesMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddFulfillmentPlacesResponse. */
@@ -6909,6 +7322,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddFulfillmentPlacesResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddLocalInventoriesRequest. */
@@ -7023,6 +7443,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddLocalInventoriesRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddLocalInventoriesMetadata. */
@@ -7107,6 +7534,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddLocalInventoriesMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddLocalInventoriesResponse. */
@@ -7191,6 +7625,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddLocalInventoriesResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveLocalInventoriesRequest. */
@@ -7299,6 +7740,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveLocalInventoriesRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveLocalInventoriesMetadata. */
@@ -7383,6 +7831,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveLocalInventoriesMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveLocalInventoriesResponse. */
@@ -7467,6 +7922,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveLocalInventoriesResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveFulfillmentPlacesRequest. */
@@ -7581,6 +8043,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveFulfillmentPlacesRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveFulfillmentPlacesMetadata. */
@@ -7665,6 +8134,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveFulfillmentPlacesMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveFulfillmentPlacesResponse. */
@@ -7749,6 +8225,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveFulfillmentPlacesResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PurgeMetadata. */
@@ -7833,6 +8316,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PurgeMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PurgeUserEventsRequest. */
@@ -7935,6 +8425,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PurgeUserEventsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PurgeUserEventsResponse. */
@@ -8025,6 +8522,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PurgeUserEventsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a SearchService */
@@ -8065,7 +8569,7 @@ export namespace google {
                 namespace SearchService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.SearchService#search}.
+                     * Callback as used by {@link google.cloud.retail.v2.SearchService|search}.
                      * @param error Error, if any
                      * @param [response] SearchResponse
                      */
@@ -8283,6 +8787,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SearchRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace SearchRequest {
@@ -8393,6 +8904,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for FacetSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace FacetSpec {
@@ -8415,11 +8933,17 @@ export namespace google {
                             /** FacetKey contains */
                             contains?: (string[]|null);
 
+                            /** FacetKey caseInsensitive */
+                            caseInsensitive?: (boolean|null);
+
                             /** FacetKey orderBy */
                             orderBy?: (string|null);
 
                             /** FacetKey query */
                             query?: (string|null);
+
+                            /** FacetKey returnMinMax */
+                            returnMinMax?: (boolean|null);
                         }
 
                         /** Represents a FacetKey. */
@@ -8446,11 +8970,17 @@ export namespace google {
                             /** FacetKey contains. */
                             public contains: string[];
 
+                            /** FacetKey caseInsensitive. */
+                            public caseInsensitive: boolean;
+
                             /** FacetKey orderBy. */
                             public orderBy: string;
 
                             /** FacetKey query. */
                             public query: string;
+
+                            /** FacetKey returnMinMax. */
+                            public returnMinMax: boolean;
 
                             /**
                              * Creates a new FacetKey instance using the specified properties.
@@ -8521,6 +9051,13 @@ export namespace google {
                              * @returns JSON object
                              */
                             public toJSON(): { [k: string]: any };
+
+                            /**
+                             * Gets the default type url for FacetKey
+                             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns The default type url
+                             */
+                            public static getTypeUrl(typeUrlPrefix?: string): string;
                         }
                     }
 
@@ -8612,6 +9149,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for DynamicFacetSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace DynamicFacetSpec {
@@ -8721,6 +9265,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for BoostSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace BoostSpec {
@@ -8819,6 +9370,13 @@ export namespace google {
                              * @returns JSON object
                              */
                             public toJSON(): { [k: string]: any };
+
+                            /**
+                             * Gets the default type url for ConditionBoostSpec
+                             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns The default type url
+                             */
+                            public static getTypeUrl(typeUrlPrefix?: string): string;
                         }
                     }
 
@@ -8916,6 +9474,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for QueryExpansionSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace QueryExpansionSpec {
@@ -9016,6 +9581,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for PersonalizationSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace PersonalizationSpec {
@@ -9116,6 +9688,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for SpellCorrectionSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace SpellCorrectionSpec {
@@ -9278,6 +9857,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SearchResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace SearchResponse {
@@ -9394,6 +9980,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for SearchResult
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a Facet. */
@@ -9496,6 +10089,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for Facet
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace Facet {
@@ -9511,6 +10111,12 @@ export namespace google {
 
                             /** FacetValue count */
                             count?: (number|Long|string|null);
+
+                            /** FacetValue minValue */
+                            minValue?: (number|null);
+
+                            /** FacetValue maxValue */
+                            maxValue?: (number|null);
                         }
 
                         /** Represents a FacetValue. */
@@ -9530,6 +10136,12 @@ export namespace google {
 
                             /** FacetValue count. */
                             public count: (number|Long|string);
+
+                            /** FacetValue minValue. */
+                            public minValue: number;
+
+                            /** FacetValue maxValue. */
+                            public maxValue: number;
 
                             /** FacetValue facetValue. */
                             public facetValue?: ("value"|"interval");
@@ -9603,6 +10215,13 @@ export namespace google {
                              * @returns JSON object
                              */
                             public toJSON(): { [k: string]: any };
+
+                            /**
+                             * Gets the default type url for FacetValue
+                             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns The default type url
+                             */
+                            public static getTypeUrl(typeUrlPrefix?: string): string;
                         }
                     }
 
@@ -9700,6 +10319,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for QueryExpansionInfo
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -9797,35 +10423,35 @@ export namespace google {
                 namespace UserEventService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.UserEventService#writeUserEvent}.
+                     * Callback as used by {@link google.cloud.retail.v2.UserEventService|writeUserEvent}.
                      * @param error Error, if any
                      * @param [response] UserEvent
                      */
                     type WriteUserEventCallback = (error: (Error|null), response?: google.cloud.retail.v2.UserEvent) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.UserEventService#collectUserEvent}.
+                     * Callback as used by {@link google.cloud.retail.v2.UserEventService|collectUserEvent}.
                      * @param error Error, if any
                      * @param [response] HttpBody
                      */
                     type CollectUserEventCallback = (error: (Error|null), response?: google.api.HttpBody) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.UserEventService#purgeUserEvents}.
+                     * Callback as used by {@link google.cloud.retail.v2.UserEventService|purgeUserEvents}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type PurgeUserEventsCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.UserEventService#importUserEvents}.
+                     * Callback as used by {@link google.cloud.retail.v2.UserEventService|importUserEvents}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type ImportUserEventsCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2.UserEventService#rejoinUserEvents}.
+                     * Callback as used by {@link google.cloud.retail.v2.UserEventService|rejoinUserEvents}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
@@ -9926,6 +10552,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for WriteUserEventRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CollectUserEventRequest. */
@@ -10034,6 +10667,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CollectUserEventRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RejoinUserEventsRequest. */
@@ -10130,6 +10770,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RejoinUserEventsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace RejoinUserEventsRequest {
@@ -10230,6 +10877,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RejoinUserEventsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RejoinUserEventsMetadata. */
@@ -10314,6 +10968,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RejoinUserEventsMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
             }
 
@@ -10414,6 +11075,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ProductLevelConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CatalogAttribute. */
@@ -10436,6 +11104,9 @@ export namespace google {
 
                     /** CatalogAttribute searchableOption */
                     searchableOption?: (google.cloud.retail.v2alpha.CatalogAttribute.SearchableOption|keyof typeof google.cloud.retail.v2alpha.CatalogAttribute.SearchableOption|null);
+
+                    /** CatalogAttribute recommendationsFilteringOption */
+                    recommendationsFilteringOption?: (google.cloud.retail.v2alpha.RecommendationsFilteringOption|keyof typeof google.cloud.retail.v2alpha.RecommendationsFilteringOption|null);
                 }
 
                 /** Represents a CatalogAttribute. */
@@ -10464,6 +11135,9 @@ export namespace google {
 
                     /** CatalogAttribute searchableOption. */
                     public searchableOption: (google.cloud.retail.v2alpha.CatalogAttribute.SearchableOption|keyof typeof google.cloud.retail.v2alpha.CatalogAttribute.SearchableOption);
+
+                    /** CatalogAttribute recommendationsFilteringOption. */
+                    public recommendationsFilteringOption: (google.cloud.retail.v2alpha.RecommendationsFilteringOption|keyof typeof google.cloud.retail.v2alpha.RecommendationsFilteringOption);
 
                     /**
                      * Creates a new CatalogAttribute instance using the specified properties.
@@ -10534,6 +11208,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CatalogAttribute
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace CatalogAttribute {
@@ -10667,6 +11348,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AttributesConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CompletionConfig. */
@@ -10817,6 +11505,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CompletionConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a MerchantCenterLink. */
@@ -10931,6 +11626,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for MerchantCenterLink
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a MerchantCenterLinkingConfig. */
@@ -11021,6 +11723,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for MerchantCenterLinkingConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a Catalog. */
@@ -11129,6 +11838,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Catalog
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** AttributeConfigLevel enum. */
@@ -11143,6 +11859,13 @@ export namespace google {
                     SOLUTION_TYPE_UNSPECIFIED = 0,
                     SOLUTION_TYPE_RECOMMENDATION = 1,
                     SOLUTION_TYPE_SEARCH = 2
+                }
+
+                /** RecommendationsFilteringOption enum. */
+                enum RecommendationsFilteringOption {
+                    RECOMMENDATIONS_FILTERING_OPTION_UNSPECIFIED = 0,
+                    RECOMMENDATIONS_FILTERING_DISABLED = 1,
+                    RECOMMENDATIONS_FILTERING_ENABLED = 3
                 }
 
                 /** SearchSolutionUseCase enum. */
@@ -11246,6 +11969,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Condition
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace Condition {
@@ -11344,6 +12074,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for QueryTerm
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a TimeRange. */
@@ -11440,6 +12177,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for TimeRange
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -11582,6 +12326,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Rule
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace Rule {
@@ -11680,6 +12431,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for BoostAction
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a FilterAction. */
@@ -11770,6 +12528,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for FilterAction
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a RedirectAction. */
@@ -11860,6 +12625,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for RedirectAction
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a TwowaySynonymsAction. */
@@ -11950,6 +12722,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for TwowaySynonymsAction
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of an OnewaySynonymsAction. */
@@ -12052,6 +12831,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for OnewaySynonymsAction
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a DoNotAssociateAction. */
@@ -12154,6 +12940,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for DoNotAssociateAction
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a ReplacementAction. */
@@ -12256,6 +13049,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for ReplacementAction
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of an IgnoreAction. */
@@ -12346,6 +13146,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for IgnoreAction
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -12443,6 +13250,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Audience
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ColorInfo. */
@@ -12539,6 +13353,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ColorInfo
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CustomAttribute. */
@@ -12653,6 +13474,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CustomAttribute
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a FulfillmentInfo. */
@@ -12749,6 +13577,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for FulfillmentInfo
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an Image. */
@@ -12851,6 +13686,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Image
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an Interval. */
@@ -12965,6 +13807,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Interval
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PriceInfo. */
@@ -13091,6 +13940,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PriceInfo
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace PriceInfo {
@@ -13189,6 +14045,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for PriceRange
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -13292,6 +14155,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Rating
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a UserInfo. */
@@ -13400,6 +14270,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UserInfo
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a LocalInventory. */
@@ -13508,6 +14385,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for LocalInventory
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GcsSource. */
@@ -13604,6 +14488,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GcsSource
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a BigQuerySource. */
@@ -13727,6 +14618,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for BigQuerySource
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ProductInlineSource. */
@@ -13817,6 +14715,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ProductInlineSource
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a UserEventInlineSource. */
@@ -13907,6 +14812,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UserEventInlineSource
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportErrorsConfig. */
@@ -14000,6 +14912,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportErrorsConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportProductsRequest. */
@@ -14025,6 +14944,9 @@ export namespace google {
 
                     /** ImportProductsRequest notificationPubsubTopic */
                     notificationPubsubTopic?: (string|null);
+
+                    /** ImportProductsRequest skipDefaultBranchProtection */
+                    skipDefaultBranchProtection?: (boolean|null);
                 }
 
                 /** Represents an ImportProductsRequest. */
@@ -14056,6 +14978,9 @@ export namespace google {
 
                     /** ImportProductsRequest notificationPubsubTopic. */
                     public notificationPubsubTopic: string;
+
+                    /** ImportProductsRequest skipDefaultBranchProtection. */
+                    public skipDefaultBranchProtection: boolean;
 
                     /**
                      * Creates a new ImportProductsRequest instance using the specified properties.
@@ -14126,6 +15051,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportProductsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace ImportProductsRequest {
@@ -14238,6 +15170,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportUserEventsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportCompletionDataRequest. */
@@ -14340,6 +15279,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportCompletionDataRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ProductInputConfig. */
@@ -14445,6 +15391,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ProductInputConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a UserEventInputConfig. */
@@ -14550,6 +15503,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UserEventInputConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CompletionDataInputConfig. */
@@ -14643,6 +15603,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CompletionDataInputConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportMetadata. */
@@ -14763,6 +15730,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportProductsResponse. */
@@ -14859,6 +15833,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportProductsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportUserEventsResponse. */
@@ -14961,6 +15942,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportUserEventsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a UserEventImportSummary. */
@@ -15057,6 +16045,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UserEventImportSummary
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportCompletionDataResponse. */
@@ -15147,6 +16142,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportCompletionDataResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a Product. */
@@ -15432,6 +16434,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Product
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace Product {
@@ -15542,6 +16551,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Promotion
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a UserEvent. */
@@ -15746,6 +16762,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UserEvent
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ProductDetail. */
@@ -15842,6 +16865,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ProductDetail
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CompletionDetail. */
@@ -15944,6 +16974,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CompletionDetail
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PurchaseTransaction. */
@@ -16058,6 +17095,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PurchaseTransaction
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a CatalogService */
@@ -16238,77 +17282,77 @@ export namespace google {
                 namespace CatalogService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService#listCatalogs}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService|listCatalogs}.
                      * @param error Error, if any
                      * @param [response] ListCatalogsResponse
                      */
                     type ListCatalogsCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.ListCatalogsResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService#updateCatalog}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService|updateCatalog}.
                      * @param error Error, if any
                      * @param [response] Catalog
                      */
                     type UpdateCatalogCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.Catalog) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService#setDefaultBranch}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService|setDefaultBranch}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
                     type SetDefaultBranchCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService#getDefaultBranch}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService|getDefaultBranch}.
                      * @param error Error, if any
                      * @param [response] GetDefaultBranchResponse
                      */
                     type GetDefaultBranchCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.GetDefaultBranchResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService#getCompletionConfig}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService|getCompletionConfig}.
                      * @param error Error, if any
                      * @param [response] CompletionConfig
                      */
                     type GetCompletionConfigCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.CompletionConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService#updateCompletionConfig}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService|updateCompletionConfig}.
                      * @param error Error, if any
                      * @param [response] CompletionConfig
                      */
                     type UpdateCompletionConfigCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.CompletionConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService#getAttributesConfig}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService|getAttributesConfig}.
                      * @param error Error, if any
                      * @param [response] AttributesConfig
                      */
                     type GetAttributesConfigCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.AttributesConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService#updateAttributesConfig}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService|updateAttributesConfig}.
                      * @param error Error, if any
                      * @param [response] AttributesConfig
                      */
                     type UpdateAttributesConfigCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.AttributesConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService#addCatalogAttribute}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService|addCatalogAttribute}.
                      * @param error Error, if any
                      * @param [response] AttributesConfig
                      */
                     type AddCatalogAttributeCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.AttributesConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService#removeCatalogAttribute}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService|removeCatalogAttribute}.
                      * @param error Error, if any
                      * @param [response] AttributesConfig
                      */
                     type RemoveCatalogAttributeCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.AttributesConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService#replaceCatalogAttribute}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.CatalogService|replaceCatalogAttribute}.
                      * @param error Error, if any
                      * @param [response] AttributesConfig
                      */
@@ -16415,6 +17459,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListCatalogsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListCatalogsResponse. */
@@ -16511,6 +17562,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListCatalogsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateCatalogRequest. */
@@ -16607,6 +17665,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateCatalogRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a SetDefaultBranchRequest. */
@@ -16715,6 +17780,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SetDefaultBranchRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetDefaultBranchRequest. */
@@ -16805,6 +17877,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetDefaultBranchRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetDefaultBranchResponse. */
@@ -16907,6 +17986,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetDefaultBranchResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetCompletionConfigRequest. */
@@ -16997,6 +18083,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetCompletionConfigRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateCompletionConfigRequest. */
@@ -17093,6 +18186,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateCompletionConfigRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetAttributesConfigRequest. */
@@ -17183,6 +18283,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetAttributesConfigRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateAttributesConfigRequest. */
@@ -17279,6 +18386,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateAttributesConfigRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddCatalogAttributeRequest. */
@@ -17375,6 +18489,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddCatalogAttributeRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveCatalogAttributeRequest. */
@@ -17471,6 +18592,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveCatalogAttributeRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ReplaceCatalogAttributeRequest. */
@@ -17573,6 +18701,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ReplaceCatalogAttributeRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a CompletionService */
@@ -17627,14 +18762,14 @@ export namespace google {
                 namespace CompletionService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.CompletionService#completeQuery}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.CompletionService|completeQuery}.
                      * @param error Error, if any
                      * @param [response] CompleteQueryResponse
                      */
                     type CompleteQueryCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.CompleteQueryResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.CompletionService#importCompletionData}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.CompletionService|importCompletionData}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
@@ -17765,6 +18900,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CompleteQueryRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CompleteQueryResponse. */
@@ -17867,6 +19009,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CompleteQueryResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace CompleteQueryResponse {
@@ -17965,6 +19114,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for CompletionResult
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a RecentSearchResult. */
@@ -18055,6 +19211,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for RecentSearchResult
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -18185,6 +19348,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Control
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a SearchService */
@@ -18225,7 +19395,7 @@ export namespace google {
                 namespace SearchService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.SearchService#search}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.SearchService|search}.
                      * @param error Error, if any
                      * @param [response] SearchResponse
                      */
@@ -18294,6 +19464,12 @@ export namespace google {
 
                     /** SearchRequest personalizationSpec */
                     personalizationSpec?: (google.cloud.retail.v2alpha.SearchRequest.IPersonalizationSpec|null);
+
+                    /** SearchRequest labels */
+                    labels?: ({ [k: string]: string }|null);
+
+                    /** SearchRequest spellCorrectionSpec */
+                    spellCorrectionSpec?: (google.cloud.retail.v2alpha.SearchRequest.ISpellCorrectionSpec|null);
                 }
 
                 /** Represents a SearchRequest. */
@@ -18365,6 +19541,15 @@ export namespace google {
                     /** SearchRequest personalizationSpec. */
                     public personalizationSpec?: (google.cloud.retail.v2alpha.SearchRequest.IPersonalizationSpec|null);
 
+                    /** SearchRequest labels. */
+                    public labels: { [k: string]: string };
+
+                    /** SearchRequest spellCorrectionSpec. */
+                    public spellCorrectionSpec?: (google.cloud.retail.v2alpha.SearchRequest.ISpellCorrectionSpec|null);
+
+                    /** SearchRequest _spellCorrectionSpec. */
+                    public _spellCorrectionSpec?: "spellCorrectionSpec";
+
                     /**
                      * Creates a new SearchRequest instance using the specified properties.
                      * @param [properties] Properties to set
@@ -18434,6 +19619,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SearchRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace SearchRequest {
@@ -18544,6 +19736,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for FacetSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace FacetSpec {
@@ -18566,11 +19765,17 @@ export namespace google {
                             /** FacetKey contains */
                             contains?: (string[]|null);
 
+                            /** FacetKey caseInsensitive */
+                            caseInsensitive?: (boolean|null);
+
                             /** FacetKey orderBy */
                             orderBy?: (string|null);
 
                             /** FacetKey query */
                             query?: (string|null);
+
+                            /** FacetKey returnMinMax */
+                            returnMinMax?: (boolean|null);
                         }
 
                         /** Represents a FacetKey. */
@@ -18597,11 +19802,17 @@ export namespace google {
                             /** FacetKey contains. */
                             public contains: string[];
 
+                            /** FacetKey caseInsensitive. */
+                            public caseInsensitive: boolean;
+
                             /** FacetKey orderBy. */
                             public orderBy: string;
 
                             /** FacetKey query. */
                             public query: string;
+
+                            /** FacetKey returnMinMax. */
+                            public returnMinMax: boolean;
 
                             /**
                              * Creates a new FacetKey instance using the specified properties.
@@ -18672,6 +19883,13 @@ export namespace google {
                              * @returns JSON object
                              */
                             public toJSON(): { [k: string]: any };
+
+                            /**
+                             * Gets the default type url for FacetKey
+                             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns The default type url
+                             */
+                            public static getTypeUrl(typeUrlPrefix?: string): string;
                         }
                     }
 
@@ -18763,6 +19981,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for DynamicFacetSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace DynamicFacetSpec {
@@ -18872,6 +20097,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for BoostSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace BoostSpec {
@@ -18970,6 +20202,13 @@ export namespace google {
                              * @returns JSON object
                              */
                             public toJSON(): { [k: string]: any };
+
+                            /**
+                             * Gets the default type url for ConditionBoostSpec
+                             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns The default type url
+                             */
+                            public static getTypeUrl(typeUrlPrefix?: string): string;
                         }
                     }
 
@@ -19067,6 +20306,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for QueryExpansionSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace QueryExpansionSpec {
@@ -19167,6 +20413,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for PersonalizationSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace PersonalizationSpec {
@@ -19176,6 +20429,113 @@ export namespace google {
                             MODE_UNSPECIFIED = 0,
                             AUTO = 1,
                             DISABLED = 2
+                        }
+                    }
+
+                    /** Properties of a SpellCorrectionSpec. */
+                    interface ISpellCorrectionSpec {
+
+                        /** SpellCorrectionSpec mode */
+                        mode?: (google.cloud.retail.v2alpha.SearchRequest.SpellCorrectionSpec.Mode|keyof typeof google.cloud.retail.v2alpha.SearchRequest.SpellCorrectionSpec.Mode|null);
+                    }
+
+                    /** Represents a SpellCorrectionSpec. */
+                    class SpellCorrectionSpec implements ISpellCorrectionSpec {
+
+                        /**
+                         * Constructs a new SpellCorrectionSpec.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.retail.v2alpha.SearchRequest.ISpellCorrectionSpec);
+
+                        /** SpellCorrectionSpec mode. */
+                        public mode: (google.cloud.retail.v2alpha.SearchRequest.SpellCorrectionSpec.Mode|keyof typeof google.cloud.retail.v2alpha.SearchRequest.SpellCorrectionSpec.Mode);
+
+                        /**
+                         * Creates a new SpellCorrectionSpec instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns SpellCorrectionSpec instance
+                         */
+                        public static create(properties?: google.cloud.retail.v2alpha.SearchRequest.ISpellCorrectionSpec): google.cloud.retail.v2alpha.SearchRequest.SpellCorrectionSpec;
+
+                        /**
+                         * Encodes the specified SpellCorrectionSpec message. Does not implicitly {@link google.cloud.retail.v2alpha.SearchRequest.SpellCorrectionSpec.verify|verify} messages.
+                         * @param message SpellCorrectionSpec message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.retail.v2alpha.SearchRequest.ISpellCorrectionSpec, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified SpellCorrectionSpec message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.SearchRequest.SpellCorrectionSpec.verify|verify} messages.
+                         * @param message SpellCorrectionSpec message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.retail.v2alpha.SearchRequest.ISpellCorrectionSpec, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a SpellCorrectionSpec message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns SpellCorrectionSpec
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.SearchRequest.SpellCorrectionSpec;
+
+                        /**
+                         * Decodes a SpellCorrectionSpec message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns SpellCorrectionSpec
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.SearchRequest.SpellCorrectionSpec;
+
+                        /**
+                         * Verifies a SpellCorrectionSpec message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a SpellCorrectionSpec message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns SpellCorrectionSpec
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.SearchRequest.SpellCorrectionSpec;
+
+                        /**
+                         * Creates a plain object from a SpellCorrectionSpec message. Also converts values to other types if specified.
+                         * @param message SpellCorrectionSpec
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.retail.v2alpha.SearchRequest.SpellCorrectionSpec, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this SpellCorrectionSpec to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for SpellCorrectionSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    namespace SpellCorrectionSpec {
+
+                        /** Mode enum. */
+                        enum Mode {
+                            MODE_UNSPECIFIED = 0,
+                            SUGGESTION_ONLY = 1,
+                            AUTO = 2
                         }
                     }
 
@@ -19338,6 +20698,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SearchResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace SearchResponse {
@@ -19454,6 +20821,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for SearchResult
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a Facet. */
@@ -19556,6 +20930,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for Facet
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace Facet {
@@ -19571,6 +20952,12 @@ export namespace google {
 
                             /** FacetValue count */
                             count?: (number|Long|string|null);
+
+                            /** FacetValue minValue */
+                            minValue?: (number|null);
+
+                            /** FacetValue maxValue */
+                            maxValue?: (number|null);
                         }
 
                         /** Represents a FacetValue. */
@@ -19590,6 +20977,12 @@ export namespace google {
 
                             /** FacetValue count. */
                             public count: (number|Long|string);
+
+                            /** FacetValue minValue. */
+                            public minValue: number;
+
+                            /** FacetValue maxValue. */
+                            public maxValue: number;
 
                             /** FacetValue facetValue. */
                             public facetValue?: ("value"|"interval");
@@ -19663,6 +21056,13 @@ export namespace google {
                              * @returns JSON object
                              */
                             public toJSON(): { [k: string]: any };
+
+                            /**
+                             * Gets the default type url for FacetValue
+                             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns The default type url
+                             */
+                            public static getTypeUrl(typeUrlPrefix?: string): string;
                         }
                     }
 
@@ -19760,6 +21160,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for QueryExpansionInfo
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -19857,35 +21264,35 @@ export namespace google {
                 namespace ControlService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ControlService#createControl}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ControlService|createControl}.
                      * @param error Error, if any
                      * @param [response] Control
                      */
                     type CreateControlCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.Control) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ControlService#deleteControl}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ControlService|deleteControl}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
                     type DeleteControlCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ControlService#updateControl}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ControlService|updateControl}.
                      * @param error Error, if any
                      * @param [response] Control
                      */
                     type UpdateControlCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.Control) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ControlService#getControl}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ControlService|getControl}.
                      * @param error Error, if any
                      * @param [response] Control
                      */
                     type GetControlCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.Control) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ControlService#listControls}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ControlService|listControls}.
                      * @param error Error, if any
                      * @param [response] ListControlsResponse
                      */
@@ -19992,6 +21399,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CreateControlRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateControlRequest. */
@@ -20088,6 +21502,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateControlRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a DeleteControlRequest. */
@@ -20178,6 +21599,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for DeleteControlRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetControlRequest. */
@@ -20268,6 +21696,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetControlRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListControlsRequest. */
@@ -20376,6 +21811,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListControlsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListControlsResponse. */
@@ -20472,6 +21914,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListControlsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ExportErrorsConfig. */
@@ -20565,6 +22014,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ExportErrorsConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ExportMetadata. */
@@ -20661,6 +22117,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ExportMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ExportProductsResponse. */
@@ -20671,6 +22134,9 @@ export namespace google {
 
                     /** ExportProductsResponse errorsConfig */
                     errorsConfig?: (google.cloud.retail.v2alpha.IExportErrorsConfig|null);
+
+                    /** ExportProductsResponse outputResult */
+                    outputResult?: (google.cloud.retail.v2alpha.IOutputResult|null);
                 }
 
                 /** Represents an ExportProductsResponse. */
@@ -20687,6 +22153,9 @@ export namespace google {
 
                     /** ExportProductsResponse errorsConfig. */
                     public errorsConfig?: (google.cloud.retail.v2alpha.IExportErrorsConfig|null);
+
+                    /** ExportProductsResponse outputResult. */
+                    public outputResult?: (google.cloud.retail.v2alpha.IOutputResult|null);
 
                     /**
                      * Creates a new ExportProductsResponse instance using the specified properties.
@@ -20757,6 +22226,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ExportProductsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ExportUserEventsResponse. */
@@ -20767,6 +22243,9 @@ export namespace google {
 
                     /** ExportUserEventsResponse errorsConfig */
                     errorsConfig?: (google.cloud.retail.v2alpha.IExportErrorsConfig|null);
+
+                    /** ExportUserEventsResponse outputResult */
+                    outputResult?: (google.cloud.retail.v2alpha.IOutputResult|null);
                 }
 
                 /** Represents an ExportUserEventsResponse. */
@@ -20783,6 +22262,9 @@ export namespace google {
 
                     /** ExportUserEventsResponse errorsConfig. */
                     public errorsConfig?: (google.cloud.retail.v2alpha.IExportErrorsConfig|null);
+
+                    /** ExportUserEventsResponse outputResult. */
+                    public outputResult?: (google.cloud.retail.v2alpha.IOutputResult|null);
 
                     /**
                      * Creates a new ExportUserEventsResponse instance using the specified properties.
@@ -20853,6 +22335,2125 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ExportUserEventsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of an OutputResult. */
+                interface IOutputResult {
+
+                    /** OutputResult bigqueryResult */
+                    bigqueryResult?: (google.cloud.retail.v2alpha.IBigQueryOutputResult[]|null);
+                }
+
+                /** Represents an OutputResult. */
+                class OutputResult implements IOutputResult {
+
+                    /**
+                     * Constructs a new OutputResult.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2alpha.IOutputResult);
+
+                    /** OutputResult bigqueryResult. */
+                    public bigqueryResult: google.cloud.retail.v2alpha.IBigQueryOutputResult[];
+
+                    /**
+                     * Creates a new OutputResult instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns OutputResult instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2alpha.IOutputResult): google.cloud.retail.v2alpha.OutputResult;
+
+                    /**
+                     * Encodes the specified OutputResult message. Does not implicitly {@link google.cloud.retail.v2alpha.OutputResult.verify|verify} messages.
+                     * @param message OutputResult message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2alpha.IOutputResult, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified OutputResult message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.OutputResult.verify|verify} messages.
+                     * @param message OutputResult message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2alpha.IOutputResult, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an OutputResult message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns OutputResult
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.OutputResult;
+
+                    /**
+                     * Decodes an OutputResult message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns OutputResult
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.OutputResult;
+
+                    /**
+                     * Verifies an OutputResult message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an OutputResult message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns OutputResult
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.OutputResult;
+
+                    /**
+                     * Creates a plain object from an OutputResult message. Also converts values to other types if specified.
+                     * @param message OutputResult
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2alpha.OutputResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this OutputResult to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for OutputResult
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a BigQueryOutputResult. */
+                interface IBigQueryOutputResult {
+
+                    /** BigQueryOutputResult datasetId */
+                    datasetId?: (string|null);
+
+                    /** BigQueryOutputResult tableId */
+                    tableId?: (string|null);
+                }
+
+                /** Represents a BigQueryOutputResult. */
+                class BigQueryOutputResult implements IBigQueryOutputResult {
+
+                    /**
+                     * Constructs a new BigQueryOutputResult.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2alpha.IBigQueryOutputResult);
+
+                    /** BigQueryOutputResult datasetId. */
+                    public datasetId: string;
+
+                    /** BigQueryOutputResult tableId. */
+                    public tableId: string;
+
+                    /**
+                     * Creates a new BigQueryOutputResult instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns BigQueryOutputResult instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2alpha.IBigQueryOutputResult): google.cloud.retail.v2alpha.BigQueryOutputResult;
+
+                    /**
+                     * Encodes the specified BigQueryOutputResult message. Does not implicitly {@link google.cloud.retail.v2alpha.BigQueryOutputResult.verify|verify} messages.
+                     * @param message BigQueryOutputResult message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2alpha.IBigQueryOutputResult, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified BigQueryOutputResult message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.BigQueryOutputResult.verify|verify} messages.
+                     * @param message BigQueryOutputResult message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2alpha.IBigQueryOutputResult, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a BigQueryOutputResult message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns BigQueryOutputResult
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.BigQueryOutputResult;
+
+                    /**
+                     * Decodes a BigQueryOutputResult message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns BigQueryOutputResult
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.BigQueryOutputResult;
+
+                    /**
+                     * Verifies a BigQueryOutputResult message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a BigQueryOutputResult message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns BigQueryOutputResult
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.BigQueryOutputResult;
+
+                    /**
+                     * Creates a plain object from a BigQueryOutputResult message. Also converts values to other types if specified.
+                     * @param message BigQueryOutputResult
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2alpha.BigQueryOutputResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this BigQueryOutputResult to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for BigQueryOutputResult
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a Model. */
+                interface IModel {
+
+                    /** Model pageOptimizationConfig */
+                    pageOptimizationConfig?: (google.cloud.retail.v2alpha.Model.IPageOptimizationConfig|null);
+
+                    /** Model name */
+                    name?: (string|null);
+
+                    /** Model displayName */
+                    displayName?: (string|null);
+
+                    /** Model trainingState */
+                    trainingState?: (google.cloud.retail.v2alpha.Model.TrainingState|keyof typeof google.cloud.retail.v2alpha.Model.TrainingState|null);
+
+                    /** Model servingState */
+                    servingState?: (google.cloud.retail.v2alpha.Model.ServingState|keyof typeof google.cloud.retail.v2alpha.Model.ServingState|null);
+
+                    /** Model createTime */
+                    createTime?: (google.protobuf.ITimestamp|null);
+
+                    /** Model updateTime */
+                    updateTime?: (google.protobuf.ITimestamp|null);
+
+                    /** Model type */
+                    type?: (string|null);
+
+                    /** Model optimizationObjective */
+                    optimizationObjective?: (string|null);
+
+                    /** Model periodicTuningState */
+                    periodicTuningState?: (google.cloud.retail.v2alpha.Model.PeriodicTuningState|keyof typeof google.cloud.retail.v2alpha.Model.PeriodicTuningState|null);
+
+                    /** Model lastTuneTime */
+                    lastTuneTime?: (google.protobuf.ITimestamp|null);
+
+                    /** Model tuningOperation */
+                    tuningOperation?: (string|null);
+
+                    /** Model dataState */
+                    dataState?: (google.cloud.retail.v2alpha.Model.DataState|keyof typeof google.cloud.retail.v2alpha.Model.DataState|null);
+
+                    /** Model filteringOption */
+                    filteringOption?: (google.cloud.retail.v2alpha.RecommendationsFilteringOption|keyof typeof google.cloud.retail.v2alpha.RecommendationsFilteringOption|null);
+
+                    /** Model servingConfigLists */
+                    servingConfigLists?: (google.cloud.retail.v2alpha.Model.IServingConfigList[]|null);
+                }
+
+                /** Represents a Model. */
+                class Model implements IModel {
+
+                    /**
+                     * Constructs a new Model.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2alpha.IModel);
+
+                    /** Model pageOptimizationConfig. */
+                    public pageOptimizationConfig?: (google.cloud.retail.v2alpha.Model.IPageOptimizationConfig|null);
+
+                    /** Model name. */
+                    public name: string;
+
+                    /** Model displayName. */
+                    public displayName: string;
+
+                    /** Model trainingState. */
+                    public trainingState: (google.cloud.retail.v2alpha.Model.TrainingState|keyof typeof google.cloud.retail.v2alpha.Model.TrainingState);
+
+                    /** Model servingState. */
+                    public servingState: (google.cloud.retail.v2alpha.Model.ServingState|keyof typeof google.cloud.retail.v2alpha.Model.ServingState);
+
+                    /** Model createTime. */
+                    public createTime?: (google.protobuf.ITimestamp|null);
+
+                    /** Model updateTime. */
+                    public updateTime?: (google.protobuf.ITimestamp|null);
+
+                    /** Model type. */
+                    public type: string;
+
+                    /** Model optimizationObjective. */
+                    public optimizationObjective: string;
+
+                    /** Model periodicTuningState. */
+                    public periodicTuningState: (google.cloud.retail.v2alpha.Model.PeriodicTuningState|keyof typeof google.cloud.retail.v2alpha.Model.PeriodicTuningState);
+
+                    /** Model lastTuneTime. */
+                    public lastTuneTime?: (google.protobuf.ITimestamp|null);
+
+                    /** Model tuningOperation. */
+                    public tuningOperation: string;
+
+                    /** Model dataState. */
+                    public dataState: (google.cloud.retail.v2alpha.Model.DataState|keyof typeof google.cloud.retail.v2alpha.Model.DataState);
+
+                    /** Model filteringOption. */
+                    public filteringOption: (google.cloud.retail.v2alpha.RecommendationsFilteringOption|keyof typeof google.cloud.retail.v2alpha.RecommendationsFilteringOption);
+
+                    /** Model servingConfigLists. */
+                    public servingConfigLists: google.cloud.retail.v2alpha.Model.IServingConfigList[];
+
+                    /** Model trainingConfig. */
+                    public trainingConfig?: "pageOptimizationConfig";
+
+                    /**
+                     * Creates a new Model instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns Model instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2alpha.IModel): google.cloud.retail.v2alpha.Model;
+
+                    /**
+                     * Encodes the specified Model message. Does not implicitly {@link google.cloud.retail.v2alpha.Model.verify|verify} messages.
+                     * @param message Model message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2alpha.IModel, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified Model message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.Model.verify|verify} messages.
+                     * @param message Model message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2alpha.IModel, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a Model message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns Model
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.Model;
+
+                    /**
+                     * Decodes a Model message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns Model
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.Model;
+
+                    /**
+                     * Verifies a Model message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a Model message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns Model
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.Model;
+
+                    /**
+                     * Creates a plain object from a Model message. Also converts values to other types if specified.
+                     * @param message Model
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2alpha.Model, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this Model to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Model
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                namespace Model {
+
+                    /** Properties of a PageOptimizationConfig. */
+                    interface IPageOptimizationConfig {
+
+                        /** PageOptimizationConfig pageOptimizationEventType */
+                        pageOptimizationEventType?: (string|null);
+
+                        /** PageOptimizationConfig panels */
+                        panels?: (google.cloud.retail.v2alpha.Model.PageOptimizationConfig.IPanel[]|null);
+
+                        /** PageOptimizationConfig restriction */
+                        restriction?: (google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Restriction|keyof typeof google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Restriction|null);
+                    }
+
+                    /** Represents a PageOptimizationConfig. */
+                    class PageOptimizationConfig implements IPageOptimizationConfig {
+
+                        /**
+                         * Constructs a new PageOptimizationConfig.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.retail.v2alpha.Model.IPageOptimizationConfig);
+
+                        /** PageOptimizationConfig pageOptimizationEventType. */
+                        public pageOptimizationEventType: string;
+
+                        /** PageOptimizationConfig panels. */
+                        public panels: google.cloud.retail.v2alpha.Model.PageOptimizationConfig.IPanel[];
+
+                        /** PageOptimizationConfig restriction. */
+                        public restriction: (google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Restriction|keyof typeof google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Restriction);
+
+                        /**
+                         * Creates a new PageOptimizationConfig instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns PageOptimizationConfig instance
+                         */
+                        public static create(properties?: google.cloud.retail.v2alpha.Model.IPageOptimizationConfig): google.cloud.retail.v2alpha.Model.PageOptimizationConfig;
+
+                        /**
+                         * Encodes the specified PageOptimizationConfig message. Does not implicitly {@link google.cloud.retail.v2alpha.Model.PageOptimizationConfig.verify|verify} messages.
+                         * @param message PageOptimizationConfig message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.retail.v2alpha.Model.IPageOptimizationConfig, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified PageOptimizationConfig message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.Model.PageOptimizationConfig.verify|verify} messages.
+                         * @param message PageOptimizationConfig message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.retail.v2alpha.Model.IPageOptimizationConfig, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a PageOptimizationConfig message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns PageOptimizationConfig
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.Model.PageOptimizationConfig;
+
+                        /**
+                         * Decodes a PageOptimizationConfig message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns PageOptimizationConfig
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.Model.PageOptimizationConfig;
+
+                        /**
+                         * Verifies a PageOptimizationConfig message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a PageOptimizationConfig message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns PageOptimizationConfig
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.Model.PageOptimizationConfig;
+
+                        /**
+                         * Creates a plain object from a PageOptimizationConfig message. Also converts values to other types if specified.
+                         * @param message PageOptimizationConfig
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.retail.v2alpha.Model.PageOptimizationConfig, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this PageOptimizationConfig to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for PageOptimizationConfig
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    namespace PageOptimizationConfig {
+
+                        /** Properties of a Candidate. */
+                        interface ICandidate {
+
+                            /** Candidate servingConfigId */
+                            servingConfigId?: (string|null);
+                        }
+
+                        /** Represents a Candidate. */
+                        class Candidate implements ICandidate {
+
+                            /**
+                             * Constructs a new Candidate.
+                             * @param [properties] Properties to set
+                             */
+                            constructor(properties?: google.cloud.retail.v2alpha.Model.PageOptimizationConfig.ICandidate);
+
+                            /** Candidate servingConfigId. */
+                            public servingConfigId?: (string|null);
+
+                            /** Candidate candidate. */
+                            public candidate?: "servingConfigId";
+
+                            /**
+                             * Creates a new Candidate instance using the specified properties.
+                             * @param [properties] Properties to set
+                             * @returns Candidate instance
+                             */
+                            public static create(properties?: google.cloud.retail.v2alpha.Model.PageOptimizationConfig.ICandidate): google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Candidate;
+
+                            /**
+                             * Encodes the specified Candidate message. Does not implicitly {@link google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Candidate.verify|verify} messages.
+                             * @param message Candidate message or plain object to encode
+                             * @param [writer] Writer to encode to
+                             * @returns Writer
+                             */
+                            public static encode(message: google.cloud.retail.v2alpha.Model.PageOptimizationConfig.ICandidate, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                            /**
+                             * Encodes the specified Candidate message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Candidate.verify|verify} messages.
+                             * @param message Candidate message or plain object to encode
+                             * @param [writer] Writer to encode to
+                             * @returns Writer
+                             */
+                            public static encodeDelimited(message: google.cloud.retail.v2alpha.Model.PageOptimizationConfig.ICandidate, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                            /**
+                             * Decodes a Candidate message from the specified reader or buffer.
+                             * @param reader Reader or buffer to decode from
+                             * @param [length] Message length if known beforehand
+                             * @returns Candidate
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Candidate;
+
+                            /**
+                             * Decodes a Candidate message from the specified reader or buffer, length delimited.
+                             * @param reader Reader or buffer to decode from
+                             * @returns Candidate
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Candidate;
+
+                            /**
+                             * Verifies a Candidate message.
+                             * @param message Plain object to verify
+                             * @returns `null` if valid, otherwise the reason why it is not
+                             */
+                            public static verify(message: { [k: string]: any }): (string|null);
+
+                            /**
+                             * Creates a Candidate message from a plain object. Also converts values to their respective internal types.
+                             * @param object Plain object
+                             * @returns Candidate
+                             */
+                            public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Candidate;
+
+                            /**
+                             * Creates a plain object from a Candidate message. Also converts values to other types if specified.
+                             * @param message Candidate
+                             * @param [options] Conversion options
+                             * @returns Plain object
+                             */
+                            public static toObject(message: google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Candidate, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                            /**
+                             * Converts this Candidate to JSON.
+                             * @returns JSON object
+                             */
+                            public toJSON(): { [k: string]: any };
+
+                            /**
+                             * Gets the default type url for Candidate
+                             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns The default type url
+                             */
+                            public static getTypeUrl(typeUrlPrefix?: string): string;
+                        }
+
+                        /** Properties of a Panel. */
+                        interface IPanel {
+
+                            /** Panel displayName */
+                            displayName?: (string|null);
+
+                            /** Panel candidates */
+                            candidates?: (google.cloud.retail.v2alpha.Model.PageOptimizationConfig.ICandidate[]|null);
+
+                            /** Panel defaultCandidate */
+                            defaultCandidate?: (google.cloud.retail.v2alpha.Model.PageOptimizationConfig.ICandidate|null);
+                        }
+
+                        /** Represents a Panel. */
+                        class Panel implements IPanel {
+
+                            /**
+                             * Constructs a new Panel.
+                             * @param [properties] Properties to set
+                             */
+                            constructor(properties?: google.cloud.retail.v2alpha.Model.PageOptimizationConfig.IPanel);
+
+                            /** Panel displayName. */
+                            public displayName: string;
+
+                            /** Panel candidates. */
+                            public candidates: google.cloud.retail.v2alpha.Model.PageOptimizationConfig.ICandidate[];
+
+                            /** Panel defaultCandidate. */
+                            public defaultCandidate?: (google.cloud.retail.v2alpha.Model.PageOptimizationConfig.ICandidate|null);
+
+                            /**
+                             * Creates a new Panel instance using the specified properties.
+                             * @param [properties] Properties to set
+                             * @returns Panel instance
+                             */
+                            public static create(properties?: google.cloud.retail.v2alpha.Model.PageOptimizationConfig.IPanel): google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Panel;
+
+                            /**
+                             * Encodes the specified Panel message. Does not implicitly {@link google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Panel.verify|verify} messages.
+                             * @param message Panel message or plain object to encode
+                             * @param [writer] Writer to encode to
+                             * @returns Writer
+                             */
+                            public static encode(message: google.cloud.retail.v2alpha.Model.PageOptimizationConfig.IPanel, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                            /**
+                             * Encodes the specified Panel message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Panel.verify|verify} messages.
+                             * @param message Panel message or plain object to encode
+                             * @param [writer] Writer to encode to
+                             * @returns Writer
+                             */
+                            public static encodeDelimited(message: google.cloud.retail.v2alpha.Model.PageOptimizationConfig.IPanel, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                            /**
+                             * Decodes a Panel message from the specified reader or buffer.
+                             * @param reader Reader or buffer to decode from
+                             * @param [length] Message length if known beforehand
+                             * @returns Panel
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Panel;
+
+                            /**
+                             * Decodes a Panel message from the specified reader or buffer, length delimited.
+                             * @param reader Reader or buffer to decode from
+                             * @returns Panel
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Panel;
+
+                            /**
+                             * Verifies a Panel message.
+                             * @param message Plain object to verify
+                             * @returns `null` if valid, otherwise the reason why it is not
+                             */
+                            public static verify(message: { [k: string]: any }): (string|null);
+
+                            /**
+                             * Creates a Panel message from a plain object. Also converts values to their respective internal types.
+                             * @param object Plain object
+                             * @returns Panel
+                             */
+                            public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Panel;
+
+                            /**
+                             * Creates a plain object from a Panel message. Also converts values to other types if specified.
+                             * @param message Panel
+                             * @param [options] Conversion options
+                             * @returns Plain object
+                             */
+                            public static toObject(message: google.cloud.retail.v2alpha.Model.PageOptimizationConfig.Panel, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                            /**
+                             * Converts this Panel to JSON.
+                             * @returns JSON object
+                             */
+                            public toJSON(): { [k: string]: any };
+
+                            /**
+                             * Gets the default type url for Panel
+                             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns The default type url
+                             */
+                            public static getTypeUrl(typeUrlPrefix?: string): string;
+                        }
+
+                        /** Restriction enum. */
+                        enum Restriction {
+                            RESTRICTION_UNSPECIFIED = 0,
+                            NO_RESTRICTION = 1,
+                            UNIQUE_SERVING_CONFIG_RESTRICTION = 2,
+                            UNIQUE_MODEL_RESTRICTION = 3,
+                            UNIQUE_MODEL_TYPE_RESTRICTION = 4
+                        }
+                    }
+
+                    /** Properties of a ServingConfigList. */
+                    interface IServingConfigList {
+
+                        /** ServingConfigList servingConfigIds */
+                        servingConfigIds?: (string[]|null);
+                    }
+
+                    /** Represents a ServingConfigList. */
+                    class ServingConfigList implements IServingConfigList {
+
+                        /**
+                         * Constructs a new ServingConfigList.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.retail.v2alpha.Model.IServingConfigList);
+
+                        /** ServingConfigList servingConfigIds. */
+                        public servingConfigIds: string[];
+
+                        /**
+                         * Creates a new ServingConfigList instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns ServingConfigList instance
+                         */
+                        public static create(properties?: google.cloud.retail.v2alpha.Model.IServingConfigList): google.cloud.retail.v2alpha.Model.ServingConfigList;
+
+                        /**
+                         * Encodes the specified ServingConfigList message. Does not implicitly {@link google.cloud.retail.v2alpha.Model.ServingConfigList.verify|verify} messages.
+                         * @param message ServingConfigList message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.retail.v2alpha.Model.IServingConfigList, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified ServingConfigList message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.Model.ServingConfigList.verify|verify} messages.
+                         * @param message ServingConfigList message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.retail.v2alpha.Model.IServingConfigList, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a ServingConfigList message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns ServingConfigList
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.Model.ServingConfigList;
+
+                        /**
+                         * Decodes a ServingConfigList message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns ServingConfigList
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.Model.ServingConfigList;
+
+                        /**
+                         * Verifies a ServingConfigList message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a ServingConfigList message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns ServingConfigList
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.Model.ServingConfigList;
+
+                        /**
+                         * Creates a plain object from a ServingConfigList message. Also converts values to other types if specified.
+                         * @param message ServingConfigList
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.retail.v2alpha.Model.ServingConfigList, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this ServingConfigList to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for ServingConfigList
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    /** ServingState enum. */
+                    enum ServingState {
+                        SERVING_STATE_UNSPECIFIED = 0,
+                        INACTIVE = 1,
+                        ACTIVE = 2,
+                        TUNED = 3
+                    }
+
+                    /** TrainingState enum. */
+                    enum TrainingState {
+                        TRAINING_STATE_UNSPECIFIED = 0,
+                        PAUSED = 1,
+                        TRAINING = 2
+                    }
+
+                    /** PeriodicTuningState enum. */
+                    enum PeriodicTuningState {
+                        PERIODIC_TUNING_STATE_UNSPECIFIED = 0,
+                        PERIODIC_TUNING_DISABLED = 1,
+                        ALL_TUNING_DISABLED = 3,
+                        PERIODIC_TUNING_ENABLED = 2
+                    }
+
+                    /** DataState enum. */
+                    enum DataState {
+                        DATA_STATE_UNSPECIFIED = 0,
+                        DATA_OK = 1,
+                        DATA_ERROR = 2
+                    }
+                }
+
+                /** Represents a ModelService */
+                class ModelService extends $protobuf.rpc.Service {
+
+                    /**
+                     * Constructs a new ModelService service.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     */
+                    constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                    /**
+                     * Creates new ModelService service using the specified rpc implementation.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     * @returns RPC service. Useful where requests and/or responses are streamed.
+                     */
+                    public static create(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean): ModelService;
+
+                    /**
+                     * Calls CreateModel.
+                     * @param request CreateModelRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public createModel(request: google.cloud.retail.v2alpha.ICreateModelRequest, callback: google.cloud.retail.v2alpha.ModelService.CreateModelCallback): void;
+
+                    /**
+                     * Calls CreateModel.
+                     * @param request CreateModelRequest message or plain object
+                     * @returns Promise
+                     */
+                    public createModel(request: google.cloud.retail.v2alpha.ICreateModelRequest): Promise<google.longrunning.Operation>;
+
+                    /**
+                     * Calls PauseModel.
+                     * @param request PauseModelRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Model
+                     */
+                    public pauseModel(request: google.cloud.retail.v2alpha.IPauseModelRequest, callback: google.cloud.retail.v2alpha.ModelService.PauseModelCallback): void;
+
+                    /**
+                     * Calls PauseModel.
+                     * @param request PauseModelRequest message or plain object
+                     * @returns Promise
+                     */
+                    public pauseModel(request: google.cloud.retail.v2alpha.IPauseModelRequest): Promise<google.cloud.retail.v2alpha.Model>;
+
+                    /**
+                     * Calls ResumeModel.
+                     * @param request ResumeModelRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Model
+                     */
+                    public resumeModel(request: google.cloud.retail.v2alpha.IResumeModelRequest, callback: google.cloud.retail.v2alpha.ModelService.ResumeModelCallback): void;
+
+                    /**
+                     * Calls ResumeModel.
+                     * @param request ResumeModelRequest message or plain object
+                     * @returns Promise
+                     */
+                    public resumeModel(request: google.cloud.retail.v2alpha.IResumeModelRequest): Promise<google.cloud.retail.v2alpha.Model>;
+
+                    /**
+                     * Calls DeleteModel.
+                     * @param request DeleteModelRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Empty
+                     */
+                    public deleteModel(request: google.cloud.retail.v2alpha.IDeleteModelRequest, callback: google.cloud.retail.v2alpha.ModelService.DeleteModelCallback): void;
+
+                    /**
+                     * Calls DeleteModel.
+                     * @param request DeleteModelRequest message or plain object
+                     * @returns Promise
+                     */
+                    public deleteModel(request: google.cloud.retail.v2alpha.IDeleteModelRequest): Promise<google.protobuf.Empty>;
+
+                    /**
+                     * Calls ListModels.
+                     * @param request ListModelsRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and ListModelsResponse
+                     */
+                    public listModels(request: google.cloud.retail.v2alpha.IListModelsRequest, callback: google.cloud.retail.v2alpha.ModelService.ListModelsCallback): void;
+
+                    /**
+                     * Calls ListModels.
+                     * @param request ListModelsRequest message or plain object
+                     * @returns Promise
+                     */
+                    public listModels(request: google.cloud.retail.v2alpha.IListModelsRequest): Promise<google.cloud.retail.v2alpha.ListModelsResponse>;
+
+                    /**
+                     * Calls UpdateModel.
+                     * @param request UpdateModelRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Model
+                     */
+                    public updateModel(request: google.cloud.retail.v2alpha.IUpdateModelRequest, callback: google.cloud.retail.v2alpha.ModelService.UpdateModelCallback): void;
+
+                    /**
+                     * Calls UpdateModel.
+                     * @param request UpdateModelRequest message or plain object
+                     * @returns Promise
+                     */
+                    public updateModel(request: google.cloud.retail.v2alpha.IUpdateModelRequest): Promise<google.cloud.retail.v2alpha.Model>;
+
+                    /**
+                     * Calls TuneModel.
+                     * @param request TuneModelRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public tuneModel(request: google.cloud.retail.v2alpha.ITuneModelRequest, callback: google.cloud.retail.v2alpha.ModelService.TuneModelCallback): void;
+
+                    /**
+                     * Calls TuneModel.
+                     * @param request TuneModelRequest message or plain object
+                     * @returns Promise
+                     */
+                    public tuneModel(request: google.cloud.retail.v2alpha.ITuneModelRequest): Promise<google.longrunning.Operation>;
+                }
+
+                namespace ModelService {
+
+                    /**
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ModelService|createModel}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type CreateModelCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ModelService|pauseModel}.
+                     * @param error Error, if any
+                     * @param [response] Model
+                     */
+                    type PauseModelCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.Model) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ModelService|resumeModel}.
+                     * @param error Error, if any
+                     * @param [response] Model
+                     */
+                    type ResumeModelCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.Model) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ModelService|deleteModel}.
+                     * @param error Error, if any
+                     * @param [response] Empty
+                     */
+                    type DeleteModelCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ModelService|listModels}.
+                     * @param error Error, if any
+                     * @param [response] ListModelsResponse
+                     */
+                    type ListModelsCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.ListModelsResponse) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ModelService|updateModel}.
+                     * @param error Error, if any
+                     * @param [response] Model
+                     */
+                    type UpdateModelCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.Model) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ModelService|tuneModel}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type TuneModelCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
+                }
+
+                /** Properties of a CreateModelRequest. */
+                interface ICreateModelRequest {
+
+                    /** CreateModelRequest parent */
+                    parent?: (string|null);
+
+                    /** CreateModelRequest model */
+                    model?: (google.cloud.retail.v2alpha.IModel|null);
+
+                    /** CreateModelRequest dryRun */
+                    dryRun?: (boolean|null);
+                }
+
+                /** Represents a CreateModelRequest. */
+                class CreateModelRequest implements ICreateModelRequest {
+
+                    /**
+                     * Constructs a new CreateModelRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2alpha.ICreateModelRequest);
+
+                    /** CreateModelRequest parent. */
+                    public parent: string;
+
+                    /** CreateModelRequest model. */
+                    public model?: (google.cloud.retail.v2alpha.IModel|null);
+
+                    /** CreateModelRequest dryRun. */
+                    public dryRun: boolean;
+
+                    /**
+                     * Creates a new CreateModelRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns CreateModelRequest instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2alpha.ICreateModelRequest): google.cloud.retail.v2alpha.CreateModelRequest;
+
+                    /**
+                     * Encodes the specified CreateModelRequest message. Does not implicitly {@link google.cloud.retail.v2alpha.CreateModelRequest.verify|verify} messages.
+                     * @param message CreateModelRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2alpha.ICreateModelRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified CreateModelRequest message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.CreateModelRequest.verify|verify} messages.
+                     * @param message CreateModelRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2alpha.ICreateModelRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a CreateModelRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns CreateModelRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.CreateModelRequest;
+
+                    /**
+                     * Decodes a CreateModelRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns CreateModelRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.CreateModelRequest;
+
+                    /**
+                     * Verifies a CreateModelRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a CreateModelRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns CreateModelRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.CreateModelRequest;
+
+                    /**
+                     * Creates a plain object from a CreateModelRequest message. Also converts values to other types if specified.
+                     * @param message CreateModelRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2alpha.CreateModelRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this CreateModelRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CreateModelRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of an UpdateModelRequest. */
+                interface IUpdateModelRequest {
+
+                    /** UpdateModelRequest model */
+                    model?: (google.cloud.retail.v2alpha.IModel|null);
+
+                    /** UpdateModelRequest updateMask */
+                    updateMask?: (google.protobuf.IFieldMask|null);
+                }
+
+                /** Represents an UpdateModelRequest. */
+                class UpdateModelRequest implements IUpdateModelRequest {
+
+                    /**
+                     * Constructs a new UpdateModelRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2alpha.IUpdateModelRequest);
+
+                    /** UpdateModelRequest model. */
+                    public model?: (google.cloud.retail.v2alpha.IModel|null);
+
+                    /** UpdateModelRequest updateMask. */
+                    public updateMask?: (google.protobuf.IFieldMask|null);
+
+                    /**
+                     * Creates a new UpdateModelRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns UpdateModelRequest instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2alpha.IUpdateModelRequest): google.cloud.retail.v2alpha.UpdateModelRequest;
+
+                    /**
+                     * Encodes the specified UpdateModelRequest message. Does not implicitly {@link google.cloud.retail.v2alpha.UpdateModelRequest.verify|verify} messages.
+                     * @param message UpdateModelRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2alpha.IUpdateModelRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified UpdateModelRequest message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.UpdateModelRequest.verify|verify} messages.
+                     * @param message UpdateModelRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2alpha.IUpdateModelRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an UpdateModelRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns UpdateModelRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.UpdateModelRequest;
+
+                    /**
+                     * Decodes an UpdateModelRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns UpdateModelRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.UpdateModelRequest;
+
+                    /**
+                     * Verifies an UpdateModelRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an UpdateModelRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns UpdateModelRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.UpdateModelRequest;
+
+                    /**
+                     * Creates a plain object from an UpdateModelRequest message. Also converts values to other types if specified.
+                     * @param message UpdateModelRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2alpha.UpdateModelRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this UpdateModelRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateModelRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a PauseModelRequest. */
+                interface IPauseModelRequest {
+
+                    /** PauseModelRequest name */
+                    name?: (string|null);
+                }
+
+                /** Represents a PauseModelRequest. */
+                class PauseModelRequest implements IPauseModelRequest {
+
+                    /**
+                     * Constructs a new PauseModelRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2alpha.IPauseModelRequest);
+
+                    /** PauseModelRequest name. */
+                    public name: string;
+
+                    /**
+                     * Creates a new PauseModelRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PauseModelRequest instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2alpha.IPauseModelRequest): google.cloud.retail.v2alpha.PauseModelRequest;
+
+                    /**
+                     * Encodes the specified PauseModelRequest message. Does not implicitly {@link google.cloud.retail.v2alpha.PauseModelRequest.verify|verify} messages.
+                     * @param message PauseModelRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2alpha.IPauseModelRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PauseModelRequest message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.PauseModelRequest.verify|verify} messages.
+                     * @param message PauseModelRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2alpha.IPauseModelRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PauseModelRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PauseModelRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.PauseModelRequest;
+
+                    /**
+                     * Decodes a PauseModelRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PauseModelRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.PauseModelRequest;
+
+                    /**
+                     * Verifies a PauseModelRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PauseModelRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PauseModelRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.PauseModelRequest;
+
+                    /**
+                     * Creates a plain object from a PauseModelRequest message. Also converts values to other types if specified.
+                     * @param message PauseModelRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2alpha.PauseModelRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PauseModelRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PauseModelRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a ResumeModelRequest. */
+                interface IResumeModelRequest {
+
+                    /** ResumeModelRequest name */
+                    name?: (string|null);
+                }
+
+                /** Represents a ResumeModelRequest. */
+                class ResumeModelRequest implements IResumeModelRequest {
+
+                    /**
+                     * Constructs a new ResumeModelRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2alpha.IResumeModelRequest);
+
+                    /** ResumeModelRequest name. */
+                    public name: string;
+
+                    /**
+                     * Creates a new ResumeModelRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns ResumeModelRequest instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2alpha.IResumeModelRequest): google.cloud.retail.v2alpha.ResumeModelRequest;
+
+                    /**
+                     * Encodes the specified ResumeModelRequest message. Does not implicitly {@link google.cloud.retail.v2alpha.ResumeModelRequest.verify|verify} messages.
+                     * @param message ResumeModelRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2alpha.IResumeModelRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified ResumeModelRequest message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.ResumeModelRequest.verify|verify} messages.
+                     * @param message ResumeModelRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2alpha.IResumeModelRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a ResumeModelRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns ResumeModelRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.ResumeModelRequest;
+
+                    /**
+                     * Decodes a ResumeModelRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns ResumeModelRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.ResumeModelRequest;
+
+                    /**
+                     * Verifies a ResumeModelRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a ResumeModelRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns ResumeModelRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.ResumeModelRequest;
+
+                    /**
+                     * Creates a plain object from a ResumeModelRequest message. Also converts values to other types if specified.
+                     * @param message ResumeModelRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2alpha.ResumeModelRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this ResumeModelRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ResumeModelRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a ListModelsRequest. */
+                interface IListModelsRequest {
+
+                    /** ListModelsRequest parent */
+                    parent?: (string|null);
+
+                    /** ListModelsRequest pageSize */
+                    pageSize?: (number|null);
+
+                    /** ListModelsRequest pageToken */
+                    pageToken?: (string|null);
+                }
+
+                /** Represents a ListModelsRequest. */
+                class ListModelsRequest implements IListModelsRequest {
+
+                    /**
+                     * Constructs a new ListModelsRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2alpha.IListModelsRequest);
+
+                    /** ListModelsRequest parent. */
+                    public parent: string;
+
+                    /** ListModelsRequest pageSize. */
+                    public pageSize: number;
+
+                    /** ListModelsRequest pageToken. */
+                    public pageToken: string;
+
+                    /**
+                     * Creates a new ListModelsRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns ListModelsRequest instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2alpha.IListModelsRequest): google.cloud.retail.v2alpha.ListModelsRequest;
+
+                    /**
+                     * Encodes the specified ListModelsRequest message. Does not implicitly {@link google.cloud.retail.v2alpha.ListModelsRequest.verify|verify} messages.
+                     * @param message ListModelsRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2alpha.IListModelsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified ListModelsRequest message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.ListModelsRequest.verify|verify} messages.
+                     * @param message ListModelsRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2alpha.IListModelsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a ListModelsRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns ListModelsRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.ListModelsRequest;
+
+                    /**
+                     * Decodes a ListModelsRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns ListModelsRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.ListModelsRequest;
+
+                    /**
+                     * Verifies a ListModelsRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a ListModelsRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns ListModelsRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.ListModelsRequest;
+
+                    /**
+                     * Creates a plain object from a ListModelsRequest message. Also converts values to other types if specified.
+                     * @param message ListModelsRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2alpha.ListModelsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this ListModelsRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListModelsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a DeleteModelRequest. */
+                interface IDeleteModelRequest {
+
+                    /** DeleteModelRequest name */
+                    name?: (string|null);
+                }
+
+                /** Represents a DeleteModelRequest. */
+                class DeleteModelRequest implements IDeleteModelRequest {
+
+                    /**
+                     * Constructs a new DeleteModelRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2alpha.IDeleteModelRequest);
+
+                    /** DeleteModelRequest name. */
+                    public name: string;
+
+                    /**
+                     * Creates a new DeleteModelRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DeleteModelRequest instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2alpha.IDeleteModelRequest): google.cloud.retail.v2alpha.DeleteModelRequest;
+
+                    /**
+                     * Encodes the specified DeleteModelRequest message. Does not implicitly {@link google.cloud.retail.v2alpha.DeleteModelRequest.verify|verify} messages.
+                     * @param message DeleteModelRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2alpha.IDeleteModelRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DeleteModelRequest message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.DeleteModelRequest.verify|verify} messages.
+                     * @param message DeleteModelRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2alpha.IDeleteModelRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DeleteModelRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DeleteModelRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.DeleteModelRequest;
+
+                    /**
+                     * Decodes a DeleteModelRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DeleteModelRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.DeleteModelRequest;
+
+                    /**
+                     * Verifies a DeleteModelRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DeleteModelRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DeleteModelRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.DeleteModelRequest;
+
+                    /**
+                     * Creates a plain object from a DeleteModelRequest message. Also converts values to other types if specified.
+                     * @param message DeleteModelRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2alpha.DeleteModelRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DeleteModelRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for DeleteModelRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a ListModelsResponse. */
+                interface IListModelsResponse {
+
+                    /** ListModelsResponse models */
+                    models?: (google.cloud.retail.v2alpha.IModel[]|null);
+
+                    /** ListModelsResponse nextPageToken */
+                    nextPageToken?: (string|null);
+                }
+
+                /** Represents a ListModelsResponse. */
+                class ListModelsResponse implements IListModelsResponse {
+
+                    /**
+                     * Constructs a new ListModelsResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2alpha.IListModelsResponse);
+
+                    /** ListModelsResponse models. */
+                    public models: google.cloud.retail.v2alpha.IModel[];
+
+                    /** ListModelsResponse nextPageToken. */
+                    public nextPageToken: string;
+
+                    /**
+                     * Creates a new ListModelsResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns ListModelsResponse instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2alpha.IListModelsResponse): google.cloud.retail.v2alpha.ListModelsResponse;
+
+                    /**
+                     * Encodes the specified ListModelsResponse message. Does not implicitly {@link google.cloud.retail.v2alpha.ListModelsResponse.verify|verify} messages.
+                     * @param message ListModelsResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2alpha.IListModelsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified ListModelsResponse message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.ListModelsResponse.verify|verify} messages.
+                     * @param message ListModelsResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2alpha.IListModelsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a ListModelsResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns ListModelsResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.ListModelsResponse;
+
+                    /**
+                     * Decodes a ListModelsResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns ListModelsResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.ListModelsResponse;
+
+                    /**
+                     * Verifies a ListModelsResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a ListModelsResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns ListModelsResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.ListModelsResponse;
+
+                    /**
+                     * Creates a plain object from a ListModelsResponse message. Also converts values to other types if specified.
+                     * @param message ListModelsResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2alpha.ListModelsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this ListModelsResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListModelsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a TuneModelRequest. */
+                interface ITuneModelRequest {
+
+                    /** TuneModelRequest name */
+                    name?: (string|null);
+                }
+
+                /** Represents a TuneModelRequest. */
+                class TuneModelRequest implements ITuneModelRequest {
+
+                    /**
+                     * Constructs a new TuneModelRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2alpha.ITuneModelRequest);
+
+                    /** TuneModelRequest name. */
+                    public name: string;
+
+                    /**
+                     * Creates a new TuneModelRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns TuneModelRequest instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2alpha.ITuneModelRequest): google.cloud.retail.v2alpha.TuneModelRequest;
+
+                    /**
+                     * Encodes the specified TuneModelRequest message. Does not implicitly {@link google.cloud.retail.v2alpha.TuneModelRequest.verify|verify} messages.
+                     * @param message TuneModelRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2alpha.ITuneModelRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified TuneModelRequest message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.TuneModelRequest.verify|verify} messages.
+                     * @param message TuneModelRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2alpha.ITuneModelRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a TuneModelRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns TuneModelRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.TuneModelRequest;
+
+                    /**
+                     * Decodes a TuneModelRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns TuneModelRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.TuneModelRequest;
+
+                    /**
+                     * Verifies a TuneModelRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a TuneModelRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns TuneModelRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.TuneModelRequest;
+
+                    /**
+                     * Creates a plain object from a TuneModelRequest message. Also converts values to other types if specified.
+                     * @param message TuneModelRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2alpha.TuneModelRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this TuneModelRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for TuneModelRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a CreateModelMetadata. */
+                interface ICreateModelMetadata {
+
+                    /** CreateModelMetadata model */
+                    model?: (string|null);
+                }
+
+                /** Represents a CreateModelMetadata. */
+                class CreateModelMetadata implements ICreateModelMetadata {
+
+                    /**
+                     * Constructs a new CreateModelMetadata.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2alpha.ICreateModelMetadata);
+
+                    /** CreateModelMetadata model. */
+                    public model: string;
+
+                    /**
+                     * Creates a new CreateModelMetadata instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns CreateModelMetadata instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2alpha.ICreateModelMetadata): google.cloud.retail.v2alpha.CreateModelMetadata;
+
+                    /**
+                     * Encodes the specified CreateModelMetadata message. Does not implicitly {@link google.cloud.retail.v2alpha.CreateModelMetadata.verify|verify} messages.
+                     * @param message CreateModelMetadata message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2alpha.ICreateModelMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified CreateModelMetadata message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.CreateModelMetadata.verify|verify} messages.
+                     * @param message CreateModelMetadata message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2alpha.ICreateModelMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a CreateModelMetadata message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns CreateModelMetadata
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.CreateModelMetadata;
+
+                    /**
+                     * Decodes a CreateModelMetadata message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns CreateModelMetadata
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.CreateModelMetadata;
+
+                    /**
+                     * Verifies a CreateModelMetadata message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a CreateModelMetadata message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns CreateModelMetadata
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.CreateModelMetadata;
+
+                    /**
+                     * Creates a plain object from a CreateModelMetadata message. Also converts values to other types if specified.
+                     * @param message CreateModelMetadata
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2alpha.CreateModelMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this CreateModelMetadata to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CreateModelMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a TuneModelMetadata. */
+                interface ITuneModelMetadata {
+
+                    /** TuneModelMetadata model */
+                    model?: (string|null);
+                }
+
+                /** Represents a TuneModelMetadata. */
+                class TuneModelMetadata implements ITuneModelMetadata {
+
+                    /**
+                     * Constructs a new TuneModelMetadata.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2alpha.ITuneModelMetadata);
+
+                    /** TuneModelMetadata model. */
+                    public model: string;
+
+                    /**
+                     * Creates a new TuneModelMetadata instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns TuneModelMetadata instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2alpha.ITuneModelMetadata): google.cloud.retail.v2alpha.TuneModelMetadata;
+
+                    /**
+                     * Encodes the specified TuneModelMetadata message. Does not implicitly {@link google.cloud.retail.v2alpha.TuneModelMetadata.verify|verify} messages.
+                     * @param message TuneModelMetadata message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2alpha.ITuneModelMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified TuneModelMetadata message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.TuneModelMetadata.verify|verify} messages.
+                     * @param message TuneModelMetadata message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2alpha.ITuneModelMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a TuneModelMetadata message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns TuneModelMetadata
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.TuneModelMetadata;
+
+                    /**
+                     * Decodes a TuneModelMetadata message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns TuneModelMetadata
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.TuneModelMetadata;
+
+                    /**
+                     * Verifies a TuneModelMetadata message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a TuneModelMetadata message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns TuneModelMetadata
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.TuneModelMetadata;
+
+                    /**
+                     * Creates a plain object from a TuneModelMetadata message. Also converts values to other types if specified.
+                     * @param message TuneModelMetadata
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2alpha.TuneModelMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this TuneModelMetadata to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for TuneModelMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a TuneModelResponse. */
+                interface ITuneModelResponse {
+                }
+
+                /** Represents a TuneModelResponse. */
+                class TuneModelResponse implements ITuneModelResponse {
+
+                    /**
+                     * Constructs a new TuneModelResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2alpha.ITuneModelResponse);
+
+                    /**
+                     * Creates a new TuneModelResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns TuneModelResponse instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2alpha.ITuneModelResponse): google.cloud.retail.v2alpha.TuneModelResponse;
+
+                    /**
+                     * Encodes the specified TuneModelResponse message. Does not implicitly {@link google.cloud.retail.v2alpha.TuneModelResponse.verify|verify} messages.
+                     * @param message TuneModelResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2alpha.ITuneModelResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified TuneModelResponse message, length delimited. Does not implicitly {@link google.cloud.retail.v2alpha.TuneModelResponse.verify|verify} messages.
+                     * @param message TuneModelResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2alpha.ITuneModelResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a TuneModelResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns TuneModelResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2alpha.TuneModelResponse;
+
+                    /**
+                     * Decodes a TuneModelResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns TuneModelResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2alpha.TuneModelResponse;
+
+                    /**
+                     * Verifies a TuneModelResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a TuneModelResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns TuneModelResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2alpha.TuneModelResponse;
+
+                    /**
+                     * Creates a plain object from a TuneModelResponse message. Also converts values to other types if specified.
+                     * @param message TuneModelResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2alpha.TuneModelResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this TuneModelResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for TuneModelResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a PredictionService */
@@ -20893,7 +24494,7 @@ export namespace google {
                 namespace PredictionService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.PredictionService#predict}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.PredictionService|predict}.
                      * @param error Error, if any
                      * @param [response] PredictResponse
                      */
@@ -21030,6 +24631,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PredictRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PredictResponse. */
@@ -21138,6 +24746,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PredictResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace PredictResponse {
@@ -21236,6 +24851,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for PredictionResult
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -21431,84 +25053,84 @@ export namespace google {
                 namespace ProductService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService#createProduct}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService|createProduct}.
                      * @param error Error, if any
                      * @param [response] Product
                      */
                     type CreateProductCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.Product) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService#getProduct}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService|getProduct}.
                      * @param error Error, if any
                      * @param [response] Product
                      */
                     type GetProductCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.Product) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService#listProducts}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService|listProducts}.
                      * @param error Error, if any
                      * @param [response] ListProductsResponse
                      */
                     type ListProductsCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.ListProductsResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService#updateProduct}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService|updateProduct}.
                      * @param error Error, if any
                      * @param [response] Product
                      */
                     type UpdateProductCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.Product) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService#deleteProduct}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService|deleteProduct}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
                     type DeleteProductCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService#purgeProducts}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService|purgeProducts}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type PurgeProductsCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService#importProducts}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService|importProducts}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type ImportProductsCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService#setInventory}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService|setInventory}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type SetInventoryCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService#addFulfillmentPlaces}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService|addFulfillmentPlaces}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type AddFulfillmentPlacesCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService#removeFulfillmentPlaces}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService|removeFulfillmentPlaces}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type RemoveFulfillmentPlacesCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService#addLocalInventories}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService|addLocalInventories}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type AddLocalInventoriesCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService#removeLocalInventories}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ProductService|removeLocalInventories}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
@@ -21615,6 +25237,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CreateProductRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetProductRequest. */
@@ -21705,6 +25334,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetProductRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateProductRequest. */
@@ -21807,6 +25443,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateProductRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a DeleteProductRequest. */
@@ -21897,6 +25540,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for DeleteProductRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListProductsRequest. */
@@ -22017,6 +25667,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListProductsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListProductsResponse. */
@@ -22119,6 +25776,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListProductsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a SetInventoryRequest. */
@@ -22227,6 +25891,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SetInventoryRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a SetInventoryMetadata. */
@@ -22311,6 +25982,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SetInventoryMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a SetInventoryResponse. */
@@ -22395,6 +26073,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SetInventoryResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddFulfillmentPlacesRequest. */
@@ -22509,6 +26194,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddFulfillmentPlacesRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddFulfillmentPlacesMetadata. */
@@ -22593,6 +26285,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddFulfillmentPlacesMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddFulfillmentPlacesResponse. */
@@ -22677,6 +26376,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddFulfillmentPlacesResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddLocalInventoriesRequest. */
@@ -22791,6 +26497,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddLocalInventoriesRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddLocalInventoriesMetadata. */
@@ -22875,6 +26588,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddLocalInventoriesMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddLocalInventoriesResponse. */
@@ -22959,6 +26679,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddLocalInventoriesResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveLocalInventoriesRequest. */
@@ -23067,6 +26794,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveLocalInventoriesRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveLocalInventoriesMetadata. */
@@ -23151,6 +26885,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveLocalInventoriesMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveLocalInventoriesResponse. */
@@ -23235,6 +26976,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveLocalInventoriesResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveFulfillmentPlacesRequest. */
@@ -23349,6 +27097,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveFulfillmentPlacesRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveFulfillmentPlacesMetadata. */
@@ -23433,6 +27188,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveFulfillmentPlacesMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveFulfillmentPlacesResponse. */
@@ -23517,6 +27279,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveFulfillmentPlacesResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PurgeMetadata. */
@@ -23601,6 +27370,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PurgeMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PurgeProductsMetadata. */
@@ -23709,6 +27485,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PurgeProductsMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PurgeProductsRequest. */
@@ -23811,6 +27594,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PurgeProductsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PurgeProductsResponse. */
@@ -23907,6 +27697,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PurgeProductsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PurgeUserEventsRequest. */
@@ -24009,6 +27806,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PurgeUserEventsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PurgeUserEventsResponse. */
@@ -24099,6 +27903,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PurgeUserEventsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ServingConfig. */
@@ -24285,6 +28096,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ServingConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a ServingConfigService */
@@ -24409,49 +28227,49 @@ export namespace google {
                 namespace ServingConfigService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ServingConfigService#createServingConfig}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ServingConfigService|createServingConfig}.
                      * @param error Error, if any
                      * @param [response] ServingConfig
                      */
                     type CreateServingConfigCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.ServingConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ServingConfigService#deleteServingConfig}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ServingConfigService|deleteServingConfig}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
                     type DeleteServingConfigCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ServingConfigService#updateServingConfig}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ServingConfigService|updateServingConfig}.
                      * @param error Error, if any
                      * @param [response] ServingConfig
                      */
                     type UpdateServingConfigCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.ServingConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ServingConfigService#getServingConfig}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ServingConfigService|getServingConfig}.
                      * @param error Error, if any
                      * @param [response] ServingConfig
                      */
                     type GetServingConfigCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.ServingConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ServingConfigService#listServingConfigs}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ServingConfigService|listServingConfigs}.
                      * @param error Error, if any
                      * @param [response] ListServingConfigsResponse
                      */
                     type ListServingConfigsCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.ListServingConfigsResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ServingConfigService#addControl}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ServingConfigService|addControl}.
                      * @param error Error, if any
                      * @param [response] ServingConfig
                      */
                     type AddControlCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.ServingConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.ServingConfigService#removeControl}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.ServingConfigService|removeControl}.
                      * @param error Error, if any
                      * @param [response] ServingConfig
                      */
@@ -24558,6 +28376,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CreateServingConfigRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateServingConfigRequest. */
@@ -24654,6 +28479,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateServingConfigRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a DeleteServingConfigRequest. */
@@ -24744,6 +28576,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for DeleteServingConfigRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetServingConfigRequest. */
@@ -24834,6 +28673,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetServingConfigRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListServingConfigsRequest. */
@@ -24936,6 +28782,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListServingConfigsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListServingConfigsResponse. */
@@ -25032,6 +28885,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListServingConfigsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddControlRequest. */
@@ -25128,6 +28988,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddControlRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveControlRequest. */
@@ -25224,6 +29091,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveControlRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a UserEventService */
@@ -25320,35 +29194,35 @@ export namespace google {
                 namespace UserEventService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.UserEventService#writeUserEvent}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.UserEventService|writeUserEvent}.
                      * @param error Error, if any
                      * @param [response] UserEvent
                      */
                     type WriteUserEventCallback = (error: (Error|null), response?: google.cloud.retail.v2alpha.UserEvent) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.UserEventService#collectUserEvent}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.UserEventService|collectUserEvent}.
                      * @param error Error, if any
                      * @param [response] HttpBody
                      */
                     type CollectUserEventCallback = (error: (Error|null), response?: google.api.HttpBody) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.UserEventService#purgeUserEvents}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.UserEventService|purgeUserEvents}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type PurgeUserEventsCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.UserEventService#importUserEvents}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.UserEventService|importUserEvents}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type ImportUserEventsCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2alpha.UserEventService#rejoinUserEvents}.
+                     * Callback as used by {@link google.cloud.retail.v2alpha.UserEventService|rejoinUserEvents}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
@@ -25449,6 +29323,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for WriteUserEventRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CollectUserEventRequest. */
@@ -25557,6 +29438,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CollectUserEventRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RejoinUserEventsRequest. */
@@ -25653,6 +29541,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RejoinUserEventsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace RejoinUserEventsRequest {
@@ -25753,6 +29648,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RejoinUserEventsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RejoinUserEventsMetadata. */
@@ -25837,6 +29739,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RejoinUserEventsMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
             }
 
@@ -25937,6 +29846,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ProductLevelConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CatalogAttribute. */
@@ -25959,6 +29875,9 @@ export namespace google {
 
                     /** CatalogAttribute searchableOption */
                     searchableOption?: (google.cloud.retail.v2beta.CatalogAttribute.SearchableOption|keyof typeof google.cloud.retail.v2beta.CatalogAttribute.SearchableOption|null);
+
+                    /** CatalogAttribute recommendationsFilteringOption */
+                    recommendationsFilteringOption?: (google.cloud.retail.v2beta.RecommendationsFilteringOption|keyof typeof google.cloud.retail.v2beta.RecommendationsFilteringOption|null);
                 }
 
                 /** Represents a CatalogAttribute. */
@@ -25987,6 +29906,9 @@ export namespace google {
 
                     /** CatalogAttribute searchableOption. */
                     public searchableOption: (google.cloud.retail.v2beta.CatalogAttribute.SearchableOption|keyof typeof google.cloud.retail.v2beta.CatalogAttribute.SearchableOption);
+
+                    /** CatalogAttribute recommendationsFilteringOption. */
+                    public recommendationsFilteringOption: (google.cloud.retail.v2beta.RecommendationsFilteringOption|keyof typeof google.cloud.retail.v2beta.RecommendationsFilteringOption);
 
                     /**
                      * Creates a new CatalogAttribute instance using the specified properties.
@@ -26057,6 +29979,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CatalogAttribute
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace CatalogAttribute {
@@ -26190,6 +30119,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AttributesConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CompletionConfig. */
@@ -26340,6 +30276,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CompletionConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a MerchantCenterLink. */
@@ -26454,6 +30397,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for MerchantCenterLink
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a MerchantCenterLinkingConfig. */
@@ -26544,6 +30494,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for MerchantCenterLinkingConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a Catalog. */
@@ -26652,6 +30609,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Catalog
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** AttributeConfigLevel enum. */
@@ -26666,6 +30630,13 @@ export namespace google {
                     SOLUTION_TYPE_UNSPECIFIED = 0,
                     SOLUTION_TYPE_RECOMMENDATION = 1,
                     SOLUTION_TYPE_SEARCH = 2
+                }
+
+                /** RecommendationsFilteringOption enum. */
+                enum RecommendationsFilteringOption {
+                    RECOMMENDATIONS_FILTERING_OPTION_UNSPECIFIED = 0,
+                    RECOMMENDATIONS_FILTERING_DISABLED = 1,
+                    RECOMMENDATIONS_FILTERING_ENABLED = 3
                 }
 
                 /** SearchSolutionUseCase enum. */
@@ -26769,6 +30740,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Condition
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace Condition {
@@ -26867,6 +30845,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for QueryTerm
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a TimeRange. */
@@ -26963,6 +30948,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for TimeRange
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -27105,6 +31097,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Rule
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace Rule {
@@ -27203,6 +31202,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for BoostAction
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a FilterAction. */
@@ -27293,6 +31299,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for FilterAction
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a RedirectAction. */
@@ -27383,6 +31396,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for RedirectAction
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a TwowaySynonymsAction. */
@@ -27473,6 +31493,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for TwowaySynonymsAction
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of an OnewaySynonymsAction. */
@@ -27575,6 +31602,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for OnewaySynonymsAction
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a DoNotAssociateAction. */
@@ -27677,6 +31711,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for DoNotAssociateAction
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a ReplacementAction. */
@@ -27779,6 +31820,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for ReplacementAction
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of an IgnoreAction. */
@@ -27869,6 +31917,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for IgnoreAction
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -27966,6 +32021,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Audience
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ColorInfo. */
@@ -28062,6 +32124,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ColorInfo
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CustomAttribute. */
@@ -28176,6 +32245,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CustomAttribute
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a FulfillmentInfo. */
@@ -28272,6 +32348,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for FulfillmentInfo
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an Image. */
@@ -28374,6 +32457,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Image
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an Interval. */
@@ -28488,6 +32578,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Interval
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PriceInfo. */
@@ -28614,6 +32711,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PriceInfo
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace PriceInfo {
@@ -28712,6 +32816,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for PriceRange
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -28815,6 +32926,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Rating
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a UserInfo. */
@@ -28923,6 +33041,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UserInfo
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a LocalInventory. */
@@ -29031,6 +33156,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for LocalInventory
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GcsSource. */
@@ -29127,6 +33259,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GcsSource
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a BigQuerySource. */
@@ -29250,6 +33389,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for BigQuerySource
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ProductInlineSource. */
@@ -29340,6 +33486,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ProductInlineSource
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a UserEventInlineSource. */
@@ -29430,6 +33583,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UserEventInlineSource
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportErrorsConfig. */
@@ -29523,6 +33683,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportErrorsConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportProductsRequest. */
@@ -29649,6 +33816,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportProductsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace ImportProductsRequest {
@@ -29761,6 +33935,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportUserEventsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportCompletionDataRequest. */
@@ -29863,6 +34044,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportCompletionDataRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ProductInputConfig. */
@@ -29968,6 +34156,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ProductInputConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a UserEventInputConfig. */
@@ -30073,6 +34268,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UserEventInputConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CompletionDataInputConfig. */
@@ -30166,6 +34368,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CompletionDataInputConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportMetadata. */
@@ -30286,6 +34495,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportProductsResponse. */
@@ -30382,6 +34598,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportProductsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportUserEventsResponse. */
@@ -30484,6 +34707,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportUserEventsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a UserEventImportSummary. */
@@ -30580,6 +34810,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UserEventImportSummary
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ImportCompletionDataResponse. */
@@ -30670,6 +34907,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ImportCompletionDataResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a Product. */
@@ -30955,6 +35199,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Product
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace Product {
@@ -31065,6 +35316,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Promotion
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a UserEvent. */
@@ -31269,6 +35527,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UserEvent
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ProductDetail. */
@@ -31365,6 +35630,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ProductDetail
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CompletionDetail. */
@@ -31467,6 +35739,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CompletionDetail
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PurchaseTransaction. */
@@ -31581,6 +35860,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PurchaseTransaction
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a CatalogService */
@@ -31761,77 +36047,77 @@ export namespace google {
                 namespace CatalogService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService#listCatalogs}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService|listCatalogs}.
                      * @param error Error, if any
                      * @param [response] ListCatalogsResponse
                      */
                     type ListCatalogsCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.ListCatalogsResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService#updateCatalog}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService|updateCatalog}.
                      * @param error Error, if any
                      * @param [response] Catalog
                      */
                     type UpdateCatalogCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.Catalog) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService#setDefaultBranch}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService|setDefaultBranch}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
                     type SetDefaultBranchCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService#getDefaultBranch}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService|getDefaultBranch}.
                      * @param error Error, if any
                      * @param [response] GetDefaultBranchResponse
                      */
                     type GetDefaultBranchCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.GetDefaultBranchResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService#getCompletionConfig}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService|getCompletionConfig}.
                      * @param error Error, if any
                      * @param [response] CompletionConfig
                      */
                     type GetCompletionConfigCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.CompletionConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService#updateCompletionConfig}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService|updateCompletionConfig}.
                      * @param error Error, if any
                      * @param [response] CompletionConfig
                      */
                     type UpdateCompletionConfigCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.CompletionConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService#getAttributesConfig}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService|getAttributesConfig}.
                      * @param error Error, if any
                      * @param [response] AttributesConfig
                      */
                     type GetAttributesConfigCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.AttributesConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService#updateAttributesConfig}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService|updateAttributesConfig}.
                      * @param error Error, if any
                      * @param [response] AttributesConfig
                      */
                     type UpdateAttributesConfigCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.AttributesConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService#addCatalogAttribute}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService|addCatalogAttribute}.
                      * @param error Error, if any
                      * @param [response] AttributesConfig
                      */
                     type AddCatalogAttributeCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.AttributesConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService#removeCatalogAttribute}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService|removeCatalogAttribute}.
                      * @param error Error, if any
                      * @param [response] AttributesConfig
                      */
                     type RemoveCatalogAttributeCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.AttributesConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService#replaceCatalogAttribute}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.CatalogService|replaceCatalogAttribute}.
                      * @param error Error, if any
                      * @param [response] AttributesConfig
                      */
@@ -31938,6 +36224,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListCatalogsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListCatalogsResponse. */
@@ -32034,6 +36327,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListCatalogsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateCatalogRequest. */
@@ -32130,6 +36430,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateCatalogRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a SetDefaultBranchRequest. */
@@ -32238,6 +36545,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SetDefaultBranchRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetDefaultBranchRequest. */
@@ -32328,6 +36642,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetDefaultBranchRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetDefaultBranchResponse. */
@@ -32430,6 +36751,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetDefaultBranchResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetCompletionConfigRequest. */
@@ -32520,6 +36848,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetCompletionConfigRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateCompletionConfigRequest. */
@@ -32616,6 +36951,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateCompletionConfigRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetAttributesConfigRequest. */
@@ -32706,6 +37048,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetAttributesConfigRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateAttributesConfigRequest. */
@@ -32802,6 +37151,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateAttributesConfigRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddCatalogAttributeRequest. */
@@ -32898,6 +37254,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddCatalogAttributeRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveCatalogAttributeRequest. */
@@ -32994,6 +37357,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveCatalogAttributeRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ReplaceCatalogAttributeRequest. */
@@ -33096,6 +37466,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ReplaceCatalogAttributeRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a CompletionService */
@@ -33150,14 +37527,14 @@ export namespace google {
                 namespace CompletionService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.CompletionService#completeQuery}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.CompletionService|completeQuery}.
                      * @param error Error, if any
                      * @param [response] CompleteQueryResponse
                      */
                     type CompleteQueryCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.CompleteQueryResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.CompletionService#importCompletionData}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.CompletionService|importCompletionData}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
@@ -33288,6 +37665,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CompleteQueryRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CompleteQueryResponse. */
@@ -33390,6 +37774,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CompleteQueryResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace CompleteQueryResponse {
@@ -33488,6 +37879,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for CompletionResult
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a RecentSearchResult. */
@@ -33578,6 +37976,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for RecentSearchResult
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -33702,6 +38107,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for Control
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a SearchService */
@@ -33742,7 +38154,7 @@ export namespace google {
                 namespace SearchService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.SearchService#search}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.SearchService|search}.
                      * @param error Error, if any
                      * @param [response] SearchResponse
                      */
@@ -33808,6 +38220,12 @@ export namespace google {
 
                     /** SearchRequest personalizationSpec */
                     personalizationSpec?: (google.cloud.retail.v2beta.SearchRequest.IPersonalizationSpec|null);
+
+                    /** SearchRequest labels */
+                    labels?: ({ [k: string]: string }|null);
+
+                    /** SearchRequest spellCorrectionSpec */
+                    spellCorrectionSpec?: (google.cloud.retail.v2beta.SearchRequest.ISpellCorrectionSpec|null);
                 }
 
                 /** Represents a SearchRequest. */
@@ -33875,6 +38293,15 @@ export namespace google {
 
                     /** SearchRequest personalizationSpec. */
                     public personalizationSpec?: (google.cloud.retail.v2beta.SearchRequest.IPersonalizationSpec|null);
+
+                    /** SearchRequest labels. */
+                    public labels: { [k: string]: string };
+
+                    /** SearchRequest spellCorrectionSpec. */
+                    public spellCorrectionSpec?: (google.cloud.retail.v2beta.SearchRequest.ISpellCorrectionSpec|null);
+
+                    /** SearchRequest _spellCorrectionSpec. */
+                    public _spellCorrectionSpec?: "spellCorrectionSpec";
 
                     /**
                      * Creates a new SearchRequest instance using the specified properties.
@@ -33945,6 +38372,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SearchRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace SearchRequest {
@@ -34055,6 +38489,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for FacetSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace FacetSpec {
@@ -34077,11 +38518,17 @@ export namespace google {
                             /** FacetKey contains */
                             contains?: (string[]|null);
 
+                            /** FacetKey caseInsensitive */
+                            caseInsensitive?: (boolean|null);
+
                             /** FacetKey orderBy */
                             orderBy?: (string|null);
 
                             /** FacetKey query */
                             query?: (string|null);
+
+                            /** FacetKey returnMinMax */
+                            returnMinMax?: (boolean|null);
                         }
 
                         /** Represents a FacetKey. */
@@ -34108,11 +38555,17 @@ export namespace google {
                             /** FacetKey contains. */
                             public contains: string[];
 
+                            /** FacetKey caseInsensitive. */
+                            public caseInsensitive: boolean;
+
                             /** FacetKey orderBy. */
                             public orderBy: string;
 
                             /** FacetKey query. */
                             public query: string;
+
+                            /** FacetKey returnMinMax. */
+                            public returnMinMax: boolean;
 
                             /**
                              * Creates a new FacetKey instance using the specified properties.
@@ -34183,6 +38636,13 @@ export namespace google {
                              * @returns JSON object
                              */
                             public toJSON(): { [k: string]: any };
+
+                            /**
+                             * Gets the default type url for FacetKey
+                             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns The default type url
+                             */
+                            public static getTypeUrl(typeUrlPrefix?: string): string;
                         }
                     }
 
@@ -34274,6 +38734,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for DynamicFacetSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace DynamicFacetSpec {
@@ -34383,6 +38850,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for BoostSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace BoostSpec {
@@ -34481,6 +38955,13 @@ export namespace google {
                              * @returns JSON object
                              */
                             public toJSON(): { [k: string]: any };
+
+                            /**
+                             * Gets the default type url for ConditionBoostSpec
+                             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns The default type url
+                             */
+                            public static getTypeUrl(typeUrlPrefix?: string): string;
                         }
                     }
 
@@ -34578,6 +39059,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for QueryExpansionSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace QueryExpansionSpec {
@@ -34678,6 +39166,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for PersonalizationSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace PersonalizationSpec {
@@ -34687,6 +39182,113 @@ export namespace google {
                             MODE_UNSPECIFIED = 0,
                             AUTO = 1,
                             DISABLED = 2
+                        }
+                    }
+
+                    /** Properties of a SpellCorrectionSpec. */
+                    interface ISpellCorrectionSpec {
+
+                        /** SpellCorrectionSpec mode */
+                        mode?: (google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec.Mode|keyof typeof google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec.Mode|null);
+                    }
+
+                    /** Represents a SpellCorrectionSpec. */
+                    class SpellCorrectionSpec implements ISpellCorrectionSpec {
+
+                        /**
+                         * Constructs a new SpellCorrectionSpec.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.retail.v2beta.SearchRequest.ISpellCorrectionSpec);
+
+                        /** SpellCorrectionSpec mode. */
+                        public mode: (google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec.Mode|keyof typeof google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec.Mode);
+
+                        /**
+                         * Creates a new SpellCorrectionSpec instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns SpellCorrectionSpec instance
+                         */
+                        public static create(properties?: google.cloud.retail.v2beta.SearchRequest.ISpellCorrectionSpec): google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec;
+
+                        /**
+                         * Encodes the specified SpellCorrectionSpec message. Does not implicitly {@link google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec.verify|verify} messages.
+                         * @param message SpellCorrectionSpec message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.retail.v2beta.SearchRequest.ISpellCorrectionSpec, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified SpellCorrectionSpec message, length delimited. Does not implicitly {@link google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec.verify|verify} messages.
+                         * @param message SpellCorrectionSpec message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.retail.v2beta.SearchRequest.ISpellCorrectionSpec, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a SpellCorrectionSpec message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns SpellCorrectionSpec
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec;
+
+                        /**
+                         * Decodes a SpellCorrectionSpec message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns SpellCorrectionSpec
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec;
+
+                        /**
+                         * Verifies a SpellCorrectionSpec message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a SpellCorrectionSpec message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns SpellCorrectionSpec
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec;
+
+                        /**
+                         * Creates a plain object from a SpellCorrectionSpec message. Also converts values to other types if specified.
+                         * @param message SpellCorrectionSpec
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.retail.v2beta.SearchRequest.SpellCorrectionSpec, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this SpellCorrectionSpec to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for SpellCorrectionSpec
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    namespace SpellCorrectionSpec {
+
+                        /** Mode enum. */
+                        enum Mode {
+                            MODE_UNSPECIFIED = 0,
+                            SUGGESTION_ONLY = 1,
+                            AUTO = 2
                         }
                     }
 
@@ -34840,6 +39442,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SearchResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace SearchResponse {
@@ -34956,6 +39565,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for SearchResult
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     /** Properties of a Facet. */
@@ -35058,6 +39674,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for Facet
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace Facet {
@@ -35073,6 +39696,12 @@ export namespace google {
 
                             /** FacetValue count */
                             count?: (number|Long|string|null);
+
+                            /** FacetValue minValue */
+                            minValue?: (number|null);
+
+                            /** FacetValue maxValue */
+                            maxValue?: (number|null);
                         }
 
                         /** Represents a FacetValue. */
@@ -35092,6 +39721,12 @@ export namespace google {
 
                             /** FacetValue count. */
                             public count: (number|Long|string);
+
+                            /** FacetValue minValue. */
+                            public minValue: number;
+
+                            /** FacetValue maxValue. */
+                            public maxValue: number;
 
                             /** FacetValue facetValue. */
                             public facetValue?: ("value"|"interval");
@@ -35165,6 +39800,13 @@ export namespace google {
                              * @returns JSON object
                              */
                             public toJSON(): { [k: string]: any };
+
+                            /**
+                             * Gets the default type url for FacetValue
+                             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns The default type url
+                             */
+                            public static getTypeUrl(typeUrlPrefix?: string): string;
                         }
                     }
 
@@ -35262,6 +39904,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for QueryExpansionInfo
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -35359,35 +40008,35 @@ export namespace google {
                 namespace ControlService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ControlService#createControl}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ControlService|createControl}.
                      * @param error Error, if any
                      * @param [response] Control
                      */
                     type CreateControlCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.Control) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ControlService#deleteControl}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ControlService|deleteControl}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
                     type DeleteControlCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ControlService#updateControl}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ControlService|updateControl}.
                      * @param error Error, if any
                      * @param [response] Control
                      */
                     type UpdateControlCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.Control) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ControlService#getControl}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ControlService|getControl}.
                      * @param error Error, if any
                      * @param [response] Control
                      */
                     type GetControlCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.Control) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ControlService#listControls}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ControlService|listControls}.
                      * @param error Error, if any
                      * @param [response] ListControlsResponse
                      */
@@ -35494,6 +40143,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CreateControlRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateControlRequest. */
@@ -35590,6 +40246,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateControlRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a DeleteControlRequest. */
@@ -35680,6 +40343,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for DeleteControlRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetControlRequest. */
@@ -35770,6 +40440,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetControlRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListControlsRequest. */
@@ -35878,6 +40555,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListControlsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListControlsResponse. */
@@ -35974,6 +40658,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListControlsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ExportErrorsConfig. */
@@ -36067,6 +40758,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ExportErrorsConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ExportMetadata. */
@@ -36163,6 +40861,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ExportMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ExportProductsResponse. */
@@ -36173,6 +40878,9 @@ export namespace google {
 
                     /** ExportProductsResponse errorsConfig */
                     errorsConfig?: (google.cloud.retail.v2beta.IExportErrorsConfig|null);
+
+                    /** ExportProductsResponse outputResult */
+                    outputResult?: (google.cloud.retail.v2beta.IOutputResult|null);
                 }
 
                 /** Represents an ExportProductsResponse. */
@@ -36189,6 +40897,9 @@ export namespace google {
 
                     /** ExportProductsResponse errorsConfig. */
                     public errorsConfig?: (google.cloud.retail.v2beta.IExportErrorsConfig|null);
+
+                    /** ExportProductsResponse outputResult. */
+                    public outputResult?: (google.cloud.retail.v2beta.IOutputResult|null);
 
                     /**
                      * Creates a new ExportProductsResponse instance using the specified properties.
@@ -36259,6 +40970,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ExportProductsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an ExportUserEventsResponse. */
@@ -36269,6 +40987,9 @@ export namespace google {
 
                     /** ExportUserEventsResponse errorsConfig */
                     errorsConfig?: (google.cloud.retail.v2beta.IExportErrorsConfig|null);
+
+                    /** ExportUserEventsResponse outputResult */
+                    outputResult?: (google.cloud.retail.v2beta.IOutputResult|null);
                 }
 
                 /** Represents an ExportUserEventsResponse. */
@@ -36285,6 +41006,9 @@ export namespace google {
 
                     /** ExportUserEventsResponse errorsConfig. */
                     public errorsConfig?: (google.cloud.retail.v2beta.IExportErrorsConfig|null);
+
+                    /** ExportUserEventsResponse outputResult. */
+                    public outputResult?: (google.cloud.retail.v2beta.IOutputResult|null);
 
                     /**
                      * Creates a new ExportUserEventsResponse instance using the specified properties.
@@ -36355,6 +41079,213 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ExportUserEventsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of an OutputResult. */
+                interface IOutputResult {
+
+                    /** OutputResult bigqueryResult */
+                    bigqueryResult?: (google.cloud.retail.v2beta.IBigQueryOutputResult[]|null);
+                }
+
+                /** Represents an OutputResult. */
+                class OutputResult implements IOutputResult {
+
+                    /**
+                     * Constructs a new OutputResult.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2beta.IOutputResult);
+
+                    /** OutputResult bigqueryResult. */
+                    public bigqueryResult: google.cloud.retail.v2beta.IBigQueryOutputResult[];
+
+                    /**
+                     * Creates a new OutputResult instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns OutputResult instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2beta.IOutputResult): google.cloud.retail.v2beta.OutputResult;
+
+                    /**
+                     * Encodes the specified OutputResult message. Does not implicitly {@link google.cloud.retail.v2beta.OutputResult.verify|verify} messages.
+                     * @param message OutputResult message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2beta.IOutputResult, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified OutputResult message, length delimited. Does not implicitly {@link google.cloud.retail.v2beta.OutputResult.verify|verify} messages.
+                     * @param message OutputResult message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2beta.IOutputResult, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an OutputResult message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns OutputResult
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2beta.OutputResult;
+
+                    /**
+                     * Decodes an OutputResult message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns OutputResult
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2beta.OutputResult;
+
+                    /**
+                     * Verifies an OutputResult message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an OutputResult message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns OutputResult
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2beta.OutputResult;
+
+                    /**
+                     * Creates a plain object from an OutputResult message. Also converts values to other types if specified.
+                     * @param message OutputResult
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2beta.OutputResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this OutputResult to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for OutputResult
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a BigQueryOutputResult. */
+                interface IBigQueryOutputResult {
+
+                    /** BigQueryOutputResult datasetId */
+                    datasetId?: (string|null);
+
+                    /** BigQueryOutputResult tableId */
+                    tableId?: (string|null);
+                }
+
+                /** Represents a BigQueryOutputResult. */
+                class BigQueryOutputResult implements IBigQueryOutputResult {
+
+                    /**
+                     * Constructs a new BigQueryOutputResult.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.retail.v2beta.IBigQueryOutputResult);
+
+                    /** BigQueryOutputResult datasetId. */
+                    public datasetId: string;
+
+                    /** BigQueryOutputResult tableId. */
+                    public tableId: string;
+
+                    /**
+                     * Creates a new BigQueryOutputResult instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns BigQueryOutputResult instance
+                     */
+                    public static create(properties?: google.cloud.retail.v2beta.IBigQueryOutputResult): google.cloud.retail.v2beta.BigQueryOutputResult;
+
+                    /**
+                     * Encodes the specified BigQueryOutputResult message. Does not implicitly {@link google.cloud.retail.v2beta.BigQueryOutputResult.verify|verify} messages.
+                     * @param message BigQueryOutputResult message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.retail.v2beta.IBigQueryOutputResult, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified BigQueryOutputResult message, length delimited. Does not implicitly {@link google.cloud.retail.v2beta.BigQueryOutputResult.verify|verify} messages.
+                     * @param message BigQueryOutputResult message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.retail.v2beta.IBigQueryOutputResult, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a BigQueryOutputResult message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns BigQueryOutputResult
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.retail.v2beta.BigQueryOutputResult;
+
+                    /**
+                     * Decodes a BigQueryOutputResult message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns BigQueryOutputResult
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.retail.v2beta.BigQueryOutputResult;
+
+                    /**
+                     * Verifies a BigQueryOutputResult message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a BigQueryOutputResult message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns BigQueryOutputResult
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.retail.v2beta.BigQueryOutputResult;
+
+                    /**
+                     * Creates a plain object from a BigQueryOutputResult message. Also converts values to other types if specified.
+                     * @param message BigQueryOutputResult
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.retail.v2beta.BigQueryOutputResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this BigQueryOutputResult to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for BigQueryOutputResult
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a PredictionService */
@@ -36395,7 +41326,7 @@ export namespace google {
                 namespace PredictionService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.PredictionService#predict}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.PredictionService|predict}.
                      * @param error Error, if any
                      * @param [response] PredictResponse
                      */
@@ -36532,6 +41463,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PredictRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PredictResponse. */
@@ -36640,6 +41578,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PredictResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace PredictResponse {
@@ -36738,6 +41683,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for PredictionResult
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -36919,77 +41871,77 @@ export namespace google {
                 namespace ProductService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService#createProduct}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService|createProduct}.
                      * @param error Error, if any
                      * @param [response] Product
                      */
                     type CreateProductCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.Product) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService#getProduct}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService|getProduct}.
                      * @param error Error, if any
                      * @param [response] Product
                      */
                     type GetProductCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.Product) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService#listProducts}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService|listProducts}.
                      * @param error Error, if any
                      * @param [response] ListProductsResponse
                      */
                     type ListProductsCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.ListProductsResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService#updateProduct}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService|updateProduct}.
                      * @param error Error, if any
                      * @param [response] Product
                      */
                     type UpdateProductCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.Product) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService#deleteProduct}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService|deleteProduct}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
                     type DeleteProductCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService#importProducts}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService|importProducts}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type ImportProductsCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService#setInventory}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService|setInventory}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type SetInventoryCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService#addFulfillmentPlaces}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService|addFulfillmentPlaces}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type AddFulfillmentPlacesCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService#removeFulfillmentPlaces}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService|removeFulfillmentPlaces}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type RemoveFulfillmentPlacesCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService#addLocalInventories}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService|addLocalInventories}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type AddLocalInventoriesCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService#removeLocalInventories}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ProductService|removeLocalInventories}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
@@ -37096,6 +42048,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CreateProductRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetProductRequest. */
@@ -37186,6 +42145,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetProductRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateProductRequest. */
@@ -37288,6 +42254,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateProductRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a DeleteProductRequest. */
@@ -37378,6 +42351,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for DeleteProductRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListProductsRequest. */
@@ -37492,6 +42472,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListProductsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListProductsResponse. */
@@ -37588,6 +42575,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListProductsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a SetInventoryRequest. */
@@ -37696,6 +42690,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SetInventoryRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a SetInventoryMetadata. */
@@ -37780,6 +42781,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SetInventoryMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a SetInventoryResponse. */
@@ -37864,6 +42872,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SetInventoryResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddFulfillmentPlacesRequest. */
@@ -37978,6 +42993,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddFulfillmentPlacesRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddFulfillmentPlacesMetadata. */
@@ -38062,6 +43084,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddFulfillmentPlacesMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddFulfillmentPlacesResponse. */
@@ -38146,6 +43175,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddFulfillmentPlacesResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddLocalInventoriesRequest. */
@@ -38260,6 +43296,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddLocalInventoriesRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddLocalInventoriesMetadata. */
@@ -38344,6 +43387,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddLocalInventoriesMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddLocalInventoriesResponse. */
@@ -38428,6 +43478,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddLocalInventoriesResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveLocalInventoriesRequest. */
@@ -38536,6 +43593,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveLocalInventoriesRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveLocalInventoriesMetadata. */
@@ -38620,6 +43684,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveLocalInventoriesMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveLocalInventoriesResponse. */
@@ -38704,6 +43775,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveLocalInventoriesResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveFulfillmentPlacesRequest. */
@@ -38818,6 +43896,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveFulfillmentPlacesRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveFulfillmentPlacesMetadata. */
@@ -38902,6 +43987,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveFulfillmentPlacesMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveFulfillmentPlacesResponse. */
@@ -38986,6 +44078,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveFulfillmentPlacesResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PurgeMetadata. */
@@ -39070,6 +44169,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PurgeMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PurgeUserEventsRequest. */
@@ -39172,6 +44278,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PurgeUserEventsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a PurgeUserEventsResponse. */
@@ -39262,6 +44375,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for PurgeUserEventsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ServingConfig. */
@@ -39448,6 +44568,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ServingConfig
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a ServingConfigService */
@@ -39572,49 +44699,49 @@ export namespace google {
                 namespace ServingConfigService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ServingConfigService#createServingConfig}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ServingConfigService|createServingConfig}.
                      * @param error Error, if any
                      * @param [response] ServingConfig
                      */
                     type CreateServingConfigCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.ServingConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ServingConfigService#deleteServingConfig}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ServingConfigService|deleteServingConfig}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
                     type DeleteServingConfigCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ServingConfigService#updateServingConfig}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ServingConfigService|updateServingConfig}.
                      * @param error Error, if any
                      * @param [response] ServingConfig
                      */
                     type UpdateServingConfigCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.ServingConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ServingConfigService#getServingConfig}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ServingConfigService|getServingConfig}.
                      * @param error Error, if any
                      * @param [response] ServingConfig
                      */
                     type GetServingConfigCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.ServingConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ServingConfigService#listServingConfigs}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ServingConfigService|listServingConfigs}.
                      * @param error Error, if any
                      * @param [response] ListServingConfigsResponse
                      */
                     type ListServingConfigsCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.ListServingConfigsResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ServingConfigService#addControl}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ServingConfigService|addControl}.
                      * @param error Error, if any
                      * @param [response] ServingConfig
                      */
                     type AddControlCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.ServingConfig) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.ServingConfigService#removeControl}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.ServingConfigService|removeControl}.
                      * @param error Error, if any
                      * @param [response] ServingConfig
                      */
@@ -39721,6 +44848,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CreateServingConfigRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateServingConfigRequest. */
@@ -39817,6 +44951,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateServingConfigRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a DeleteServingConfigRequest. */
@@ -39907,6 +45048,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for DeleteServingConfigRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetServingConfigRequest. */
@@ -39997,6 +45145,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetServingConfigRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListServingConfigsRequest. */
@@ -40099,6 +45254,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListServingConfigsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListServingConfigsResponse. */
@@ -40195,6 +45357,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListServingConfigsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an AddControlRequest. */
@@ -40291,6 +45460,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AddControlRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RemoveControlRequest. */
@@ -40387,6 +45563,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RemoveControlRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a UserEventService */
@@ -40483,35 +45666,35 @@ export namespace google {
                 namespace UserEventService {
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.UserEventService#writeUserEvent}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.UserEventService|writeUserEvent}.
                      * @param error Error, if any
                      * @param [response] UserEvent
                      */
                     type WriteUserEventCallback = (error: (Error|null), response?: google.cloud.retail.v2beta.UserEvent) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.UserEventService#collectUserEvent}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.UserEventService|collectUserEvent}.
                      * @param error Error, if any
                      * @param [response] HttpBody
                      */
                     type CollectUserEventCallback = (error: (Error|null), response?: google.api.HttpBody) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.UserEventService#purgeUserEvents}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.UserEventService|purgeUserEvents}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type PurgeUserEventsCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.UserEventService#importUserEvents}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.UserEventService|importUserEvents}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type ImportUserEventsCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.retail.v2beta.UserEventService#rejoinUserEvents}.
+                     * Callback as used by {@link google.cloud.retail.v2beta.UserEventService|rejoinUserEvents}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
@@ -40612,6 +45795,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for WriteUserEventRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CollectUserEventRequest. */
@@ -40720,6 +45910,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CollectUserEventRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RejoinUserEventsRequest. */
@@ -40816,6 +46013,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RejoinUserEventsRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace RejoinUserEventsRequest {
@@ -40916,6 +46120,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RejoinUserEventsResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a RejoinUserEventsMetadata. */
@@ -41000,6 +46211,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for RejoinUserEventsMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
             }
         }
@@ -41144,6 +46362,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for ResourceDescriptor
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         namespace ResourceDescriptor {
@@ -41256,6 +46481,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for ResourceReference
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a Http. */
@@ -41352,6 +46584,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for Http
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a HttpRule. */
@@ -41499,6 +46738,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for HttpRule
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a CustomHttpPattern. */
@@ -41595,6 +46841,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for CustomHttpPattern
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a HttpBody. */
@@ -41697,6 +46950,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for HttpBody
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
     }
 
@@ -41791,6 +47051,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for FileDescriptorSet
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a FileDescriptorProto. */
@@ -41831,6 +47098,9 @@ export namespace google {
 
             /** FileDescriptorProto syntax */
             syntax?: (string|null);
+
+            /** FileDescriptorProto edition */
+            edition?: (string|null);
         }
 
         /** Represents a FileDescriptorProto. */
@@ -41877,6 +47147,9 @@ export namespace google {
 
             /** FileDescriptorProto syntax. */
             public syntax: string;
+
+            /** FileDescriptorProto edition. */
+            public edition: string;
 
             /**
              * Creates a new FileDescriptorProto instance using the specified properties.
@@ -41947,6 +47220,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for FileDescriptorProto
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a DescriptorProto. */
@@ -42091,6 +47371,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for DescriptorProto
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         namespace DescriptorProto {
@@ -42195,6 +47482,13 @@ export namespace google {
                  * @returns JSON object
                  */
                 public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for ExtensionRange
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
             }
 
             /** Properties of a ReservedRange. */
@@ -42291,6 +47585,13 @@ export namespace google {
                  * @returns JSON object
                  */
                 public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for ReservedRange
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
             }
         }
 
@@ -42382,6 +47683,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for ExtensionRangeOptions
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a FieldDescriptorProto. */
@@ -42532,6 +47840,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for FieldDescriptorProto
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         namespace FieldDescriptorProto {
@@ -42660,6 +47975,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for OneofDescriptorProto
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of an EnumDescriptorProto. */
@@ -42774,6 +48096,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for EnumDescriptorProto
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         namespace EnumDescriptorProto {
@@ -42872,6 +48201,13 @@ export namespace google {
                  * @returns JSON object
                  */
                 public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for EnumReservedRange
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
             }
         }
 
@@ -42975,6 +48311,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for EnumValueDescriptorProto
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a ServiceDescriptorProto. */
@@ -43077,6 +48420,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for ServiceDescriptorProto
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a MethodDescriptorProto. */
@@ -43197,6 +48547,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for MethodDescriptorProto
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a FileOptions. */
@@ -43410,6 +48767,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for FileOptions
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         namespace FileOptions {
@@ -43537,6 +48901,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for MessageOptions
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a FieldOptions. */
@@ -43553,6 +48924,9 @@ export namespace google {
 
             /** FieldOptions lazy */
             lazy?: (boolean|null);
+
+            /** FieldOptions unverifiedLazy */
+            unverifiedLazy?: (boolean|null);
 
             /** FieldOptions deprecated */
             deprecated?: (boolean|null);
@@ -43590,6 +48964,9 @@ export namespace google {
 
             /** FieldOptions lazy. */
             public lazy: boolean;
+
+            /** FieldOptions unverifiedLazy. */
+            public unverifiedLazy: boolean;
 
             /** FieldOptions deprecated. */
             public deprecated: boolean;
@@ -43669,6 +49046,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for FieldOptions
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         namespace FieldOptions {
@@ -43776,6 +49160,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for OneofOptions
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of an EnumOptions. */
@@ -43878,6 +49269,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for EnumOptions
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of an EnumValueOptions. */
@@ -43974,6 +49372,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for EnumValueOptions
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a ServiceOptions. */
@@ -44076,6 +49481,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for ServiceOptions
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a MethodOptions. */
@@ -44187,6 +49599,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for MethodOptions
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         namespace MethodOptions {
@@ -44323,6 +49742,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for UninterpretedOption
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         namespace UninterpretedOption {
@@ -44421,6 +49847,13 @@ export namespace google {
                  * @returns JSON object
                  */
                 public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for NamePart
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
             }
         }
 
@@ -44512,6 +49945,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for SourceCodeInfo
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         namespace SourceCodeInfo {
@@ -44628,6 +50068,13 @@ export namespace google {
                  * @returns JSON object
                  */
                 public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for Location
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
             }
         }
 
@@ -44719,6 +50166,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for GeneratedCodeInfo
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         namespace GeneratedCodeInfo {
@@ -44737,6 +50191,9 @@ export namespace google {
 
                 /** Annotation end */
                 end?: (number|null);
+
+                /** Annotation semantic */
+                semantic?: (google.protobuf.GeneratedCodeInfo.Annotation.Semantic|keyof typeof google.protobuf.GeneratedCodeInfo.Annotation.Semantic|null);
             }
 
             /** Represents an Annotation. */
@@ -44759,6 +50216,9 @@ export namespace google {
 
                 /** Annotation end. */
                 public end: number;
+
+                /** Annotation semantic. */
+                public semantic: (google.protobuf.GeneratedCodeInfo.Annotation.Semantic|keyof typeof google.protobuf.GeneratedCodeInfo.Annotation.Semantic);
 
                 /**
                  * Creates a new Annotation instance using the specified properties.
@@ -44829,6 +50289,23 @@ export namespace google {
                  * @returns JSON object
                  */
                 public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for Annotation
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
+            }
+
+            namespace Annotation {
+
+                /** Semantic enum. */
+                enum Semantic {
+                    NONE = 0,
+                    SET = 1,
+                    ALIAS = 2
+                }
             }
         }
 
@@ -44914,6 +50391,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for Empty
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a FieldMask. */
@@ -45004,6 +50488,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for FieldMask
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a Timestamp. */
@@ -45100,6 +50591,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for Timestamp
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a Duration. */
@@ -45196,6 +50694,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for Duration
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a DoubleValue. */
@@ -45286,6 +50791,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for DoubleValue
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a FloatValue. */
@@ -45376,6 +50888,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for FloatValue
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of an Int64Value. */
@@ -45466,6 +50985,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for Int64Value
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a UInt64Value. */
@@ -45556,6 +51082,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for UInt64Value
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of an Int32Value. */
@@ -45646,6 +51179,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for Int32Value
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a UInt32Value. */
@@ -45736,6 +51276,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for UInt32Value
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a BoolValue. */
@@ -45826,6 +51373,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for BoolValue
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a StringValue. */
@@ -45916,6 +51470,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for StringValue
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a BytesValue. */
@@ -46006,6 +51567,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for BytesValue
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of an Any. */
@@ -46102,6 +51670,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for Any
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a Struct. */
@@ -46192,6 +51767,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for Struct
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a Value. */
@@ -46315,6 +51897,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for Value
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** NullValue enum. */
@@ -46410,6 +51999,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for ListValue
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
     }
 
@@ -46516,6 +52112,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for Status
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
     }
 
@@ -46622,6 +52225,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for Date
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
     }
 
@@ -46722,35 +52332,35 @@ export namespace google {
         namespace Operations {
 
             /**
-             * Callback as used by {@link google.longrunning.Operations#listOperations}.
+             * Callback as used by {@link google.longrunning.Operations|listOperations}.
              * @param error Error, if any
              * @param [response] ListOperationsResponse
              */
             type ListOperationsCallback = (error: (Error|null), response?: google.longrunning.ListOperationsResponse) => void;
 
             /**
-             * Callback as used by {@link google.longrunning.Operations#getOperation}.
+             * Callback as used by {@link google.longrunning.Operations|getOperation}.
              * @param error Error, if any
              * @param [response] Operation
              */
             type GetOperationCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
             /**
-             * Callback as used by {@link google.longrunning.Operations#deleteOperation}.
+             * Callback as used by {@link google.longrunning.Operations|deleteOperation}.
              * @param error Error, if any
              * @param [response] Empty
              */
             type DeleteOperationCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
             /**
-             * Callback as used by {@link google.longrunning.Operations#cancelOperation}.
+             * Callback as used by {@link google.longrunning.Operations|cancelOperation}.
              * @param error Error, if any
              * @param [response] Empty
              */
             type CancelOperationCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
             /**
-             * Callback as used by {@link google.longrunning.Operations#waitOperation}.
+             * Callback as used by {@link google.longrunning.Operations|waitOperation}.
              * @param error Error, if any
              * @param [response] Operation
              */
@@ -46872,6 +52482,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for Operation
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a GetOperationRequest. */
@@ -46962,6 +52579,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for GetOperationRequest
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a ListOperationsRequest. */
@@ -47070,6 +52694,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for ListOperationsRequest
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a ListOperationsResponse. */
@@ -47166,6 +52797,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for ListOperationsResponse
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a CancelOperationRequest. */
@@ -47256,6 +52894,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for CancelOperationRequest
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a DeleteOperationRequest. */
@@ -47346,6 +52991,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for DeleteOperationRequest
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of a WaitOperationRequest. */
@@ -47442,6 +53094,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for WaitOperationRequest
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
         /** Properties of an OperationInfo. */
@@ -47538,6 +53197,13 @@ export namespace google {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for OperationInfo
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
         }
     }
 }
