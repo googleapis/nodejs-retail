@@ -44,7 +44,7 @@ echo "Service Account: $service_account_id"
 gcloud iam service-accounts create "$service_account_id"
 
 # assign necessary roles to your new service account
-for role in {retail.admin,editor,bigquery.admin}
+for role in {retail.admin,editor}
 do
     gcloud projects add-iam-policy-binding "$project_id" --member="serviceAccount:$service_account_id@$project_id.iam.gserviceaccount.com" --role=roles/"${role}"
 done
@@ -61,3 +61,4 @@ gcloud auth activate-service-account --key-file ~/key.json
 # install needed Google client libraries
 cd ~/cloudshell_open/nodejs-retail/samples
 npm install
+'success'
