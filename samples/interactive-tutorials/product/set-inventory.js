@@ -74,7 +74,9 @@ async function main(generatedProductId) {
     console.log('Set inventory request:', request);
 
     // Run request
-    await retailClient.setInventory(request);
+    const data = await retailClient.setInventory(request);
+    const operation = data[0];
+    await operation.promise();
     console.log('Waiting to complete set inventory operation..');
   };
 
