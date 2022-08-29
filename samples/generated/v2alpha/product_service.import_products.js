@@ -23,6 +23,9 @@
 function main(parent, inputConfig) {
   // [START retail_v2alpha_generated_ProductService_ImportProducts_async]
   /**
+   * This snippet has been automatically generated and should be regarded as a code template only.
+   * It will require modifications to work.
+   * It may require correct/in-range values for request initialization.
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
@@ -52,16 +55,31 @@ function main(parent, inputConfig) {
    */
   // const reconciliationMode = {}
   /**
-   *  Pub/Sub topic for receiving notification. If this field is set,
+   *  Full Pub/Sub topic name for receiving notification. If this field is set,
    *  when the import is finished, a notification will be sent to
    *  specified Pub/Sub topic. The message data will be JSON string of a
    *  Operation google.longrunning.Operation.
-   *  Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
+   *  Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It has
+   *  to be within the same project as
+   *  ImportProductsRequest.parent google.cloud.retail.v2alpha.ImportProductsRequest.parent.
+   *  Make sure that both
+   *  `cloud-retail-customer-data-access@system.gserviceaccount.com` and
+   *  `service-<project number>@gcp-sa-retail.iam.gserviceaccount.com`
+   *  have the `pubsub.topics.publish` IAM permission on the topic.
    *  Only supported when
    *  ImportProductsRequest.reconciliation_mode google.cloud.retail.v2alpha.ImportProductsRequest.reconciliation_mode 
    *  is set to `FULL`.
    */
   // const notificationPubsubTopic = 'abc123'
+  /**
+   *  If true, will perform the FULL import even if it would delete a large
+   *  proportion of the products in the default branch, which could potentially
+   *  cause outages if you have live predict/search traffic.
+   *  Only supported when
+   *  ImportProductsRequest.reconciliation_mode google.cloud.retail.v2alpha.ImportProductsRequest.reconciliation_mode 
+   *  is set to `FULL`.
+   */
+  // const skipDefaultBranchProtection = true
 
   // Imports the Retail library
   const {ProductServiceClient} = require('@google-cloud/retail').v2alpha;

@@ -23,10 +23,15 @@
 function main(placement, visitorId) {
   // [START retail_v2_generated_SearchService_Search_async]
   /**
+   * This snippet has been automatically generated and should be regarded as a code template only.
+   * It will require modifications to work.
+   * It may require correct/in-range values for request initialization.
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The resource name of the search engine placement, such as
+   *  Required. The resource name of the Retail Search serving config, such as
+   *  `projects/* /locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
+   *  or the name of the legacy placement resource, such as
    *  `projects/* /locations/global/catalogs/default_catalog/placements/default_search`.
    *  This field is used to identify the serving configuration name and the set
    *  of models that will be used to make the search.

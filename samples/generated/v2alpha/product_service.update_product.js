@@ -23,6 +23,9 @@
 function main(product) {
   // [START retail_v2alpha_generated_ProductService_UpdateProduct_async]
   /**
+   * This snippet has been automatically generated and should be regarded as a code template only.
+   * It will require modifications to work.
+   * It may require correct/in-range values for request initialization.
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
@@ -43,6 +46,10 @@ function main(product) {
    *  fields that are neither immutable nor output only) are updated.
    *  If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
    *  is returned.
+   *  The attribute key can be updated by setting the mask path as
+   *  "attributes.${key_name}". If a key name is present in the mask but not in
+   *  the patching product from the request, this key will be deleted after the
+   *  update.
    */
   // const updateMask = {}
   /**
