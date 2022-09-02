@@ -46,9 +46,6 @@ async function main(generatedProductId) {
 
   // The time when the fulfillment updates are issued, used to prevent
   // out-of-order updates on fulfillment information.
-  const removeTime = {
-    seconds: Math.round(Date.now() / 1000),
-  };
 
   const callRemoveFulfillmentPlaces = async () => {
     // Construct request
@@ -56,7 +53,6 @@ async function main(generatedProductId) {
       product,
       type,
       placeIds,
-      removeTime,
     };
 
     console.log('Remove fulfillment request:', request);
