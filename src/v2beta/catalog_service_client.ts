@@ -202,6 +202,9 @@ export class CatalogServiceClient {
       locationPathTemplate: new this._gaxModule.PathTemplate(
         'projects/{project}/locations/{location}'
       ),
+      modelPathTemplate: new this._gaxModule.PathTemplate(
+        'projects/{project}/locations/{location}/catalogs/{catalog}/models/{model}'
+      ),
       productPathTemplate: new this._gaxModule.PathTemplate(
         'projects/{project}/locations/{location}/catalogs/{catalog}/branches/{branch}/products/{product}'
       ),
@@ -319,6 +322,7 @@ export class CatalogServiceClient {
       'updateAttributesConfig',
       'addCatalogAttribute',
       'removeCatalogAttribute',
+      'batchRemoveCatalogAttributes',
       'replaceCatalogAttribute',
     ];
     for (const methodName of catalogServiceStubMethods) {
@@ -752,7 +756,7 @@ export class CatalogServiceClient {
    *   The request object that will be sent.
    * @param {string} request.name
    *   Required. Full CompletionConfig resource name. Format:
-   *   projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig
+   *   `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig`
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
@@ -1373,6 +1377,115 @@ export class CatalogServiceClient {
       });
     this.initialize();
     return this.innerApiCalls.removeCatalogAttribute(
+      request,
+      options,
+      callback
+    );
+  }
+  /**
+   * Removes all specified
+   * {@link google.cloud.retail.v2beta.CatalogAttribute|CatalogAttribute}s from the
+   * {@link google.cloud.retail.v2beta.AttributesConfig|AttributesConfig}.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.attributesConfig
+   *   Required. The attributes config resource shared by all catalog attributes
+   *   being deleted. Format:
+   *   `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+   * @param {string[]} request.attributeKeys
+   *   Required. The attribute name keys of the
+   *   {@link google.cloud.retail.v2beta.CatalogAttribute|CatalogAttribute}s to delete.
+   *   A maximum of 1000 catalog attributes can be deleted in a batch.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing [BatchRemoveCatalogAttributesResponse]{@link google.cloud.retail.v2beta.BatchRemoveCatalogAttributesResponse}.
+   *   Please see the
+   *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
+   *   for more details and examples.
+   * @example <caption>include:samples/generated/v2beta/catalog_service.batch_remove_catalog_attributes.js</caption>
+   * region_tag:retail_v2beta_generated_CatalogService_BatchRemoveCatalogAttributes_async
+   */
+  batchRemoveCatalogAttributes(
+    request?: protos.google.cloud.retail.v2beta.IBatchRemoveCatalogAttributesRequest,
+    options?: CallOptions
+  ): Promise<
+    [
+      protos.google.cloud.retail.v2beta.IBatchRemoveCatalogAttributesResponse,
+      (
+        | protos.google.cloud.retail.v2beta.IBatchRemoveCatalogAttributesRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  >;
+  batchRemoveCatalogAttributes(
+    request: protos.google.cloud.retail.v2beta.IBatchRemoveCatalogAttributesRequest,
+    options: CallOptions,
+    callback: Callback<
+      protos.google.cloud.retail.v2beta.IBatchRemoveCatalogAttributesResponse,
+      | protos.google.cloud.retail.v2beta.IBatchRemoveCatalogAttributesRequest
+      | null
+      | undefined,
+      {} | null | undefined
+    >
+  ): void;
+  batchRemoveCatalogAttributes(
+    request: protos.google.cloud.retail.v2beta.IBatchRemoveCatalogAttributesRequest,
+    callback: Callback<
+      protos.google.cloud.retail.v2beta.IBatchRemoveCatalogAttributesResponse,
+      | protos.google.cloud.retail.v2beta.IBatchRemoveCatalogAttributesRequest
+      | null
+      | undefined,
+      {} | null | undefined
+    >
+  ): void;
+  batchRemoveCatalogAttributes(
+    request?: protos.google.cloud.retail.v2beta.IBatchRemoveCatalogAttributesRequest,
+    optionsOrCallback?:
+      | CallOptions
+      | Callback<
+          protos.google.cloud.retail.v2beta.IBatchRemoveCatalogAttributesResponse,
+          | protos.google.cloud.retail.v2beta.IBatchRemoveCatalogAttributesRequest
+          | null
+          | undefined,
+          {} | null | undefined
+        >,
+    callback?: Callback<
+      protos.google.cloud.retail.v2beta.IBatchRemoveCatalogAttributesResponse,
+      | protos.google.cloud.retail.v2beta.IBatchRemoveCatalogAttributesRequest
+      | null
+      | undefined,
+      {} | null | undefined
+    >
+  ): Promise<
+    [
+      protos.google.cloud.retail.v2beta.IBatchRemoveCatalogAttributesResponse,
+      (
+        | protos.google.cloud.retail.v2beta.IBatchRemoveCatalogAttributesRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  > | void {
+    request = request || {};
+    let options: CallOptions;
+    if (typeof optionsOrCallback === 'function' && callback === undefined) {
+      callback = optionsOrCallback;
+      options = {};
+    } else {
+      options = optionsOrCallback as CallOptions;
+    }
+    options = options || {};
+    options.otherArgs = options.otherArgs || {};
+    options.otherArgs.headers = options.otherArgs.headers || {};
+    options.otherArgs.headers['x-goog-request-params'] =
+      this._gaxModule.routingHeader.fromParams({
+        attributes_config: request.attributesConfig || '',
+      });
+    this.initialize();
+    return this.innerApiCalls.batchRemoveCatalogAttributes(
       request,
       options,
       callback
@@ -2331,6 +2444,68 @@ export class CatalogServiceClient {
    */
   matchLocationFromLocationName(locationName: string) {
     return this.pathTemplates.locationPathTemplate.match(locationName).location;
+  }
+
+  /**
+   * Return a fully-qualified model resource name string.
+   *
+   * @param {string} project
+   * @param {string} location
+   * @param {string} catalog
+   * @param {string} model
+   * @returns {string} Resource name string.
+   */
+  modelPath(project: string, location: string, catalog: string, model: string) {
+    return this.pathTemplates.modelPathTemplate.render({
+      project: project,
+      location: location,
+      catalog: catalog,
+      model: model,
+    });
+  }
+
+  /**
+   * Parse the project from Model resource.
+   *
+   * @param {string} modelName
+   *   A fully-qualified path representing Model resource.
+   * @returns {string} A string representing the project.
+   */
+  matchProjectFromModelName(modelName: string) {
+    return this.pathTemplates.modelPathTemplate.match(modelName).project;
+  }
+
+  /**
+   * Parse the location from Model resource.
+   *
+   * @param {string} modelName
+   *   A fully-qualified path representing Model resource.
+   * @returns {string} A string representing the location.
+   */
+  matchLocationFromModelName(modelName: string) {
+    return this.pathTemplates.modelPathTemplate.match(modelName).location;
+  }
+
+  /**
+   * Parse the catalog from Model resource.
+   *
+   * @param {string} modelName
+   *   A fully-qualified path representing Model resource.
+   * @returns {string} A string representing the catalog.
+   */
+  matchCatalogFromModelName(modelName: string) {
+    return this.pathTemplates.modelPathTemplate.match(modelName).catalog;
+  }
+
+  /**
+   * Parse the model from Model resource.
+   *
+   * @param {string} modelName
+   *   A fully-qualified path representing Model resource.
+   * @returns {string} A string representing the model.
+   */
+  matchModelFromModelName(modelName: string) {
+    return this.pathTemplates.modelPathTemplate.match(modelName).model;
   }
 
   /**
