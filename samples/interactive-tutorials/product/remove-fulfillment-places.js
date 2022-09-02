@@ -61,8 +61,7 @@ async function main(generatedProductId) {
 
     console.log('Remove fulfillment request:', request);
     // Run request
-    const data = await retailClient.removeFulfillmentPlaces(request);
-    const operation = data[0];
+    const [operation] = await retailClient.removeFulfillmentPlaces(request);
     await operation.promise();
 
     console.log('Waiting to complete remove operation..');

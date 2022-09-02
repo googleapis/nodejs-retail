@@ -66,8 +66,7 @@ async function main(generatedProductId) {
     console.log('Add fulfillment request:', request);
 
     // Run request
-    const data = await retailClient.addFulfillmentPlaces(request);
-    const operation = data[0];
+    const [operation] = await retailClient.addFulfillmentPlaces(request);
     await operation.promise();
 
     console.log('Waiting to complete add operation..');
