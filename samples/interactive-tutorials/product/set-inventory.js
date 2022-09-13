@@ -73,14 +73,14 @@ async function main(generatedProductId) {
     console.log('Set inventory request:', request);
 
     // Run request
-    await retailClient.setInventory(request);
+    const [operation] = await retailClient.setInventory(request);
+    await operation.promise();
     console.log('Waiting to complete set inventory operation..');
   };
 
   // Set inventory with current time
   console.log('Start set inventory');
   await callSetInventory();
-  await utils.delay(200000);
 
   // Get product
   let changedProduct = await utils.getProduct(createdProduct.name);
@@ -93,7 +93,6 @@ async function main(generatedProductId) {
   product.priceInfo.price = 20.0;
   setTime = {seconds: Math.round(Date.now() / 1000) - 86400};
   await callSetInventory();
-  await utils.delay(200000);
 
   // Get product
   changedProduct = await utils.getProduct(createdProduct.name);
