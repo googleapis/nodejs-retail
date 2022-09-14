@@ -71,12 +71,13 @@ async function main(generatedProductId) {
       setTime,
       allowMissing,
     };
+
     console.log('Set inventory request:', request);
+    console.log('Waiting to complete set inventory operation...');
 
     // Run request
     const [operation] = await retailClient.setInventory(request);
     await operation.promise();
-    console.log('Waiting to complete set inventory operation..');
   };
 
   // Set inventory with current time

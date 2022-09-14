@@ -64,12 +64,11 @@ async function main(generatedProductId) {
     };
 
     console.log('Add fulfillment request:', request);
+    console.log('Waiting to complete add operation...');
 
     // Run request
     const [operation] = await retailClient.addFulfillmentPlaces(request);
     await operation.promise();
-
-    console.log('Waiting to complete add operation..');
   };
 
   // Add fulfillment places with current time
