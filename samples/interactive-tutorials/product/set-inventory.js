@@ -29,7 +29,8 @@ async function main(generatedProductId) {
   // Create product
   const createdProduct = await utils.createProduct(
     projectId,
-    generatedProductId
+    generatedProductId,
+    true
   );
 
   // The inventory information to update
@@ -54,12 +55,6 @@ async function main(generatedProductId) {
     availability: 'IN_STOCK',
   };
 
-  // The time when the request is issued, used to prevent
-  // out-of-order updates on inventory fields with the last update time recorded.
-  let setTime = {
-    seconds: Math.round(Date.now() / 1000),
-  };
-
   // If set to true, and the product with name is not found, the
   // inventory update will still be processed and retained for at most 1 day until the product is created
   const allowMissing = true;
@@ -68,9 +63,11 @@ async function main(generatedProductId) {
     // Construct request
     const request = {
       inventory: product,
-      setTime,
       allowMissing,
     };
+
+    // To send an out-of-order request assign the invalid setTime here:
+    // request.setTime = {seconds: Math.round(Date.now() / 1000) - 86400};
 
     console.log('Set inventory request:', request);
     console.log('Waiting to complete set inventory operation...');
@@ -80,28 +77,17 @@ async function main(generatedProductId) {
     await operation.promise();
   };
 
-  // Set inventory with current time
+  // Set inventory
   console.log('Start set inventory');
   await callSetInventory();
 
   // Get product
-  let changedProduct = await utils.getProduct(createdProduct.name);
+  const changedProduct = await utils.getProduct(createdProduct.name);
   console.log(
     `Updated product ${createdProduct.id} with current time: `,
     JSON.stringify(changedProduct[0])
   );
 
-  // Set inventory with outdated time
-  product.priceInfo.price = 20.0;
-  setTime = {seconds: Math.round(Date.now() / 1000) - 86400};
-  await callSetInventory();
-
-  // Get product
-  changedProduct = await utils.getProduct(createdProduct.name);
-  console.log(
-    `Updated product ${createdProduct.id} with outdated time: `,
-    JSON.stringify(changedProduct[0])
-  );
   console.log('Set inventory finished');
 
   // Delete product
