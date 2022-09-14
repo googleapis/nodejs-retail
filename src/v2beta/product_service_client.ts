@@ -588,7 +588,7 @@ export class ProductServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        parent: request.parent || '',
+        parent: request.parent ?? '',
       });
     this.initialize();
     return this.innerApiCalls.createProduct(request, options, callback);
@@ -682,7 +682,7 @@ export class ProductServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        name: request.name || '',
+        name: request.name ?? '',
       });
     this.initialize();
     return this.innerApiCalls.getProduct(request, options, callback);
@@ -799,7 +799,7 @@ export class ProductServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        'product.name': request.product!.name || '',
+        'product.name': request.product!.name ?? '',
       });
     this.initialize();
     return this.innerApiCalls.updateProduct(request, options, callback);
@@ -911,7 +911,7 @@ export class ProductServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        name: request.name || '',
+        name: request.name ?? '',
       });
     this.initialize();
     return this.innerApiCalls.deleteProduct(request, options, callback);
@@ -1050,7 +1050,7 @@ export class ProductServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        parent: request.parent || '',
+        parent: request.parent ?? '',
       });
     this.initialize();
     return this.innerApiCalls.importProducts(request, options, callback);
@@ -1315,7 +1315,7 @@ export class ProductServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        'inventory.name': request.inventory!.name || '',
+        'inventory.name': request.inventory!.name ?? '',
       });
     this.initialize();
     return this.innerApiCalls.setInventory(request, options, callback);
@@ -1530,7 +1530,7 @@ export class ProductServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        product: request.product || '',
+        product: request.product ?? '',
       });
     this.initialize();
     return this.innerApiCalls.addFulfillmentPlaces(request, options, callback);
@@ -1740,7 +1740,7 @@ export class ProductServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        product: request.product || '',
+        product: request.product ?? '',
       });
     this.initialize();
     return this.innerApiCalls.removeFulfillmentPlaces(
@@ -1949,7 +1949,7 @@ export class ProductServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        product: request.product || '',
+        product: request.product ?? '',
       });
     this.initialize();
     return this.innerApiCalls.addLocalInventories(request, options, callback);
@@ -2135,7 +2135,7 @@ export class ProductServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        product: request.product || '',
+        product: request.product ?? '',
       });
     this.initialize();
     return this.innerApiCalls.removeLocalInventories(
@@ -2341,7 +2341,7 @@ export class ProductServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        parent: request.parent || '',
+        parent: request.parent ?? '',
       });
     this.initialize();
     return this.innerApiCalls.listProducts(request, options, callback);
@@ -2448,7 +2448,7 @@ export class ProductServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        parent: request.parent || '',
+        parent: request.parent ?? '',
       });
     const defaultCallSettings = this._defaults['listProducts'];
     const callSettings = defaultCallSettings.merge(options);
@@ -2564,7 +2564,7 @@ export class ProductServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        parent: request.parent || '',
+        parent: request.parent ?? '',
       });
     const defaultCallSettings = this._defaults['listProducts'];
     const callSettings = defaultCallSettings.merge(options);

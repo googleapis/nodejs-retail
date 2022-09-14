@@ -708,7 +708,7 @@ export class SearchServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        placement: request.placement || '',
+        placement: request.placement ?? '',
       });
     this.initialize();
     return this.innerApiCalls.search(request, options, callback);
@@ -971,7 +971,7 @@ export class SearchServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        placement: request.placement || '',
+        placement: request.placement ?? '',
       });
     const defaultCallSettings = this._defaults['search'];
     const callSettings = defaultCallSettings.merge(options);
@@ -1243,7 +1243,7 @@ export class SearchServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        placement: request.placement || '',
+        placement: request.placement ?? '',
       });
     const defaultCallSettings = this._defaults['search'];
     const callSettings = defaultCallSettings.merge(options);
