@@ -15,7 +15,6 @@
 'use strict';
 
 async function main(id1, id2) {
-
   // Imports the Google Cloud client library.
   const {ProductServiceClient} = require('@google-cloud/retail').v2;
   const utils = require('../setup/setup-cleanup');
