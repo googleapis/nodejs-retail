@@ -70,14 +70,14 @@ async function main(generatedProductId) {
     console.log('Set inventory request:', request);
 
     // Run request
-    await retailClient.setInventory(request);
+    const [operation] = await retailClient.setInventory(request);
+    await operation.promise();
     console.log('Waiting to complete set inventory operation..');
   };
 
   // Set inventory with current time
   console.log('Start set inventory');
   await callSetInventory();
-  await utils.delay(200000);
 
   // Get product
   let changedProduct = await utils.getProduct(createdProduct.name);
@@ -89,7 +89,6 @@ async function main(generatedProductId) {
   // Set inventory with outdated time
   product.priceInfo.price = 20.0;
   await callSetInventory();
-  await utils.delay(200000);
 
   // Get product
   changedProduct = await utils.getProduct(createdProduct.name);
