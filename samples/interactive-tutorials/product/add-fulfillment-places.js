@@ -15,8 +15,6 @@
 'use strict';
 
 async function main(generatedProductId) {
-  // [START retail_add_remove_fulfillment_places]
-
   // Imports the Google Cloud client library.
   const {ProductServiceClient} = require('@google-cloud/retail').v2;
   const utils = require('../setup/setup-cleanup');
@@ -45,9 +43,6 @@ async function main(generatedProductId) {
 
   // The time when the fulfillment updates are issued, used to prevent
   // out-of-order updates on fulfillment information.
-  const addTime = {
-    seconds: Math.round(Date.now() / 1000),
-  };
 
   //If set to true, and the product is not found, the fulfillment information will still be processed and retained for
   // at most 1 day and processed once the product is created
@@ -59,7 +54,6 @@ async function main(generatedProductId) {
       product,
       type,
       placeIds,
-      addTime,
       allowMissing,
     };
 
@@ -87,7 +81,6 @@ async function main(generatedProductId) {
   // Delete product
   await utils.deleteProduct(product);
   console.log(`Product ${createdProduct.id} deleted`);
-  // [END retail_add_remove_fulfillment_places]
 }
 
 process.on('unhandledRejection', err => {
