@@ -15,8 +15,6 @@
 'use strict';
 
 async function main(generatedProductId) {
-  // [START retail_remove_fulfillment_places]
-
   // Imports the Google Cloud client library.
   const {ProductServiceClient} = require('@google-cloud/retail').v2;
   const utils = require('../setup/setup-cleanup');
@@ -46,9 +44,6 @@ async function main(generatedProductId) {
 
   // The time when the fulfillment updates are issued, used to prevent
   // out-of-order updates on fulfillment information.
-  const removeTime = {
-    seconds: Math.round(Date.now() / 1000),
-  };
 
   const callRemoveFulfillmentPlaces = async () => {
     // Construct request
@@ -56,7 +51,6 @@ async function main(generatedProductId) {
       product,
       type,
       placeIds,
-      removeTime,
     };
 
     console.log('Remove fulfillment request:', request);
@@ -82,7 +76,6 @@ async function main(generatedProductId) {
   // Delete product
   await utils.deleteProduct(product);
   console.log(`Product ${createdProduct.id} deleted`);
-  // [END retail_remove_fulfillment_places]
 }
 
 process.on('unhandledRejection', err => {
