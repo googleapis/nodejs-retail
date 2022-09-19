@@ -15,8 +15,6 @@
 'use strict';
 
 async function main() {
-  // [START retail_search_for_products_with_query_expansion_specification]
-
   // Imports the Google Cloud client library.
   const {SearchServiceClient} = require('@google-cloud/retail');
 
@@ -72,7 +70,6 @@ async function main() {
   };
 
   callSearch();
-  // [END retail_search_for_products_with_query_expansion_specification]
 }
 
 process.on('unhandledRejection', err => {

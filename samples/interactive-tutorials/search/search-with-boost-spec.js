@@ -15,7 +15,6 @@
 'use strict';
 
 async function main() {
-  // [START retail_search_product_with_boost_spec]
   // Call Retail API to search for a products in a catalog, rerank the
   // results boosting or burying the products that match defined condition.
 
@@ -78,7 +77,6 @@ async function main() {
   };
 
   callSearch();
-  // [END retail_search_product_with_boost_spec]
 }
 
 process.on('unhandledRejection', err => {
