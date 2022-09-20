@@ -92,7 +92,7 @@ describe('Search with pagination', () => {
             'variantRollupValues',
             'id',
             'product',
-            'peronsalLabels',
+            'personalLabels',
             'matchingVariantCount'
           );
         });
