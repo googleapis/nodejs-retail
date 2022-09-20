@@ -87,7 +87,7 @@ describe('Search with query expansion spec', () => {
             'variantRollupValues',
             'id',
             'product',
-            'peronsalLabels',
+            'personalLabels',
             'matchingVariantCount'
           );
         });
