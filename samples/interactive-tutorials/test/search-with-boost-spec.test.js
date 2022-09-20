@@ -85,7 +85,7 @@ describe('Search with boost spec', () => {
             'variantRollupValues',
             'id',
             'product',
-            'peronsalLabels',
+            'personalLabels',
             'matchingVariantCount'
           );
         });
