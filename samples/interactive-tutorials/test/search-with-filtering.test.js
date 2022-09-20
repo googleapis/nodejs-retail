@@ -82,7 +82,7 @@ describe('Search with filtering', () => {
             'variantRollupValues',
             'id',
             'product',
-            'peronsalLabels',
+            'personalLabels',
             'matchingVariantCount'
           );
         });
