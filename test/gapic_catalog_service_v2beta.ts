@@ -25,7 +25,7 @@ import * as catalogserviceModule from '../src';
 
 import {PassThrough} from 'stream';
 
-import {protobuf, operationsProtos, LocationProtos} from 'google-gax';
+import {protobuf, LocationProtos} from 'google-gax';
 
 // Dynamically loaded proto JSON is needed to get the type information
 // to fill in default values for request objects
@@ -238,10 +238,10 @@ describe('v2beta.CatalogServiceClient', () => {
         new protos.google.cloud.retail.v2beta.UpdateCatalogRequest()
       );
       request.catalog ??= {};
-      const defaultValue1 = getTypeDefaultValue('UpdateCatalogRequest', [
-        'catalog',
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.UpdateCatalogRequest',
+        ['catalog', 'name']
+      );
       request.catalog.name = defaultValue1;
       const expectedHeaderRequestParams = `catalog.name=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -270,10 +270,10 @@ describe('v2beta.CatalogServiceClient', () => {
         new protos.google.cloud.retail.v2beta.UpdateCatalogRequest()
       );
       request.catalog ??= {};
-      const defaultValue1 = getTypeDefaultValue('UpdateCatalogRequest', [
-        'catalog',
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.UpdateCatalogRequest',
+        ['catalog', 'name']
+      );
       request.catalog.name = defaultValue1;
       const expectedHeaderRequestParams = `catalog.name=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -318,10 +318,10 @@ describe('v2beta.CatalogServiceClient', () => {
         new protos.google.cloud.retail.v2beta.UpdateCatalogRequest()
       );
       request.catalog ??= {};
-      const defaultValue1 = getTypeDefaultValue('UpdateCatalogRequest', [
-        'catalog',
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.UpdateCatalogRequest',
+        ['catalog', 'name']
+      );
       request.catalog.name = defaultValue1;
       const expectedHeaderRequestParams = `catalog.name=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -350,10 +350,10 @@ describe('v2beta.CatalogServiceClient', () => {
         new protos.google.cloud.retail.v2beta.UpdateCatalogRequest()
       );
       request.catalog ??= {};
-      const defaultValue1 = getTypeDefaultValue('UpdateCatalogRequest', [
-        'catalog',
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.UpdateCatalogRequest',
+        ['catalog', 'name']
+      );
       request.catalog.name = defaultValue1;
       const expectedError = new Error('The client has already been closed.');
       client.close();
@@ -371,9 +371,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.SetDefaultBranchRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('SetDefaultBranchRequest', [
-        'catalog',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.SetDefaultBranchRequest',
+        ['catalog']
+      );
       request.catalog = defaultValue1;
       const expectedHeaderRequestParams = `catalog=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -401,9 +402,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.SetDefaultBranchRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('SetDefaultBranchRequest', [
-        'catalog',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.SetDefaultBranchRequest',
+        ['catalog']
+      );
       request.catalog = defaultValue1;
       const expectedHeaderRequestParams = `catalog=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -447,9 +449,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.SetDefaultBranchRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('SetDefaultBranchRequest', [
-        'catalog',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.SetDefaultBranchRequest',
+        ['catalog']
+      );
       request.catalog = defaultValue1;
       const expectedHeaderRequestParams = `catalog=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -477,9 +480,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.SetDefaultBranchRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('SetDefaultBranchRequest', [
-        'catalog',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.SetDefaultBranchRequest',
+        ['catalog']
+      );
       request.catalog = defaultValue1;
       const expectedError = new Error('The client has already been closed.');
       client.close();
@@ -497,9 +501,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.GetDefaultBranchRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GetDefaultBranchRequest', [
-        'catalog',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.GetDefaultBranchRequest',
+        ['catalog']
+      );
       request.catalog = defaultValue1;
       const expectedHeaderRequestParams = `catalog=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -527,9 +532,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.GetDefaultBranchRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GetDefaultBranchRequest', [
-        'catalog',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.GetDefaultBranchRequest',
+        ['catalog']
+      );
       request.catalog = defaultValue1;
       const expectedHeaderRequestParams = `catalog=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -573,9 +579,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.GetDefaultBranchRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GetDefaultBranchRequest', [
-        'catalog',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.GetDefaultBranchRequest',
+        ['catalog']
+      );
       request.catalog = defaultValue1;
       const expectedHeaderRequestParams = `catalog=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -603,9 +610,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.GetDefaultBranchRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GetDefaultBranchRequest', [
-        'catalog',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.GetDefaultBranchRequest',
+        ['catalog']
+      );
       request.catalog = defaultValue1;
       const expectedError = new Error('The client has already been closed.');
       client.close();
@@ -623,9 +631,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.GetCompletionConfigRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GetCompletionConfigRequest', [
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.GetCompletionConfigRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedHeaderRequestParams = `name=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -654,9 +663,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.GetCompletionConfigRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GetCompletionConfigRequest', [
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.GetCompletionConfigRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedHeaderRequestParams = `name=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -700,9 +710,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.GetCompletionConfigRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GetCompletionConfigRequest', [
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.GetCompletionConfigRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedHeaderRequestParams = `name=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -730,9 +741,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.GetCompletionConfigRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GetCompletionConfigRequest', [
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.GetCompletionConfigRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedError = new Error('The client has already been closed.');
       client.close();
@@ -752,7 +764,7 @@ describe('v2beta.CatalogServiceClient', () => {
       );
       request.completionConfig ??= {};
       const defaultValue1 = getTypeDefaultValue(
-        'UpdateCompletionConfigRequest',
+        '.google.cloud.retail.v2beta.UpdateCompletionConfigRequest',
         ['completionConfig', 'name']
       );
       request.completionConfig.name = defaultValue1;
@@ -785,7 +797,7 @@ describe('v2beta.CatalogServiceClient', () => {
       );
       request.completionConfig ??= {};
       const defaultValue1 = getTypeDefaultValue(
-        'UpdateCompletionConfigRequest',
+        '.google.cloud.retail.v2beta.UpdateCompletionConfigRequest',
         ['completionConfig', 'name']
       );
       request.completionConfig.name = defaultValue1;
@@ -833,7 +845,7 @@ describe('v2beta.CatalogServiceClient', () => {
       );
       request.completionConfig ??= {};
       const defaultValue1 = getTypeDefaultValue(
-        'UpdateCompletionConfigRequest',
+        '.google.cloud.retail.v2beta.UpdateCompletionConfigRequest',
         ['completionConfig', 'name']
       );
       request.completionConfig.name = defaultValue1;
@@ -868,7 +880,7 @@ describe('v2beta.CatalogServiceClient', () => {
       );
       request.completionConfig ??= {};
       const defaultValue1 = getTypeDefaultValue(
-        'UpdateCompletionConfigRequest',
+        '.google.cloud.retail.v2beta.UpdateCompletionConfigRequest',
         ['completionConfig', 'name']
       );
       request.completionConfig.name = defaultValue1;
@@ -891,9 +903,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.GetAttributesConfigRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GetAttributesConfigRequest', [
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.GetAttributesConfigRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedHeaderRequestParams = `name=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -922,9 +935,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.GetAttributesConfigRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GetAttributesConfigRequest', [
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.GetAttributesConfigRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedHeaderRequestParams = `name=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -968,9 +982,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.GetAttributesConfigRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GetAttributesConfigRequest', [
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.GetAttributesConfigRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedHeaderRequestParams = `name=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -998,9 +1013,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.GetAttributesConfigRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('GetAttributesConfigRequest', [
-        'name',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.GetAttributesConfigRequest',
+        ['name']
+      );
       request.name = defaultValue1;
       const expectedError = new Error('The client has already been closed.');
       client.close();
@@ -1020,7 +1036,7 @@ describe('v2beta.CatalogServiceClient', () => {
       );
       request.attributesConfig ??= {};
       const defaultValue1 = getTypeDefaultValue(
-        'UpdateAttributesConfigRequest',
+        '.google.cloud.retail.v2beta.UpdateAttributesConfigRequest',
         ['attributesConfig', 'name']
       );
       request.attributesConfig.name = defaultValue1;
@@ -1053,7 +1069,7 @@ describe('v2beta.CatalogServiceClient', () => {
       );
       request.attributesConfig ??= {};
       const defaultValue1 = getTypeDefaultValue(
-        'UpdateAttributesConfigRequest',
+        '.google.cloud.retail.v2beta.UpdateAttributesConfigRequest',
         ['attributesConfig', 'name']
       );
       request.attributesConfig.name = defaultValue1;
@@ -1101,7 +1117,7 @@ describe('v2beta.CatalogServiceClient', () => {
       );
       request.attributesConfig ??= {};
       const defaultValue1 = getTypeDefaultValue(
-        'UpdateAttributesConfigRequest',
+        '.google.cloud.retail.v2beta.UpdateAttributesConfigRequest',
         ['attributesConfig', 'name']
       );
       request.attributesConfig.name = defaultValue1;
@@ -1136,7 +1152,7 @@ describe('v2beta.CatalogServiceClient', () => {
       );
       request.attributesConfig ??= {};
       const defaultValue1 = getTypeDefaultValue(
-        'UpdateAttributesConfigRequest',
+        '.google.cloud.retail.v2beta.UpdateAttributesConfigRequest',
         ['attributesConfig', 'name']
       );
       request.attributesConfig.name = defaultValue1;
@@ -1159,9 +1175,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.AddCatalogAttributeRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('AddCatalogAttributeRequest', [
-        'attributesConfig',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.AddCatalogAttributeRequest',
+        ['attributesConfig']
+      );
       request.attributesConfig = defaultValue1;
       const expectedHeaderRequestParams = `attributes_config=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -1190,9 +1207,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.AddCatalogAttributeRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('AddCatalogAttributeRequest', [
-        'attributesConfig',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.AddCatalogAttributeRequest',
+        ['attributesConfig']
+      );
       request.attributesConfig = defaultValue1;
       const expectedHeaderRequestParams = `attributes_config=${defaultValue1}`;
       const expectedResponse = generateSampleMessage(
@@ -1236,9 +1254,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.AddCatalogAttributeRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('AddCatalogAttributeRequest', [
-        'attributesConfig',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.AddCatalogAttributeRequest',
+        ['attributesConfig']
+      );
       request.attributesConfig = defaultValue1;
       const expectedHeaderRequestParams = `attributes_config=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -1266,9 +1285,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.AddCatalogAttributeRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('AddCatalogAttributeRequest', [
-        'attributesConfig',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.AddCatalogAttributeRequest',
+        ['attributesConfig']
+      );
       request.attributesConfig = defaultValue1;
       const expectedError = new Error('The client has already been closed.');
       client.close();
@@ -1287,7 +1307,7 @@ describe('v2beta.CatalogServiceClient', () => {
         new protos.google.cloud.retail.v2beta.RemoveCatalogAttributeRequest()
       );
       const defaultValue1 = getTypeDefaultValue(
-        'RemoveCatalogAttributeRequest',
+        '.google.cloud.retail.v2beta.RemoveCatalogAttributeRequest',
         ['attributesConfig']
       );
       request.attributesConfig = defaultValue1;
@@ -1319,7 +1339,7 @@ describe('v2beta.CatalogServiceClient', () => {
         new protos.google.cloud.retail.v2beta.RemoveCatalogAttributeRequest()
       );
       const defaultValue1 = getTypeDefaultValue(
-        'RemoveCatalogAttributeRequest',
+        '.google.cloud.retail.v2beta.RemoveCatalogAttributeRequest',
         ['attributesConfig']
       );
       request.attributesConfig = defaultValue1;
@@ -1366,7 +1386,7 @@ describe('v2beta.CatalogServiceClient', () => {
         new protos.google.cloud.retail.v2beta.RemoveCatalogAttributeRequest()
       );
       const defaultValue1 = getTypeDefaultValue(
-        'RemoveCatalogAttributeRequest',
+        '.google.cloud.retail.v2beta.RemoveCatalogAttributeRequest',
         ['attributesConfig']
       );
       request.attributesConfig = defaultValue1;
@@ -1400,7 +1420,7 @@ describe('v2beta.CatalogServiceClient', () => {
         new protos.google.cloud.retail.v2beta.RemoveCatalogAttributeRequest()
       );
       const defaultValue1 = getTypeDefaultValue(
-        'RemoveCatalogAttributeRequest',
+        '.google.cloud.retail.v2beta.RemoveCatalogAttributeRequest',
         ['attributesConfig']
       );
       request.attributesConfig = defaultValue1;
@@ -1424,7 +1444,7 @@ describe('v2beta.CatalogServiceClient', () => {
         new protos.google.cloud.retail.v2beta.BatchRemoveCatalogAttributesRequest()
       );
       const defaultValue1 = getTypeDefaultValue(
-        'BatchRemoveCatalogAttributesRequest',
+        '.google.cloud.retail.v2beta.BatchRemoveCatalogAttributesRequest',
         ['attributesConfig']
       );
       request.attributesConfig = defaultValue1;
@@ -1456,7 +1476,7 @@ describe('v2beta.CatalogServiceClient', () => {
         new protos.google.cloud.retail.v2beta.BatchRemoveCatalogAttributesRequest()
       );
       const defaultValue1 = getTypeDefaultValue(
-        'BatchRemoveCatalogAttributesRequest',
+        '.google.cloud.retail.v2beta.BatchRemoveCatalogAttributesRequest',
         ['attributesConfig']
       );
       request.attributesConfig = defaultValue1;
@@ -1503,7 +1523,7 @@ describe('v2beta.CatalogServiceClient', () => {
         new protos.google.cloud.retail.v2beta.BatchRemoveCatalogAttributesRequest()
       );
       const defaultValue1 = getTypeDefaultValue(
-        'BatchRemoveCatalogAttributesRequest',
+        '.google.cloud.retail.v2beta.BatchRemoveCatalogAttributesRequest',
         ['attributesConfig']
       );
       request.attributesConfig = defaultValue1;
@@ -1537,7 +1557,7 @@ describe('v2beta.CatalogServiceClient', () => {
         new protos.google.cloud.retail.v2beta.BatchRemoveCatalogAttributesRequest()
       );
       const defaultValue1 = getTypeDefaultValue(
-        'BatchRemoveCatalogAttributesRequest',
+        '.google.cloud.retail.v2beta.BatchRemoveCatalogAttributesRequest',
         ['attributesConfig']
       );
       request.attributesConfig = defaultValue1;
@@ -1561,7 +1581,7 @@ describe('v2beta.CatalogServiceClient', () => {
         new protos.google.cloud.retail.v2beta.ReplaceCatalogAttributeRequest()
       );
       const defaultValue1 = getTypeDefaultValue(
-        'ReplaceCatalogAttributeRequest',
+        '.google.cloud.retail.v2beta.ReplaceCatalogAttributeRequest',
         ['attributesConfig']
       );
       request.attributesConfig = defaultValue1;
@@ -1593,7 +1613,7 @@ describe('v2beta.CatalogServiceClient', () => {
         new protos.google.cloud.retail.v2beta.ReplaceCatalogAttributeRequest()
       );
       const defaultValue1 = getTypeDefaultValue(
-        'ReplaceCatalogAttributeRequest',
+        '.google.cloud.retail.v2beta.ReplaceCatalogAttributeRequest',
         ['attributesConfig']
       );
       request.attributesConfig = defaultValue1;
@@ -1640,7 +1660,7 @@ describe('v2beta.CatalogServiceClient', () => {
         new protos.google.cloud.retail.v2beta.ReplaceCatalogAttributeRequest()
       );
       const defaultValue1 = getTypeDefaultValue(
-        'ReplaceCatalogAttributeRequest',
+        '.google.cloud.retail.v2beta.ReplaceCatalogAttributeRequest',
         ['attributesConfig']
       );
       request.attributesConfig = defaultValue1;
@@ -1674,7 +1694,7 @@ describe('v2beta.CatalogServiceClient', () => {
         new protos.google.cloud.retail.v2beta.ReplaceCatalogAttributeRequest()
       );
       const defaultValue1 = getTypeDefaultValue(
-        'ReplaceCatalogAttributeRequest',
+        '.google.cloud.retail.v2beta.ReplaceCatalogAttributeRequest',
         ['attributesConfig']
       );
       request.attributesConfig = defaultValue1;
@@ -1697,9 +1717,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.ListCatalogsRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListCatalogsRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.ListCatalogsRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedResponse = [
@@ -1729,9 +1750,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.ListCatalogsRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListCatalogsRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.ListCatalogsRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedResponse = [
@@ -1777,9 +1799,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.ListCatalogsRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListCatalogsRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.ListCatalogsRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -1807,9 +1830,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.ListCatalogsRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListCatalogsRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.ListCatalogsRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedResponse = [
@@ -1860,9 +1884,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.ListCatalogsRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListCatalogsRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.ListCatalogsRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -1910,9 +1935,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.ListCatalogsRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListCatalogsRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.ListCatalogsRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedResponse = [
@@ -1952,9 +1978,10 @@ describe('v2beta.CatalogServiceClient', () => {
       const request = generateSampleMessage(
         new protos.google.cloud.retail.v2beta.ListCatalogsRequest()
       );
-      const defaultValue1 = getTypeDefaultValue('ListCatalogsRequest', [
-        'parent',
-      ]);
+      const defaultValue1 = getTypeDefaultValue(
+        '.google.cloud.retail.v2beta.ListCatalogsRequest',
+        ['parent']
+      );
       request.parent = defaultValue1;
       const expectedHeaderRequestParams = `parent=${defaultValue1}`;
       const expectedError = new Error('expected');
@@ -2177,311 +2204,6 @@ describe('v2beta.CatalogServiceClient', () => {
           .args[2].otherArgs.headers['x-goog-request-params'].includes(
             expectedHeaderRequestParams
           )
-      );
-    });
-  });
-  describe('getOperation', () => {
-    it('invokes getOperation without error', async () => {
-      const client = new catalogserviceModule.v2beta.CatalogServiceClient({
-        credentials: {client_email: 'bogus', private_key: 'bogus'},
-        projectId: 'bogus',
-      });
-      client.initialize();
-      const request = generateSampleMessage(
-        new operationsProtos.google.longrunning.GetOperationRequest()
-      );
-      const expectedResponse = generateSampleMessage(
-        new operationsProtos.google.longrunning.Operation()
-      );
-      client.operationsClient.getOperation = stubSimpleCall(expectedResponse);
-      const response = await client.getOperation(request);
-      assert.deepStrictEqual(response, [expectedResponse]);
-      assert(
-        (client.operationsClient.getOperation as SinonStub)
-          .getCall(0)
-          .calledWith(request)
-      );
-    });
-    it('invokes getOperation without error using callback', async () => {
-      const client = new catalogserviceModule.v2beta.CatalogServiceClient({
-        credentials: {client_email: 'bogus', private_key: 'bogus'},
-        projectId: 'bogus',
-      });
-      const request = generateSampleMessage(
-        new operationsProtos.google.longrunning.GetOperationRequest()
-      );
-      const expectedResponse = generateSampleMessage(
-        new operationsProtos.google.longrunning.Operation()
-      );
-      client.operationsClient.getOperation = sinon
-        .stub()
-        .callsArgWith(2, null, expectedResponse);
-      const promise = new Promise((resolve, reject) => {
-        client.operationsClient.getOperation(
-          request,
-          undefined,
-          (
-            err?: Error | null,
-            result?: operationsProtos.google.longrunning.Operation | null
-          ) => {
-            if (err) {
-              reject(err);
-            } else {
-              resolve(result);
-            }
-          }
-        );
-      });
-      const response = await promise;
-      assert.deepStrictEqual(response, expectedResponse);
-      assert((client.operationsClient.getOperation as SinonStub).getCall(0));
-    });
-    it('invokes getOperation with error', async () => {
-      const client = new catalogserviceModule.v2beta.CatalogServiceClient({
-        credentials: {client_email: 'bogus', private_key: 'bogus'},
-        projectId: 'bogus',
-      });
-      const request = generateSampleMessage(
-        new operationsProtos.google.longrunning.GetOperationRequest()
-      );
-      const expectedError = new Error('expected');
-      client.operationsClient.getOperation = stubSimpleCall(
-        undefined,
-        expectedError
-      );
-      await assert.rejects(async () => {
-        await client.getOperation(request);
-      }, expectedError);
-      assert(
-        (client.operationsClient.getOperation as SinonStub)
-          .getCall(0)
-          .calledWith(request)
-      );
-    });
-  });
-  describe('cancelOperation', () => {
-    it('invokes cancelOperation without error', async () => {
-      const client = new catalogserviceModule.v2beta.CatalogServiceClient({
-        credentials: {client_email: 'bogus', private_key: 'bogus'},
-        projectId: 'bogus',
-      });
-      client.initialize();
-      const request = generateSampleMessage(
-        new operationsProtos.google.longrunning.CancelOperationRequest()
-      );
-      const expectedResponse = generateSampleMessage(
-        new protos.google.protobuf.Empty()
-      );
-      client.operationsClient.cancelOperation =
-        stubSimpleCall(expectedResponse);
-      const response = await client.cancelOperation(request);
-      assert.deepStrictEqual(response, [expectedResponse]);
-      assert(
-        (client.operationsClient.cancelOperation as SinonStub)
-          .getCall(0)
-          .calledWith(request)
-      );
-    });
-    it('invokes cancelOperation without error using callback', async () => {
-      const client = new catalogserviceModule.v2beta.CatalogServiceClient({
-        credentials: {client_email: 'bogus', private_key: 'bogus'},
-        projectId: 'bogus',
-      });
-      const request = generateSampleMessage(
-        new operationsProtos.google.longrunning.CancelOperationRequest()
-      );
-      const expectedResponse = generateSampleMessage(
-        new protos.google.protobuf.Empty()
-      );
-      client.operationsClient.cancelOperation = sinon
-        .stub()
-        .callsArgWith(2, null, expectedResponse);
-      const promise = new Promise((resolve, reject) => {
-        client.operationsClient.cancelOperation(
-          request,
-          undefined,
-          (
-            err?: Error | null,
-            result?: protos.google.protobuf.Empty | null
-          ) => {
-            if (err) {
-              reject(err);
-            } else {
-              resolve(result);
-            }
-          }
-        );
-      });
-      const response = await promise;
-      assert.deepStrictEqual(response, expectedResponse);
-      assert((client.operationsClient.cancelOperation as SinonStub).getCall(0));
-    });
-    it('invokes cancelOperation with error', async () => {
-      const client = new catalogserviceModule.v2beta.CatalogServiceClient({
-        credentials: {client_email: 'bogus', private_key: 'bogus'},
-        projectId: 'bogus',
-      });
-      const request = generateSampleMessage(
-        new operationsProtos.google.longrunning.CancelOperationRequest()
-      );
-      const expectedError = new Error('expected');
-      client.operationsClient.cancelOperation = stubSimpleCall(
-        undefined,
-        expectedError
-      );
-      await assert.rejects(async () => {
-        await client.cancelOperation(request);
-      }, expectedError);
-      assert(
-        (client.operationsClient.cancelOperation as SinonStub)
-          .getCall(0)
-          .calledWith(request)
-      );
-    });
-  });
-  describe('deleteOperation', () => {
-    it('invokes deleteOperation without error', async () => {
-      const client = new catalogserviceModule.v2beta.CatalogServiceClient({
-        credentials: {client_email: 'bogus', private_key: 'bogus'},
-        projectId: 'bogus',
-      });
-      client.initialize();
-      const request = generateSampleMessage(
-        new operationsProtos.google.longrunning.DeleteOperationRequest()
-      );
-      const expectedResponse = generateSampleMessage(
-        new protos.google.protobuf.Empty()
-      );
-      client.operationsClient.deleteOperation =
-        stubSimpleCall(expectedResponse);
-      const response = await client.deleteOperation(request);
-      assert.deepStrictEqual(response, [expectedResponse]);
-      assert(
-        (client.operationsClient.deleteOperation as SinonStub)
-          .getCall(0)
-          .calledWith(request)
-      );
-    });
-    it('invokes deleteOperation without error using callback', async () => {
-      const client = new catalogserviceModule.v2beta.CatalogServiceClient({
-        credentials: {client_email: 'bogus', private_key: 'bogus'},
-        projectId: 'bogus',
-      });
-      const request = generateSampleMessage(
-        new operationsProtos.google.longrunning.DeleteOperationRequest()
-      );
-      const expectedResponse = generateSampleMessage(
-        new protos.google.protobuf.Empty()
-      );
-      client.operationsClient.deleteOperation = sinon
-        .stub()
-        .callsArgWith(2, null, expectedResponse);
-      const promise = new Promise((resolve, reject) => {
-        client.operationsClient.deleteOperation(
-          request,
-          undefined,
-          (
-            err?: Error | null,
-            result?: protos.google.protobuf.Empty | null
-          ) => {
-            if (err) {
-              reject(err);
-            } else {
-              resolve(result);
-            }
-          }
-        );
-      });
-      const response = await promise;
-      assert.deepStrictEqual(response, expectedResponse);
-      assert((client.operationsClient.deleteOperation as SinonStub).getCall(0));
-    });
-    it('invokes deleteOperation with error', async () => {
-      const client = new catalogserviceModule.v2beta.CatalogServiceClient({
-        credentials: {client_email: 'bogus', private_key: 'bogus'},
-        projectId: 'bogus',
-      });
-      const request = generateSampleMessage(
-        new operationsProtos.google.longrunning.DeleteOperationRequest()
-      );
-      const expectedError = new Error('expected');
-      client.operationsClient.deleteOperation = stubSimpleCall(
-        undefined,
-        expectedError
-      );
-      await assert.rejects(async () => {
-        await client.deleteOperation(request);
-      }, expectedError);
-      assert(
-        (client.operationsClient.deleteOperation as SinonStub)
-          .getCall(0)
-          .calledWith(request)
-      );
-    });
-  });
-  describe('listOperationsAsync', () => {
-    it('uses async iteration with listOperations without error', async () => {
-      const client = new catalogserviceModule.v2beta.CatalogServiceClient({
-        credentials: {client_email: 'bogus', private_key: 'bogus'},
-        projectId: 'bogus',
-      });
-      const request = generateSampleMessage(
-        new operationsProtos.google.longrunning.ListOperationsRequest()
-      );
-      const expectedResponse = [
-        generateSampleMessage(
-          new operationsProtos.google.longrunning.ListOperationsResponse()
-        ),
-        generateSampleMessage(
-          new operationsProtos.google.longrunning.ListOperationsResponse()
-        ),
-        generateSampleMessage(
-          new operationsProtos.google.longrunning.ListOperationsResponse()
-        ),
-      ];
-      client.operationsClient.descriptor.listOperations.asyncIterate =
-        stubAsyncIterationCall(expectedResponse);
-      const responses: operationsProtos.google.longrunning.ListOperationsResponse[] =
-        [];
-      const iterable = client.operationsClient.listOperationsAsync(request);
-      for await (const resource of iterable) {
-        responses.push(resource!);
-      }
-      assert.deepStrictEqual(responses, expectedResponse);
-      assert.deepStrictEqual(
-        (
-          client.operationsClient.descriptor.listOperations
-            .asyncIterate as SinonStub
-        ).getCall(0).args[1],
-        request
-      );
-    });
-    it('uses async iteration with listOperations with error', async () => {
-      const client = new catalogserviceModule.v2beta.CatalogServiceClient({
-        credentials: {client_email: 'bogus', private_key: 'bogus'},
-        projectId: 'bogus',
-      });
-      client.initialize();
-      const request = generateSampleMessage(
-        new operationsProtos.google.longrunning.ListOperationsRequest()
-      );
-      const expectedError = new Error('expected');
-      client.operationsClient.descriptor.listOperations.asyncIterate =
-        stubAsyncIterationCall(undefined, expectedError);
-      const iterable = client.operationsClient.listOperationsAsync(request);
-      await assert.rejects(async () => {
-        const responses: operationsProtos.google.longrunning.ListOperationsResponse[] =
-          [];
-        for await (const resource of iterable) {
-          responses.push(resource!);
-        }
-      });
-      assert.deepStrictEqual(
-        (
-          client.operationsClient.descriptor.listOperations
-            .asyncIterate as SinonStub
-        ).getCall(0).args[1],
-        request
       );
     });
   });
